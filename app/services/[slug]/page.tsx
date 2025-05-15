@@ -2,11 +2,13 @@ import Footer from '@/app/footer';
 import Navbar from '@/app/navbar';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
-import { services } from '../data'; // ✅ Importar solo los datos
+import { services } from '../data';
 
-export default function ServiceDetail({ params }: { params: { slug: string } }) {
+export default async function ServiceDetail({ params }: { params: Promise<{ slug: string }> }) {
+  const resolvedParams = await params;
+
   const service = services.find(
-    s => s.slug.toLowerCase() === params.slug.toLowerCase()
+    s => s.slug.toLowerCase() === resolvedParams.slug.toLowerCase()
   );
 
   if (!service) return notFound();
