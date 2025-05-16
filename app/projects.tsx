@@ -147,8 +147,8 @@ export function Projects() {
         </CarouselContent>
 
         {/* Navegación - Oculto en móviles */}
-        <CarouselPrevious className="hidden md:flex absolute left-[-2rem] top-1/2 -translate-y-1/2 bg-black/50 text-white hover:bg-black/70" />
-        <CarouselNext className="hidden md:flex absolute right-[-2rem] top-1/2 -translate-y-1/2 bg-black/50 text-white hover:bg-black/70" />
+        <CarouselPrevious className="hidden lg:flex absolute left-[-3rem] top-1/2 -translate-y-1/2 bg-black/50 text-white hover:bg-black/70" />
+        <CarouselNext className="hidden lg:flex absolute right-[-3rem] top-1/2 -translate-y-1/2 bg-black/50 text-white hover:bg-black/70" />
       </Carousel>
     </section>
   );

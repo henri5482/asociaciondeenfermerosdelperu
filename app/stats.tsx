@@ -1,113 +1,129 @@
-"use client";
+'use client';
 
-import React, { useEffect, useState } from "react";
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+import { AnimatePresence, motion } from 'framer-motion';
+import Image from 'next/image';
+import Link from 'next/link';
 
-import { Separator } from "@/components/ui/separator";
-
-interface StatCardProps {
-  number: string;
-  label: string;
-}
-
-const StatCard: React.FC<StatCardProps> = ({ number, label }) => {
-  const [isVisible, setIsVisible] = useState(false);
-  const cardRef = React.useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.unobserve(entry.target);
-        }
-      },
-      {
-        threshold: 0.1,
-      }
-    );
-
-    if (cardRef.current) {
-      observer.observe(cardRef.current);
+const Certifications = () => {
+  const certifications = [
+    {
+      id: 1,
+      name: "TOEFL",
+      description: "Alianza con ETS para la certificación TOEFL en Inglés",
+      logo: "/toefl-logo.png",
+      link: "/cursos/toefl",
+      color: "blue"
+    },
+    {
+      id: 2,
+      name: "Google",
+      description: "Convenio de certificación en tecnologías cloud",
+      logo: "/google-cloud-logo.png",
+      link: "/cursos/google",
+      color: "green"
+    },
+    {
+      id: 3,
+      name: "SIGUAY",
+      description: "Domina la seguridad digital con CompTIA security+",
+      logo: "/comptia-logo.png",
+      link: "/cursos/siguay",
+      color: "purple"
     }
+  ];
 
-    return () => {
-      if (cardRef.current) {
-        observer.unobserve(cardRef.current);
-      }
-    };
-  }, []);
-
-  const formatNumber = (num: string): string => {
-    if (num.includes("%")) {
-      return num;
+  const colorVariants = {
+    blue: {
+      bg: 'bg-blue-50/50 hover:bg-blue-50',
+      border: 'border-blue-200',
+      button: 'bg-blue-600 hover:bg-blue-700'
+    },
+    green: {
+      bg: 'bg-green-50/50 hover:bg-green-50',
+      border: 'border-green-200',
+      button: 'bg-green-600 hover:bg-green-700'
+    },
+    purple: {
+      bg: 'bg-purple-50/50 hover:bg-purple-50',
+      border: 'border-purple-200',
+      button: 'bg-purple-600 hover:bg-purple-700'
     }
-    if (num.includes("$")) {
-      return `$${num.replace(/[^0-9]/g, "")}+`;
-    }
-    return `${num.replace(/[^0-9]/g, "")}+`;
   };
 
   return (
-    <div ref={cardRef} className="bg-[#fada4e] p-6 shadow-sm">
-      <div className="h-14 ">
-        <div
-          className={`text-5xl font-bold mb-2 transform transition-all duration-700 ${
-            isVisible ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
-          }`}
-        >
-          {formatNumber(number)}
-        </div>
-      </div>
-      <div
-        className={`text-[#7b7b7b] text-sm transform transition-all duration-700 delay-200 ${
-          isVisible ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
-        }`}
+    <div className="px-4 sm:px-6 mx-auto max-w-7xl py-12 md:py-24">
+      <motion.div 
+        className="text-center mb-12"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.6 }}
       >
-        {label}
+        <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 via-green-500 to-purple-600 bg-clip-text text-transparent">
+          Obtén certificaciones oficiales de:
+        </h2>
+        <p className="text-muted-foreground max-w-2xl mx-auto">
+          Certificaciones reconocidas internacionalmente que impulsarán tu carrera profesional
+        </p>
+      </motion.div>
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <AnimatePresence>
+          {certifications.map((cert, index) => (
+            <motion.div
+              key={cert.id}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.5, delay: index * 0.15 }}
+            >
+              <Card 
+                className={`h-full transition-all hover:shadow-lg ${colorVariants[cert.color as keyof typeof colorVariants].bg} ${colorVariants[cert.color as keyof typeof colorVariants].border}`}
+              >
+                <motion.div whileHover={{ y: -5 }}>
+                  <CardHeader className="flex flex-row items-center space-y-0 pb-4">
+                    <div className="relative h-12 w-12 mr-4">
+                      <Image
+                        src={cert.logo}
+                        alt={`Logo ${cert.name}`}
+                        fill
+                        className="object-contain"
+                      />
+                    </div>
+                    <div>
+                      <CardTitle className="text-lg font-bold">{cert.name}</CardTitle>
+                    </div>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-sm text-muted-foreground">
+                      {cert.description}
+                    </p>
+                  </CardContent>
+                  <CardFooter>
+                    <Link href={cert.link} className="w-full">
+                      <Button 
+                        className={`w-full ${colorVariants[cert.color as keyof typeof colorVariants].button}`}
+                        asChild
+                      >
+                        <motion.div
+                          whileHover={{ scale: 1.03 }}
+                          whileTap={{ scale: 0.98 }}
+                        >
+                          Ir a los cursos
+                        </motion.div>
+                      </Button>
+                    </Link>
+                  </CardFooter>
+                </motion.div>
+              </Card>
+            </motion.div>
+          ))}
+        </AnimatePresence>
       </div>
     </div>
   );
 };
 
-const Stats: React.FC = () => {
-  const stats = [
-    { number: "100", label: "Clientes satisfechos" },
-    { number: "280", label: "Trabajos realizados" },
-    { number: "90", label: "Eventos seguros" },
-    { number: "98", label: "Proyectos realizados" },
-  ];
-
-  return (
-    <div
-      className="mx-auto   
-     2xl:w-4/5 md:px-16
-
-    
-    
-    px-6 "
-    >
-      <Separator className="my-16" />
-
-      <div className="flex flex-col md:flex-row items-start justify-between ">
-        <div className="md:w-1/4 mb-8 md:mb-0">
-          <h2 className="text-4xl font-bold">Nuestros números:</h2>
-          <p className="text-gray-500 mt-4">
-            Con cada trabajo que asumimos, nos esforzamos por ofrecer los
-            mejores resultados para nuestros clientes.
-          </p>
-        </div>
-        <div className="md:w-2/4 w-full">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {stats.map((stat, index) => (
-              <StatCard key={index} number={stat.number} label={stat.label} />
-            ))}
-          </div>
-        </div>
-      </div>
-
-      <Separator className="my-16" />
-    </div>
-  );
-};
-
-export default Stats;
+export default Certifications;

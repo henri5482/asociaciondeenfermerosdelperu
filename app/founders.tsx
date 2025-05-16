@@ -1,357 +1,288 @@
-'use client'
+'use client';
 
 import { AnimatePresence, motion } from "framer-motion";
-import { useEffect, useState } from "react";
-
 import Image from "next/image";
-import {
-  PiArrowArcLeft,
-  PiArrowArcRight,
-  PiGlobe,
-  PiLinkedinLogo,
-  PiTwitterLogo,
-} from "react-icons/pi";
-
+import { useEffect, useState } from "react";
+import { PiArrowArcLeft, PiArrowArcRight } from "react-icons/pi";
 
 interface Social {
-    linkedin: string;
-    twitter: string;
-    website?: string;
-  }
-
-
+  linkedin: string;
+  twitter: string;
+  website?: string;
+}
 
 interface Founder {
-    name: string;
-    role: string;
-    image: string;
-    description: string;
-    social: Social;
-  }
-
+  name: string;
+  role: string;
+  image: string;
+  image2?: string;
+  titulo: string;
+  description: string;
+  social: Social;
+}
 
 const founders: Founder[] = [
-    {
-      name: "Alex Johnson",
-      role: "CEO & Founder",
-      image: "/image-1.jpg",
-      description:
-        "Leading our vision with over a decade of experience in AI and business strategy",
-      social: {
-        linkedin: "https://linkedin.com",
-        twitter: "https://twitter.com",
-        website: "https://website.com",
-      },
+  {
+    name: "Carli Florida",
+    role: "Teacher In-house en Platzi",
+    image: "/image-2.jpg",
+    titulo: "Curso de Python",
+    image2: "/logo-5.svg",
+    description: "Instructora especializada en Python con 5 años de experiencia",
+    social: {
+      linkedin: "https://linkedin.com",
+      twitter: "https://twitter.com",
     },
-    {
-      name: "Jamie Lee",
-      role: "CTO",
-      image: "/image-2.jpg",
-      description:
-        "Expert in AI technologies, driving innovation and technical excellence across our projects",
-      social: {
-        linkedin: "https://linkedin.com",
-        twitter: "https://twitter.com",
-        website: "https://website.com",
-      },
+  },
+  {
+    name: "Carli Florida",
+    role: "Teacher In-house en Platzi",
+    image: "/image-2.jpg",
+    titulo: "Curso de Python",
+    image2: "/logo-5.svg",
+    description: "Instructora especializada en Python con 5 años de experiencia",
+    social: {
+      linkedin: "https://linkedin.com",
+      twitter: "https://twitter.com",
     },
-    {
-      name: "Morgan Smith",
-      role: "Marketing Director",
-      image: "/image-3.jpg",
-      description:
-        "Crafting impactful marketing strategies that resonate with our clients and their audiences",
-      social: {
-        linkedin: "https://linkedin.com",
-        twitter: "https://twitter.com",
-      },
+  },
+  {
+    name: "Carli Florida",
+    role: "Teacher In-house en Platzi",
+    image: "/image-2.jpg",
+    titulo: "Curso de Python",
+    image2: "/logo-5.svg",
+    description: "Instructora especializada en Python con 5 años de experiencia",
+    social: {
+      linkedin: "https://linkedin.com",
+      twitter: "https://twitter.com",
     },
-    {
-      name: "Taylor Brown",
-      role: "Lead Developer",
-      image: "/image-4.jpg",
-      description:
-        "Creating innovative solutions with our expert development team",
-      social: {
-        linkedin: "https://linkedin.com",
-        twitter: "https://twitter.com",
-      },
+  },
+  {
+    name: "Carli Florida",
+    role: "Teacher In-house en Platzi",
+    image: "/image-2.jpg",
+    titulo: "Curso de Python",
+    image2: "/logo-5.svg",
+    description: "Instructora especializada en Python con 5 años de experiencia",
+    social: {
+      linkedin: "https://linkedin.com",
+      twitter: "https://twitter.com",
     },
-    {
-      name: "Chris White",
-      role: "Head of Design",
-      image: "/image-4.jpg",
-      description:
-        "Driving creative direction and design excellence across all our projects",
-      social: {
-        linkedin: "https://linkedin.com",
-        twitter: "https://twitter.com",
-      },
+  },
+  {
+    name: "Carli Florida",
+    role: "Teacher In-house en Platzi",
+    image: "/image-2.jpg",
+    titulo: "Curso de Python",
+    image2: "/logo-5.svg",
+    description: "Instructora especializada en Python con 5 años de experiencia",
+    social: {
+      linkedin: "https://linkedin.com",
+      twitter: "https://twitter.com",
     },
-    {
-      name: "Emily Green",
-      role: "Product Manager",
-      image: "/image-5.jpg",
-      description:
-        "Leading product development and strategy with a focus on user experience",
-      social: {
-        linkedin: "https://linkedin.com",
-        twitter: "https://twitter.com",
-      },
-    },
-    {
-      name: "Ethan Black",
-      role: "Data Scientist",
-      image: "/image-6.jpg",
-      description:
-        "Applying advanced data science techniques to drive insights and innovation",
-      social: {
-        linkedin: "https://linkedin.com",
-        twitter: "https://twitter.com",
-      },
-    },
-    {
-      name: "Ava Brown",
-      role: "Customer Success",
-      image: "/image-7.jpg",
-      description:
-        "Ensuring our clients receive the best possible service and support",
-      social: {
-        linkedin: "https://linkedin.com",
-        twitter: "https://twitter.com",
-      },
-    },
-    {
-      name: "Noah White",
-      role: "Business Development",
-      image: "/image-1.jpg",
-      description:
-        "Building relationships and driving growth through strategic partnerships",
-      social: {
-        linkedin: "https://linkedin.com",
-        twitter: "https://twitter.com",
-      },
-    },
-  ];
-
-
-
-
+  },
+  // ... (otros profesores)
+];
 
 const Founders = () => {
+  const [startIndex, setStartIndex] = useState(0);
+  const [itemsToShow, setItemsToShow] = useState(4);
+  const [isMobile, setIsMobile] = useState(false);
+  const [hoveredCard, setHoveredCard] = useState<number | null>(null);
 
-    const [startIndex, setStartIndex] = useState(0);
-    const [itemsToShow, setItemsToShow] = useState(4);
-    const [isMobile, setIsMobile] = useState(false);
-
-
-    const container = {
-        hidden: { opacity: 0 },
-        show: {
-          opacity: 1,
-          transition: {
-            staggerChildren: 0.1,
-            delayChildren: 0,
-          },
-        },
-        exit: {
-          opacity: 0,
-          transition: {
-            staggerChildren: 0.05,
-            staggerDirection: -1,
-            duration: 0.2,
-          },
-        },
-      };
-    
-      const item = {
-        hidden: {
-          opacity: 0,
-          y: 20,
-          scale: 0.95,
-        },
-        show: {
-          opacity: 1,
-          y: 0,
-          scale: 1,
-          transition: {
-            type: "spring",
-            duration: 0.5,
-            bounce: 0.4,
-          },
-        },
-        exit: {
-          opacity: 0,
-          y: -20,
-          scale: 0.95,
-          transition: {
-            duration: 0.3,
-          },
-        },
-      };
-
+  // Responsive setup
+  useEffect(() => {
+    const handleResize = () => {
+      const width = window.innerWidth;
+      let mobile = false;
+      let items = 4;
       
-
-
-
-    useEffect(() => {
-        const handleResize = () => {
-          const mobile = window.innerWidth < 768;
-          setIsMobile(mobile);
-          setItemsToShow(mobile ? 2 : 4);
-          setStartIndex((prev) => {
-            const maxStart = founders.length - (mobile ? 2 : 4);
-            return prev > maxStart ? maxStart : prev;
-          });
-        };
-    
-        handleResize();
-        window.addEventListener("resize", handleResize);
-        return () => window.removeEventListener("resize", handleResize);
-      }, [founders.length]);
-
-
-      const next = () => {
-        setStartIndex((prev) => {
-          const nextIndex = prev + 1;
-          const maxStart = founders.length - itemsToShow;
-          return nextIndex > maxStart ? 0 : nextIndex;
-        });
-      };
-    
-      const prev = () => {
-        setStartIndex((prev) => {
-          const nextIndex = prev - 1;
-          return nextIndex < 0 ? founders.length - itemsToShow : nextIndex;
-        });
-      };
-    
-      type PanInfo = {
-        offset: {
-          x: number;
-          y: number;
-        };
-        velocity: {
-          x: number;
-        };
-      };
-
-      const handleDragEnd = (_event: never, info: PanInfo) => {
-        const swipeThreshold = 50;
-        if (
-          info.offset.x < -swipeThreshold &&
-          startIndex < founders.length - itemsToShow
-        ) {
-          next();
-        } else if (info.offset.x > swipeThreshold && startIndex > 0) {
-          prev();
-        }
-      };
-    
-      const visibleFounders = founders.slice(startIndex, startIndex + itemsToShow);
-
+      if (width < 640) { // Mobile pequeño
+        mobile = true;
+        items = 1;
+      } else if (width < 768) { // Tablet pequeña
+        mobile = true;
+        items = 2;
+      } else if (width < 1024) { // Tablet grande
+        items = 3;
+      } else { // Desktop
+        items = 4;
+      }
       
+      setIsMobile(mobile);
+      setItemsToShow(items);
+      setStartIndex(prev => Math.min(prev, founders.length - items));
+    };
 
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
-    return ( 
-        <div
-        className="px-6 
-      mx-auto 2xl:w-4/5 md:px-16
-      
-      py-16 md:py-32"
-      >
-        <div className="flex justify-between items-center mb-12">
-          <div>
-            <h2 className="text-3xl font-bold mb-2">
-              Nuestro Equipo de trabajo
-            </h2>
-            {/* <p className="text-gray-600">
-              Meet the passionate experts driving our AI solutions.
-            </p> */}
-          </div>
-          <div className="hidden md:flex gap-2">
-            <motion.button onClick={prev}>
-              <PiArrowArcLeft className="text-black border rounded-full flex items-center justify-center text-5xl p-3 hover:bg-black/10 transition-colors" />
-            </motion.button>
-            <motion.button onClick={next}>
-              <PiArrowArcRight className="text-black border rounded-full flex items-center justify-center text-5xl p-3 hover:bg-black/10 transition-colors" />
-            </motion.button>
-          </div>
+  const next = () => {
+    setStartIndex(prev => (prev + 1) % (founders.length - itemsToShow + 1));
+  };
+
+  const prev = () => {
+    setStartIndex(prev => (prev - 1 + founders.length - itemsToShow + 1) % (founders.length - itemsToShow + 1));
+  };
+
+  const handleDragEnd = (_e: never, info: { offset: { x: number } }) => {
+    const threshold = 50;
+    if (info.offset.x < -threshold) next();
+    else if (info.offset.x > threshold) prev();
+  };
+
+  const visibleFounders = founders.slice(startIndex, startIndex + itemsToShow);
+
+  return (
+    <div className="bg-blue-50">
+
+    <div className="px-4 sm:px-0 mx-auto max-w-7xl py-12 md:py-24 ">
+      {/* Header */}
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 md:mb-12 px-4">
+        <div className="mb-6 md:mb-0 max-w-2xl">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2">
+            Nuestros profesores son expertos de la industria
+          </h2>
+          <p className="text-gray-600 text-sm sm:text-base">
+            Aprende de los mejores profesionales con experiencia real
+          </p>
         </div>
-  
-        <div className="relative max-w-full overflow-hidden">
-          <AnimatePresence mode="wait">
-            <motion.div
-              className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-8"
-              key={startIndex}
-              variants={container}
-              initial="hidden"
-              animate="show"
-              exit="exit"
-              drag={isMobile ? "x" : false}
-              dragSnapToOrigin
-              dragElastic={0.1}
-              onDragEnd={handleDragEnd}
-              style={{
-                touchAction: "none",
-                x: 0,
-              }}
-            >
-              {visibleFounders.map((founder, index) => (
-                <motion.div
-                  key={`${founder.name}-${index}`}
-                  variants={item}
-                  className="md:mb-0 mb-8"
-                >
-                  <div className="bg-gray-100 aspect-square mb-4 overflow-hidden">
-                    <Image
-                      priority
-                      width={500}
-                      height={500}
-                      src={founder.image}
-                      alt={founder.name}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <h3 className="font-bold text-lg mb-1">{founder.name}</h3>
-                  <p className="text-[#7b7b7b] text-sm mb-2">{founder.role}</p>
-                  <p className="text-gray-700 text-sm mb-4">
-                    {founder.description}
-                  </p>
-                  <div className="flex gap-4">
-                    <motion.div
-                      whileHover={{ scale: 1.15 }}
-                      transition={{ type: "spring", stiffness: 400, damping: 17 }}
-                    >
-                      <PiLinkedinLogo className="w-5 h-5 text-[#7b7b7b] hover:text-gray-900 cursor-pointer" />
-                    </motion.div>
-                    <motion.div
-                      whileHover={{ scale: 1.15 }}
-                      transition={{ type: "spring", stiffness: 400, damping: 17 }}
-                    >
-                      <PiTwitterLogo className="w-5 h-5 text-[#7b7b7b] hover:text-gray-900 cursor-pointer" />
-                    </motion.div>
-                    {founder.social.website && (
-                      <motion.div
-                        whileHover={{ scale: 1.15 }}
-                        transition={{
-                          type: "spring",
-                          stiffness: 400,
-                          damping: 17,
-                        }}
-                      >
-                        <PiGlobe className="w-5 h-5 text-[#7b7b7b] hover:text-gray-900 cursor-pointer" />
-                      </motion.div>
-                    )}
-                  </div>
-                </motion.div>
-              ))}
-            </motion.div>
-          </AnimatePresence>
+        
+        {/* Desktop arrows */}
+        <div className="hidden md:flex gap-4">
+          <motion.button 
+            onClick={prev}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
+            className="p-2 bg-white rounded-full shadow-md hover:bg-gray-100 transition-colors"
+            aria-label="Anterior"
+          >
+            <PiArrowArcLeft className="text-gray-800 text-xl" />
+          </motion.button>
+          <motion.button 
+            onClick={next}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
+            className="p-2 bg-white rounded-full shadow-md hover:bg-gray-100 transition-colors"
+            aria-label="Siguiente"
+          >
+            <PiArrowArcRight className="text-gray-800 text-xl" />
+          </motion.button>
         </div>
       </div>
-    
-);
-}
- 
+
+      {/* Cards container */}
+      <div className="relative w-full overflow-x-visible px-4">
+        <AnimatePresence mode="wait">
+          <motion.div
+            className={`grid gap-4 sm:gap-6 ${
+              itemsToShow === 1 ? 'grid-cols-1' :
+              itemsToShow === 2 ? 'grid-cols-2' :
+              itemsToShow === 3 ? 'grid-cols-3' : 'grid-cols-4'
+            }`}
+            key={startIndex}
+            initial="hidden"
+            animate="show"
+            exit="exit"
+            variants={{
+              hidden: { opacity: 0 },
+              show: { opacity: 1, transition: { staggerChildren: 0.1 } },
+              exit: { opacity: 0, transition: { staggerChildren: 0.05 } },
+            }}
+            drag={isMobile ? "x" : false}
+            dragConstraints={{ left: 0, right: 0 }}
+            onDragEnd={handleDragEnd}
+          >
+            {visibleFounders.map((founder, index) => (
+              <motion.div
+                key={`${founder.name}-${index}`}
+                variants={{
+                  hidden: { opacity: 0, y: 20 },
+                  show: { opacity: 1, y: 0, transition: { type: "spring", damping: 15 } },
+                  exit: { opacity: 0, y: -20 },
+                }}
+                className="bg-white rounded-lg sm:rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden"
+                onMouseEnter={() => setHoveredCard(index)}
+                onMouseLeave={() => setHoveredCard(null)}
+              >
+                {/* Image with zoom effect */}
+                <div className="relative aspect-[4/5] w-full overflow-hidden">
+                  <motion.div
+                    animate={{ scale: hoveredCard === index ? 1.05 : 1 }}
+                    transition={{ duration: 0.3 }}
+                    className="h-full w-full"
+                  >
+                    <Image
+                      fill
+                      src={founder.image}
+                      alt={`Foto de ${founder.name}`}
+                      className="object-cover"
+                      sizes="(max-width: 640px) 90vw, (max-width: 768px) 45vw, (max-width: 1024px) 30vw, 23vw"
+                      priority={index < 2} // Solo prioriza las primeras imágenes
+                    />
+                  </motion.div>
+                </div>
+
+                {/* Content */}
+                <div className="p-4 sm:p-6">
+                  <h3 className="font-bold text-base sm:text-lg mb-1 line-clamp-1">{founder.name}</h3>
+                  <p className="text-gray-500 text-xs sm:text-sm mb-3 line-clamp-1">{founder.role}</p>
+                  
+                  {/* Clickable course area */}
+                  <motion.a
+                    href="#"
+                    className="block pt-3 border-t border-gray-100 group"
+                    whileHover={{ x: 5 }}
+                    transition={{ type: "spring", stiffness: 300 }}
+                  >
+                    <div className="flex items-center gap-2 sm:gap-3">
+                      {founder.image2 && (
+                        <div className="relative h-6 w-6 sm:h-8 sm:w-8 shrink-0">
+                          <Image
+                            src={founder.image2}
+                            alt="Logo del curso"
+                            fill
+                            className="object-contain"
+                          />
+                        </div>
+                      )}
+                      <span className="text-xs sm:text-sm font-medium text-gray-800 group-hover:text-blue-600 transition-colors line-clamp-1">
+                        {founder.titulo}
+                      </span>
+                    </div>
+                  </motion.a>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </AnimatePresence>
+      </div>
+
+      {/* Mobile arrows */}
+      <div className="flex justify-center gap-4 mt-8 md:hidden px-4">
+        <motion.button 
+          onClick={prev}
+          whileTap={{ scale: 0.9 }}
+          className="p-2 bg-white rounded-full shadow-md"
+          aria-label="Anterior"
+        >
+          <PiArrowArcLeft className="text-gray-800 text-lg" />
+        </motion.button>
+        <motion.button 
+          onClick={next}
+          whileTap={{ scale: 0.9 }}
+          className="p-2 bg-white rounded-full shadow-md"
+          aria-label="Siguiente"
+        >
+          <PiArrowArcRight className="text-gray-800 text-lg" />
+        </motion.button>
+      </div>
+    </div>
+    </div>
+  );
+};
+
 export default Founders;
