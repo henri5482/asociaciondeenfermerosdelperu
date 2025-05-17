@@ -8,10 +8,10 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 const links = [
-  { href: "/services", label: "Servicios" },
-  { href: "/projects", label: "Proyectos" },
+  { href: "/services", label: "Cursos" },
+  { href: "/projects", label: "Certificados" },
   { href: "/about", label: "Nosotros" },
-  { href: "/contact", label: "Contáctanos" },
+  { href: "/contact", label: "Trabaja con nosotros" },
 ];
 
 const Navbar = () => {
