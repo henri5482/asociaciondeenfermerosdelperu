@@ -87,17 +87,17 @@ const Navbar = () => {
           <div className="flex justify-between items-center">
             {/* Logo y nombre */}
             <Link href="/" className="flex items-center space-x-0 group">
-              <div className="relative h-12 w-12 md:h-14 md:w-16">
+              <div className="relative h-12 w-12 md:h-16 md:w-96">
                 <Image 
-                  src="/logoenfermeria.png" 
+                  src="/logo02.webp" 
                   alt="Logo Asociación de Enfermeros"
                   fill
                   className="object-contain transition-transform group-hover:scale-105"
                 />
               </div>
-      <h1 className="text-lg md:text-xl font-black text-[#0d70af] tracking-wider uppercase">
+      {/* <h1 className="text-lg md:text-xl font-black text-[#0d70af] tracking-wider uppercase">
   ASOCIACIÓN DE ENFERMEROS
-</h1>
+</h1> */}
             </Link>
 
             {/* Menú desktop */}
