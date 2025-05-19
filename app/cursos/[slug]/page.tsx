@@ -88,21 +88,18 @@ export async function generateStaticParams() {
 }
 
 // Modificamos la forma en que recibimos y usamos params
-export default async function CourseDetail(props: {
-  params: { slug: string };
-}) {
-  const { slug } = props.params;
+export default async function CourseDetail({ params }: { params: { slug: string } }) {
+  // Extraemos el slug de forma segura (now directly from params)
+  const slug = params.slug;
 
   const allCourses = await getAllCourses();
   const course = allCourses.find((c) => c.slug === slug);
 
   if (!course) {
-    // ... rest of the not found component ...
     return (
       <div className="min-h-screen flex flex-col items-center justify-center bg-[#0f1e26] text-white">
         <p className="text-xl mb-4">Curso no encontrado</p>
         <Link href="/" className="text-cyan-300 hover:underline">
-          {" "}
           Volver al inicio
         </Link>
       </div>
@@ -155,18 +152,19 @@ export default async function CourseDetail(props: {
 
               {/* Sección "¿Qué aprenderás?" - Esta sección se mantiene aquí */}
               {course.learnings && course.learnings.length > 0 && (
-                <div className="mb-8">
-                  <h2 className="text-2xl font-bold mb-4">¿Qué aprenderás?</h2>
-                  <ul className="space-y-3">
-                    {course.learnings.map((item, index) => (
-                      <li key={index} className="flex items-start">
-                        <span className="text-cyan-300 mr-2 mt-1">•</span>
-                        <span className="text-lg text-gray-300">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                 <div className="mb-8">
+                   <h2 className="text-2xl font-bold mb-4">¿Qué aprenderás?</h2>
+                   <ul className="space-y-3">
+                     {course.learnings.map((item, index) => (
+                       <li key={index} className="flex items-start">
+                         <span className="text-cyan-300 mr-2 mt-1">•</span>
+                         <span className="text-lg text-gray-300">{item}</span>
+                       </li>
+                     ))}
+                   </ul>
+                 </div>
               )}
+
 
               <div className="flex flex-col text-sm sm:flex-row items-center justify-between gap-4   rounded-xl ">
                 <Button
@@ -295,43 +293,43 @@ export default async function CourseDetail(props: {
               {/* Sección "Acerca del curso" - Mostrando contenido completo */}
               {/* Comprobación para renderizar solo si 'about' existe */}
               {course.about && (
-                <div className="mt-8 bg-[#223344] rounded-lg p-6 border border-[#2a3c4b]">
-                  <h2 className="text-xl font-bold mb-4 flex items-center">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-6 w-6 mr-2 text-cyan-400"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      strokeWidth={2}
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"
-                      />
-                    </svg>
-                    Acerca del curso
-                  </h2>
-                  <div className="text-gray-300 space-y-4">
-                    {/* Se comprueba course.about antes de este bloque */}
-                    {course.about.split("\n").map((paragraph, index) => (
-                      <p key={index}>{paragraph}</p>
-                    ))}
-                  </div>
-                </div>
+                 <div className="mt-8 bg-[#223344] rounded-lg p-6 border border-[#2a3c4b]">
+                    <h2 className="text-xl font-bold mb-4 flex items-center">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-6 w-6 mr-2 text-cyan-400"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        strokeWidth={2}
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"
+                        />
+                      </svg>
+                      Acerca del curso
+                    </h2>
+                    <div className="text-gray-300 space-y-4">
+                      {/* Se comprueba course.about antes de este bloque */}
+                      {course.about.split("\n").map((paragraph, index) => (
+                        <p key={index}>{paragraph}</p>
+                      ))}
+                    </div>
+                 </div>
               )}
-              {/* Mensaje si 'about' no está disponible */}
-              {!course.about && (
-                <div className="mt-8 bg-[#223344] rounded-lg p-6 border border-[#2a3c4b]">
-                  <h2 className="text-xl font-bold mb-4 flex items-center">
-                    Acerca del curso
-                  </h2>
-                  <p className="text-gray-400">
-                    Información detallada no disponible para este curso.
-                  </p>
-                </div>
-              )}
+               {/* Mensaje si 'about' no está disponible */}
+               {!course.about && (
+                   <div className="mt-8 bg-[#223344] rounded-lg p-6 border border-[#2a3c4b]">
+                       <h2 className="text-xl font-bold mb-4 flex items-center">
+                         Acerca del curso
+                       </h2>
+                       <p className="text-gray-400">Información detallada no disponible para este curso.</p>
+                   </div>
+               )}
+
+
             </div>
 
             {/* Columna de Profesores (1/3 del ancho) */}
