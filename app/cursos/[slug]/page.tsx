@@ -39,6 +39,8 @@ interface Course {
   slug: string;
   src: string;
   name: string;
+  precio?: number;
+  descuento?: number;
   titulo: string; // Campo para el título del curso
   descripcion: string; // Esta parece ser la descripción corta
   fechatext: string;
@@ -88,7 +90,9 @@ export async function generateStaticParams() {
 }
 
 // Modificamos la forma en que recibimos y usamos params
-export default async function CourseDetail({ params }: Readonly<{ params: { slug: string } }>) {
+export default async function CourseDetail({
+  params,
+}: Readonly<{ params: { slug: string } }>) {
   // Extract the slug safely (now directly from params)
   const slug = params.slug;
 
@@ -152,67 +156,96 @@ export default async function CourseDetail({ params }: Readonly<{ params: { slug
 
               {/* Sección "¿Qué aprenderás?" - Esta sección se mantiene aquí */}
               {course.learnings && course.learnings.length > 0 && (
-                 <div className="mb-8">
-                   <h2 className="text-2xl font-bold mb-4">¿Qué aprenderás?</h2>
-                   <ul className="space-y-3">
-                     {course.learnings.map((item, index) => (
-                       <li key={index} className="flex items-start">
-                         <span className="text-cyan-300 mr-2 mt-1">•</span>
-                         <span className="text-lg text-gray-300">{item}</span>
-                       </li>
-                     ))}
-                   </ul>
-                 </div>
-              )}
-
-
-              <div className="flex flex-col text-sm sm:flex-row items-center justify-between gap-4   rounded-xl ">
-                <Button
-                  className="bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-300 hover:to-yellow-400 text-black font-bold py-5 px-8 rounded-lg transition-all duration-300 hover:scale-[1.02] shadow-lg hover:shadow-yellow-500/20 whitespace-nowrap"
-                  asChild
-                >
-                  <Link href="/checkout" className="flex items-center gap-2">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-5 w-5"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
-                      />
-                    </svg>
-                    COMPRAR AHORA
-                  </Link>
-                </Button>
-                <div className="flex items-center gap-3">
-                  <div className="bg-cyan-500/20 p-2 rounded-full">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-6 w-6 text-cyan-400"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 110 4v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 110-4V7a2 2 0 00-2-2H5z"
-                      />
-                    </svg>
-                  </div>
-                  <div>
-                    <p className="font-bold text-cyan-300">
-                      {course.remainingSeats} TICKETS
-                    </p>
-                  </div>
+                <div className="mb-8">
+                  <h2 className="text-2xl font-bold mb-4">¿Qué aprenderás?</h2>
+                  <ul className="space-y-3">
+                    {course.learnings.map((item, index) => (
+                      <li key={index} className="flex items-start">
+                        <span className="text-cyan-300 mr-2 mt-1">•</span>
+                        <span className="text-lg text-gray-300">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-              </div>
+              )}
+              <div className="flex flex-col items-start gap-4 rounded-xl">
+      <div className="flex flex-col sm:flex-row items-start gap-4">
+
+        {/* Premium Subscription Button (Left Button from Image) */}
+        <Button
+          className="bg-[#FFC94A] hover:bg-[#E6B342] text-black font-semibold py-5 px-8 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg whitespace-nowrap flex items-center gap-2"
+          asChild
+        >
+          <Link href="/premium-subscription">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="lucide lucide-star h-5 w-5" // Placeholder icon for the star/arrow
+            >
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+              <path d="M12 17v-4" />
+              <path d="m14.5 12.5-2.5-2.5-2.5 2.5" />
+            </svg>
+            Ver mas cursos
+          </Link>
+        </Button>
+
+        {/* Buy This Course Button (Right Button from Image) */}
+        <Button
+          className="bg-[#2D3748] hover:bg-[#202933] text-white font-semibold py-5 px-8 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg flex items-center gap-2 border border-gray-600 text-left" // Removed whitespace-nowrap, added text-left
+          asChild
+        >
+          <Link href="/checkout" className="flex items-center gap-2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+              />
+            </svg>
+            Compra este curso:{" "}
+            {course.descuento && course.precio ? (
+              <>
+                {/* Original price (strikethrough) followed by discounted price */}
+                <span className="line-through text-gray-400">
+                  S/{course.precio.toFixed(2)}
+                </span>
+                <span className="ml-1">
+                  S/{(course.precio * (1 - course.descuento)).toFixed(2)}
+                </span>
+                {/* Oferta especial badge */}
+                <span className="bg-orange-500 text-white text-xs px-2 py-1 rounded-md font-bold ml-2">
+                  Oferta especial
+                </span>
+              </>
+            ) : (
+              // Display only price if no discount
+              <span>S/{course.precio?.toFixed(2)}</span>
+            )}
+            SOLES
+          </Link>
+        </Button>
+      </div>
+
+      <p className="text-sm text-gray-400">
+        * Acceso de por vida solo a este curso
+      </p>
+    </div>
+
             </div>
 
             {/* Columna derecha: Imagen y detalles del curso */}
@@ -228,20 +261,40 @@ export default async function CourseDetail({ params }: Readonly<{ params: { slug
               </div>
               <div className="bg-[#223344] rounded-lg p-6">
                 <div className="grid grid-cols-2 gap-4">
-                  {Object.entries(course.details).map(([key, value]) => (
-                    <div key={key} className="text-center md:text-left">
+                  <div className="text-center md:text-left">
+                    <p className="text-gray-400 text-sm uppercase tracking-wider mb-1">
+                      Fecha
+                    </p>
+                    <p className="font-semibold text-lg">
+                      {course.details.date}
+                    </p>
+                  </div>
+                  <div className="text-center md:text-left">
+                    <p className="text-gray-400 text-sm uppercase tracking-wider mb-1">
+                      Duración
+                    </p>
+                    <p className="font-semibold text-lg">
+                      {course.details.duration}
+                    </p>
+                  </div>
+                  <div className="text-center md:text-left">
+                    <p className="text-gray-400 text-sm uppercase tracking-wider mb-1">
+                      Estudiantes
+                    </p>
+                    <p className="font-semibold text-lg">
+                      {course.remainingSeats}
+                    </p>
+                  </div>
+                  {course.details.offer && (
+                    <div className="text-center md:text-left">
                       <p className="text-gray-400 text-sm uppercase tracking-wider mb-1">
-                        {key}
+                        Oferta
                       </p>
-                      <p
-                        className={`font-semibold text-lg ${
-                          key === "offer" ? "text-cyan-300" : ""
-                        }`}
-                      >
-                        {value}
+                      <p className="font-semibold text-lg text-cyan-300">
+                        {course.details.offer}
                       </p>
                     </div>
-                  ))}
+                  )}
                 </div>
               </div>
             </div>
@@ -293,43 +346,43 @@ export default async function CourseDetail({ params }: Readonly<{ params: { slug
               {/* Sección "Acerca del curso" - Mostrando contenido completo */}
               {/* Comprobación para renderizar solo si 'about' existe */}
               {course.about && (
-                 <div className="mt-8 bg-[#223344] rounded-lg p-6 border border-[#2a3c4b]">
-                    <h2 className="text-xl font-bold mb-4 flex items-center">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="h-6 w-6 mr-2 text-cyan-400"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        strokeWidth={2}
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"
-                        />
-                      </svg>
-                      Acerca del curso
-                    </h2>
-                    <div className="text-gray-300 space-y-4">
-                      {/* Se comprueba course.about antes de este bloque */}
-                      {course.about.split("\n").map((paragraph, index) => (
-                        <p key={index}>{paragraph}</p>
-                      ))}
-                    </div>
-                 </div>
+                <div className="mt-8 bg-[#223344] rounded-lg p-6 border border-[#2a3c4b]">
+                  <h2 className="text-xl font-bold mb-4 flex items-center">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-6 w-6 mr-2 text-cyan-400"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth={2}
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"
+                      />
+                    </svg>
+                    Acerca del curso
+                  </h2>
+                  <div className="text-gray-300 space-y-4">
+                    {/* Se comprueba course.about antes de este bloque */}
+                    {course.about.split("\n").map((paragraph, index) => (
+                      <p key={index}>{paragraph}</p>
+                    ))}
+                  </div>
+                </div>
               )}
-               {/* Mensaje si 'about' no está disponible */}
-               {!course.about && (
-                   <div className="mt-8 bg-[#223344] rounded-lg p-6 border border-[#2a3c4b]">
-                       <h2 className="text-xl font-bold mb-4 flex items-center">
-                         Acerca del curso
-                       </h2>
-                       <p className="text-gray-400">Información detallada no disponible para este curso.</p>
-                   </div>
-               )}
-
-
+              {/* Mensaje si 'about' no está disponible */}
+              {!course.about && (
+                <div className="mt-8 bg-[#223344] rounded-lg p-6 border border-[#2a3c4b]">
+                  <h2 className="text-xl font-bold mb-4 flex items-center">
+                    Acerca del curso
+                  </h2>
+                  <p className="text-gray-400">
+                    Información detallada no disponible para este curso.
+                  </p>
+                </div>
+              )}
             </div>
 
             {/* Columna de Profesores (1/3 del ancho) */}
