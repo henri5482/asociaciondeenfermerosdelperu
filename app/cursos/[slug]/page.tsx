@@ -88,8 +88,8 @@ export async function generateStaticParams() {
 }
 
 // Modificamos la forma en que recibimos y usamos params
-export default async function CourseDetail({ params }: { params: { slug: string } }) {
-  // Extraemos el slug de forma segura (now directly from params)
+export default async function CourseDetail({ params }: Readonly<{ params: { slug: string } }>) {
+  // Extract the slug safely (now directly from params)
   const slug = params.slug;
 
   const allCourses = await getAllCourses();
@@ -98,9 +98,9 @@ export default async function CourseDetail({ params }: { params: { slug: string 
   if (!course) {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center bg-[#0f1e26] text-white">
-        <p className="text-xl mb-4">Curso no encontrado</p>
+        <p className="text-xl mb-4">Course not found</p>
         <Link href="/" className="text-cyan-300 hover:underline">
-          Volver al inicio
+          Back to home
         </Link>
       </div>
     );
