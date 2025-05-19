@@ -1,18 +1,16 @@
-import { Button } from "@/components/ui/button";
-import Image from "next/image";
-import Link from "next/link";
-// Importa los componentes de acordeón
+import Footer from "@/app/footer";
+import Navbar from "@/app/navbar";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-
-// Importa el módulo 'fs' de Node.js para leer archivos locales
-import fs from 'fs/promises';
-// Importa 'path' para construir rutas de archivo de forma segura
-import path from 'path';
+import { Button } from "@/components/ui/button";
+import fs from "fs/promises";
+import Image from "next/image";
+import Link from "next/link";
+import path from "path";
 
 interface Temario {
   title: string;
@@ -26,56 +24,76 @@ interface CourseDetails {
   offer: string;
 }
 
+// Interfaz para cada profesor
+interface Profesor {
+  nombre: string;
+  imagen: string;
+  usuarioSocial?: string;
+  enlacePerfil?: string;
+  // Podrías añadir más campos como país, especialidad, etc.
+}
+
 interface Course {
   id: string;
+  about?: string; // Hacer 'about' opcional con '?'
   slug: string;
   src: string;
   name: string;
-  titulo: string;
-  descripcion: string;
+  titulo: string; // Campo para el título del curso
+  descripcion: string; // Esta parece ser la descripción corta
   fechatext: string;
-  docente: string;
+  // Campos de docente individual eliminados/comentados si ya no los usas para todos los cursos
+  docente?: string;
+  docenteImage?: string;
+  docenteBio?: string;
+  profesores?: Profesor[]; // Array para múltiples profesores
+  paraQuienEs?: string[]; // Nuevo campo
+  conocimientosPrevios?: string[]; // Nuevo campo
   fecha: string;
-  learnings: string[];
+  learnings: string[]; // Esta es la lista de "¿Qué aprenderás?"
   details: CourseDetails;
   remainingSeats: string;
   temarios: Temario[];
+  category?: string; // Campo para la categoría del curso
 }
 
-// Función para obtener un curso específico por su slug
-async function getCourse(slug: string): Promise<Course | null> {
+// Función para obtener todos los cursos
+async function getAllCourses(): Promise<Course[]> {
   try {
-    // Construye la ruta absoluta al archivo JSON dentro del directorio 'public'
-    const filePath = path.join(process.cwd(), 'public', 'data', 'courses.json');
-    const fileContent = await fs.readFile(filePath, 'utf-8');
+    const filePath = path.join(process.cwd(), "public", "data", "courses.json");
+    const fileContent = await fs.readFile(filePath, "utf-8");
     const courses: Course[] = JSON.parse(fileContent);
-    return courses.find((c) => c.slug === slug) || null;
+    return courses;
   } catch (error) {
-    console.error(`Error al cargar los cursos desde el archivo (getCourse):`, error);
-    return null;
+    console.error(`Error al cargar todos los cursos desde el archivo:`, error);
+    return [];
   }
 }
 
-// Para generar rutas estáticas para cada curso en tiempo de build (recomendado para SEO)
 export async function generateStaticParams() {
   try {
-    // Construye la ruta absoluta al archivo JSON dentro del directorio 'public'
-    const filePath = path.join(process.cwd(), 'public', 'data', 'courses.json');
-    const fileContent = await fs.readFile(filePath, 'utf-8');
+    const filePath = path.join(process.cwd(), "public", "data", "courses.json");
+    const fileContent = await fs.readFile(filePath, "utf-8");
     const courses: Course[] = JSON.parse(fileContent);
     return courses.map((course) => ({
       slug: course.slug,
     }));
   } catch (error) {
-    console.error(`Error al cargar los cursos desde el archivo (generateStaticParams):`, error);
-    return []; // Retorna un array vacío para evitar errores de build
+    console.error(
+      `Error al cargar los cursos desde el archivo (generateStaticParams):`,
+      error
+    );
+    return [];
   }
 }
 
-export default async function CourseDetail({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug: courseSlug } = await params;
-  const course = await getCourse(courseSlug);
-
+// Modificamos la forma en que recibimos y usamos params
+export default async function CourseDetail(props: { params: { slug: string } }) {
+  // Esperamos explícitamente la promesa (aunque normalmente no es necesario)
+  const { slug } = await Promise.resolve(props.params);
+  
+  const allCourses = await getAllCourses();
+const course = allCourses.find((c) => c.slug === slug);
 
   if (!course) {
     return (
@@ -88,93 +106,376 @@ export default async function CourseDetail({ params }: { params: Promise<{ slug:
     );
   }
 
+  // *** Lógica de filtrado de cursos relacionados por CATEGORÍA ***
+
+  let relatedCourses: Course[] = [];
+
+  // Solo buscamos cursos relacionados si el curso actual tiene una categoría definida
+  if (course.category) {
+    relatedCourses = allCourses.filter(
+      (c) =>
+        c.id !== course.id && // No es el curso actual
+        c.category === course.category // Es de la misma categoría
+    );
+  }
+
+  // Limitar los cursos relacionados a 3 (o menos si no hay suficientes en la misma categoría)
+  relatedCourses = relatedCourses.slice(0, 3);
+
+  // *** Fin de la lógica de filtrado ***
+
+  const startDate = course.details.date;
+
   return (
-    <div className="min-h-screen bg-[#0f1e26] text-white py-12 px-4 md:px-8 lg:px-16">
-      <div className="max-w-4xl mx-auto bg-[#1a2c3b] rounded-2xl p-6 md:p-10 shadow-2xl">
-        {/* Sección principal del curso: Título, descripción, imagen */}
-        <div className="text-center mb-8">
-          <h1 className="text-2xl md:text-3xl font-bold mb-4">{course.titulo}</h1>
-          <p className="text-gray-300 mb-6">{course.descripcion}</p>
-          <div className="bg-yellow-400 text-black px-4 py-2 rounded-md font-semibold inline-block">
-            PRÓXIMO LANZAMIENTO
+    <>
+      <Navbar />
+      <div className="min-h-screen bg-[#0f1e26] text-white py-12 px-4 md:px-8 lg:px-16 pt-40">
+        <div className="max-w-7xl mx-auto bg-[#1a2c3b] rounded-2xl p-6 md:p-10 shadow-2xl">
+          {/* Sección superior: Título, descripción y contenido principal */}
+          <div className="flex flex-col md:flex-row gap-8 mb-8">
+            {/* Columna izquierda: Contenido textual */}
+            <div className="flex-1">
+              <div className="flex flex-wrap gap-2 mb-4">
+                <div className="bg-yellow-400 text-black px-4 py-2 rounded-md font-semibold inline-block">
+                  PRÓXIMO LANZAMIENTO
+                </div>
+                <div className="bg-yellow-400 text-black px-4 py-2 rounded-md font-semibold inline-block">
+                  <span>Las clases empiezan el </span>
+                  <span className="font-bold">{startDate}</span>
+                </div>
+              </div>
+              <h1 className="text-3xl md:text-4xl font-bold mb-4">
+                {course.titulo}
+              </h1>
+              {/* Aquí se muestra la descripción corta principal */}
+              <p className="text-gray-300 text-lg mb-6">{course.descripcion}</p>
+
+              {/* Sección "¿Qué aprenderás?" - Esta sección se mantiene aquí */}
+              {course.learnings && course.learnings.length > 0 && (
+                 <div className="mb-8">
+                   <h2 className="text-2xl font-bold mb-4">¿Qué aprenderás?</h2>
+                   <ul className="space-y-3">
+                     {course.learnings.map((item, index) => (
+                       <li key={index} className="flex items-start">
+                         <span className="text-cyan-300 mr-2 mt-1">•</span>
+                         <span className="text-lg text-gray-300">{item}</span>
+                       </li>
+                     ))}
+                   </ul>
+                 </div>
+              )}
+
+
+              <div className="flex flex-col text-sm sm:flex-row items-center justify-between gap-4   rounded-xl ">
+                <Button
+                  className="bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-300 hover:to-yellow-400 text-black font-bold py-5 px-8 rounded-lg transition-all duration-300 hover:scale-[1.02] shadow-lg hover:shadow-yellow-500/20 whitespace-nowrap"
+                  asChild
+                >
+                  <Link href="/checkout" className="flex items-center gap-2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-5 w-5"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+                      />
+                    </svg>
+                    COMPRAR AHORA
+                  </Link>
+                </Button>
+                <div className="flex items-center gap-3">
+                  <div className="bg-cyan-500/20 p-2 rounded-full">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-6 w-6 text-cyan-400"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 110 4v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 110-4V7a2 2 0 00-2-2H5z"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <p className="font-bold text-cyan-300">
+                      {course.remainingSeats} TICKETS
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Columna derecha: Imagen y detalles del curso */}
+            <div className="w-full md:w-1/2 flex flex-col gap-6">
+              <div className="h-64 sm:h-96 relative rounded-xl overflow-hidden shadow-lg">
+                <Image
+                  src={course.src}
+                  alt={course.name}
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </div>
+              <div className="bg-[#223344] rounded-lg p-6">
+                <div className="grid grid-cols-2 gap-4">
+                  {Object.entries(course.details).map(([key, value]) => (
+                    <div key={key} className="text-center md:text-left">
+                      <p className="text-gray-400 text-sm uppercase tracking-wider mb-1">
+                        {key}
+                      </p>
+                      <p
+                        className={`font-semibold text-lg ${
+                          key === "offer" ? "text-cyan-300" : ""
+                        }`}
+                      >
+                        {value}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
 
-        <div className="w-full h-64 sm:h-96 relative rounded-xl overflow-hidden shadow-lg mb-8">
-          <Image
-            src={course.src}
-            alt={course.name}
-            fill
-            className="object-cover"
-            priority
-          />
-        </div>
+          {/* Sección de Temario y Profesores */}
+          <div className="flex flex-col lg:flex-row gap-8 mb-10">
+            {/* Columna de Temario (2/3 del ancho) */}
+            <div className="lg:w-2/3">
+              <h2 className="text-2xl font-bold mb-6">Temario del Curso</h2>
+              {course.temarios && course.temarios.length > 0 ? (
+                <Accordion
+                  type="single"
+                  collapsible
+                  className="w-full space-y-2"
+                >
+                  {course.temarios.map((temario, index) => (
+                    <AccordionItem
+                      key={`temario-${index}`}
+                      value={`item-${index}`}
+                      className="border border-gray-700 rounded-lg overflow-hidden"
+                    >
+                      <AccordionTrigger className="text-lg font-semibold hover:no-underline px-6 py-4 bg-[#223344] hover:bg-[#2a3c4b] transition-colors duration-200">
+                        <span className="text-left">
+                          {index + 1}. {temario.title}
+                        </span>
+                      </AccordionTrigger>
+                      <AccordionContent className="bg-[#1a2c3b] px-6 py-4">
+                        <ul className="list-disc list-inside space-y-2 text-gray-300">
+                          {temario.items.map((item, itemIndex) => (
+                            <li
+                              key={`temario-item-${index}-${itemIndex}`}
+                              className="text-base"
+                            >
+                              {item}
+                            </li>
+                          ))}
+                        </ul>
+                      </AccordionContent>
+                    </AccordionItem>
+                  ))}
+                </Accordion>
+              ) : (
+                <p className="text-gray-400 text-center py-4">
+                  No hay temario disponible para este curso.
+                </p>
+              )}
 
-        {/* Contenido principal: Qué aprenderás y la nueva sección de Temario */}
-        <div className="grid md:grid-cols-2 gap-8 mb-8">
-          <div>
-            <h2 className="text-xl font-bold mb-4">¿Qué aprenderás?</h2>
-            <ul className="space-y-2">
-              {course.learnings.map((item) => (
-                <li key={item} className="flex items-start">
-                  <span className="text-cyan-300 mr-2">•</span>
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
+              {/* Sección "Acerca del curso" - Mostrando contenido completo */}
+              {/* Comprobación para renderizar solo si 'about' existe */}
+              {course.about && (
+                 <div className="mt-8 bg-[#223344] rounded-lg p-6 border border-[#2a3c4b]">
+                    <h2 className="text-xl font-bold mb-4 flex items-center">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-6 w-6 mr-2 text-cyan-400"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        strokeWidth={2}
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"
+                        />
+                      </svg>
+                      Acerca del curso
+                    </h2>
+                    <div className="text-gray-300 space-y-4">
+                      {/* Se comprueba course.about antes de este bloque */}
+                      {course.about.split("\n").map((paragraph, index) => (
+                        <p key={index}>{paragraph}</p>
+                      ))}
+                    </div>
+                 </div>
+              )}
+               {/* Mensaje si 'about' no está disponible */}
+               {!course.about && (
+                   <div className="mt-8 bg-[#223344] rounded-lg p-6 border border-[#2a3c4b]">
+                       <h2 className="text-xl font-bold mb-4 flex items-center">
+                         Acerca del curso
+                       </h2>
+                       <p className="text-gray-400">Información detallada no disponible para este curso.</p>
+                   </div>
+               )}
 
-          {/* --- Nuevo Renderizado de Temarios con Accordion --- */}
-          <div>
-            <h2 className="text-xl font-bold mb-4">Temario del Curso</h2>
-            {course.temarios && course.temarios.length > 0 ? (
-              <Accordion type="single" collapsible className="w-full">
-                {course.temarios.map((temario, index) => (
-                  <AccordionItem key={`temario-${index}`} value={`item-${index}`} className="border-b border-gray-700">
-                    <AccordionTrigger className="text-lg font-semibold text-white hover:no-underline px-4 py-3 bg-[#1a2c3b] hover:bg-[#2a3c4b] rounded-t-md transition-colors duration-200">
-                      {index + 1}. {temario.title}
-                    </AccordionTrigger>
-                    <AccordionContent className="bg-[#1a2c3b] px-4 py-3 pb-4 rounded-b-md">
-                      <ul className="list-disc list-inside space-y-1 text-gray-300 ml-4">
-                        {temario.items.map((item, itemIndex) => (
-                          <li key={`temario-item-${index}-${itemIndex}`}>{item}</li>
-                        ))}
-                      </ul>
-                    </AccordionContent>
-                  </AccordionItem>
-                ))}
-              </Accordion>
-            ) : (
-              <p className="text-gray-400">No hay temario disponible para este curso.</p>
+
+            </div>
+
+            {/* Columna de Profesores (1/3 del ancho) */}
+            {course.profesores && course.profesores.length > 0 && (
+              <div className="lg:w-1/3">
+                <h2 className="text-2xl font-bold mb-6">
+                  Profesores del Curso
+                </h2>
+                <div className="bg-[#223344] rounded-lg p-6 shadow-lg">
+                  <div className="space-y-6">
+                    {course.profesores.map((profesor, index) => (
+                      <div key={index} className="flex items-start gap-4">
+                        <div className="relative w-16 h-16 rounded-full overflow-hidden flex-shrink-0 border-2 border-cyan-400">
+                          <Image
+                            src={profesor.imagen}
+                            alt={profesor.nombre}
+                            fill
+                            className="object-cover"
+                            priority
+                          />
+                        </div>
+                        <div>
+                          <h3 className="text-lg font-semibold text-white">
+                            {profesor.nombre}
+                          </h3>
+                          {profesor.usuarioSocial && (
+                            <div className="mt-1">
+                              <Link
+                                href={profesor.enlacePerfil || "#"}
+                                className="text-cyan-400 hover:text-cyan-300 text-sm inline-flex items-center"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  className="h-4 w-4 mr-1"
+                                  fill="none"
+                                  viewBox="0 0 24 24"
+                                  stroke="currentColor"
+                                >
+                                  <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth={2}
+                                    d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"
+                                  />
+                                </svg>
+                                {profesor.usuarioSocial}
+                              </Link>
+                            </div>
+                          )}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Sección de "Para quien es este curso" */}
+                  {course.paraQuienEs && course.paraQuienEs.length > 0 && (
+                    <div className="mt-10 border-t-[1px] border-[#566f82] py-4">
+                      <h2 className="text-xl font-bold mb-1">
+                        ¿Para quién es este curso?
+                      </h2>
+                      <div className="bg-[#223344] rounded-lg shadow-lg">
+                        <ul className="list-disc list-outside p-4 space-y-2 text-gray-300">
+                          {course.paraQuienEs.map((item, index) => (
+                            <li key={`para-quien-${index}`} className="text-sm">
+                              {item}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Sección de "Conocimientos Previos" */}
+                  {course.conocimientosPrevios &&
+                    course.conocimientosPrevios.length > 0 && (
+                      <div className="mt-10 border-t-[1px] border-[#566f82] py-4 ">
+                        <h2 className="text-2xl font-bold mb-1">
+                          Conocimientos Previos
+                        </h2>
+                        <div className="bg-[#223344] rounded-lg shadow-lg">
+                          <ul className="list-disc list-outside p-4 space-y-2 text-gray-300">
+                            {course.conocimientosPrevios.map((item, index) => (
+                              <li
+                                key={`conocimientos-${index}`}
+                                className="text-sm"
+                              >
+                                {item}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      </div>
+                    )}
+                </div>
+              </div>
             )}
           </div>
-          {/* --- Fin del Nuevo Renderizado de Temarios --- */}
-        </div>
 
-        {/* Detalles del curso (fecha, duración, nivel, oferta) */}
-        <div className="border-t border-gray-700 pt-6 mb-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {Object.entries(course.details).map(([key, value]) => (
-              <div key={key}>
-                <p className="text-gray-400 text-sm capitalize">{key}</p>
-                <p className={`font-semibold ${key === 'offer' ? 'text-cyan-300' : ''}`}>
-                  {value}
-                </p>
+          {/* Sección de Cursos Relacionados */}
+          {/* Solo mostramos la sección si hay cursos relacionados */}
+          {relatedCourses.length > 0 && (
+            <div className="mt-12">
+              {" "}
+              {/* Añade margen superior */}
+              <h2 className="text-2xl font-bold mb-6">Cursos relacionados</h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                {" "}
+                {/* Grid para las tarjetas */}
+                {relatedCourses.map((relatedCourse) => (
+                  <Link
+                    href={`/cursos/${relatedCourse.slug}`}
+                    key={relatedCourse.id}
+                  >
+                    <div className="bg-[#223344] rounded-lg overflow-hidden shadow-lg hover:scale-[1.02] transition-transform duration-300 cursor-pointer">
+                      {" "}
+                      {/* Asegura que sea clickable */}
+                      <div className="relative h-40">
+                        {" "}
+                        {/* Contenedor para la imagen */}
+                        <Image
+                          src={relatedCourse.src}
+                          alt={relatedCourse.name}
+                          fill
+                          className="object-cover"
+                          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" // Optimización de imagen
+                        />
+                      </div>
+                      <div className="p-4">
+                        {/* Mostramos el título del curso relacionado */}
+                        <h3 className="text-lg font-semibold text-white">
+                          {relatedCourse.titulo}
+                        </h3>
+                        {/* Opcional: mostrar descripción corta */}
+                        {/* <p className="text-gray-400 text-sm mt-1">{relatedCourse.descripcion}</p> */}
+                      </div>
+                    </div>
+                  </Link>
+                ))}
               </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Botón de compra */}
-        <div className="text-center">
-          <Button
-            className="bg-yellow-400 text-black hover:bg-yellow-300 font-semibold py-6 px-8 text-lg transition transform hover:scale-105"
-            asChild
-          >
-            <Link href="/checkout">🛒 Comprar entrada ahora</Link>
-          </Button>
+            </div>
+          )}
         </div>
       </div>
-    </div>
+      <Footer />
+    </>
   );
 }

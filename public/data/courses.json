@@ -2,12 +2,43 @@
   {
     "id": "programacion-ia",
     "slug": "programacion-ia",
-    "src": "/paypal.jpg",
-    "name": "IA desde Cero",
-    "titulo": "Programación desde cero con Inteligencia Artificial",
-    "descripcion": "Aprende a programar desde cero integrando la Inteligencia Artificial en todas las etapas del desarrollo de software. Curso presencial en Miraflores, Lima - Perú.",
-    "fechatext": "Disponible desde el sábado 28 de junio",
-    "docente": "Centro de Capacitación La Moneda",
+    "category": "Inteligencia Artificial" ,
+  "src": "/paypal.jpg",
+  "name": "IA desde Cero",
+  "titulo": "Programación desde cero con Inteligencia Artificial",
+  "descripcion": "Aprende a programar desde cero integrando la Inteligencia Artificial en todas las etapas del desarrollo de software. Curso presencial en Miraflores, Lima - Perú.",
+  "fechatext": "Disponible desde el sábado 28 de junio",
+  "about": "Este curso está diseñado para aquellos que desean aprender a programar desde cero, integrando la Inteligencia Artificial en cada etapa del desarrollo de software. A lo largo de 8 horas, los estudiantes adquirirán conocimientos fundamentales de programación y aprenderán a utilizar herramientas de IA para optimizar su proceso de aprendizaje y desarrollo.",
+  "profesores": [ 
+    {
+      "nombre": "Alvaro Felipe Chávez",
+      "imagen": "/image-1.jpg", 
+      "usuarioSocial": "@alvaro",
+      "enlacePerfil": "https://vercel.com/" 
+    },
+    {
+      "nombre": "Alexys Lozada",
+      "imagen": "/image-2.jpg",
+      "usuarioSocial": "@alexyslozada",
+      "enlacePerfil": "/perfil/alexys"
+    },
+    {
+      "nombre": "Beto Quiroga",
+      "imagen": "/image-3.jpg",
+      "usuarioSocial": "@betoquiroga",
+      "enlacePerfil": "/perfil/beto"
+    }
+  ],
+   "paraQuienEs": [
+      "Principiantes sin experiencia previa en programación.",
+      "Profesionales de otras áreas que buscan una transición al desarrollo de software.",
+      "Estudiantes interesados en integrar la IA desde el inicio de su aprendizaje de código.",
+      "Cualquier persona curiosa sobre cómo la IA puede potenciar el desarrollo de software."
+    ],
+    "conocimientosPrevios": [
+      "No se requieren conocimientos previos de programación.",
+      "Familiaridad básica con el uso de computadoras e internet."
+    ],
     "temarios": [
       {
         "title": "Módulo 1: Fundamentos de Programación",
@@ -106,5 +137,708 @@
       "offer": "Mira las primeras clases gratis"
     },
     "remainingSeats": "Quedan pocos asientos disponibles"
+
+  },
+  {
+    "id": "desarrollo-web",
+    "slug": "desarrollo-web",
+    "category": "desarrollo web" ,
+  "src": "/sony.jpg",
+  "name": "IA desde Cero",
+  "titulo": "Programación desde cero con Inteligencia Artificial",
+  "descripcion": "Aprende a programar desde cero integrando la Inteligencia Artificial en todas las etapas del desarrollo de software. Curso presencial en Miraflores, Lima - Perú.",
+  "fechatext": "Disponible desde el sábado 28 de junio",
+  "about": "Este curso está diseñado para aquellos que desean aprender a programar desde cero, integrando la Inteligencia Artificial en cada etapa del desarrollo de software. A lo largo de 8 horas, los estudiantes adquirirán conocimientos fundamentales de programación y aprenderán a utilizar herramientas de IA para optimizar su proceso de aprendizaje y desarrollo.",
+  "profesores": [ 
+    {
+      "nombre": "Alvaro Felipe Chávez",
+      "imagen": "/image-1.jpg", 
+      "usuarioSocial": "@alvaro",
+      "enlacePerfil": "https://vercel.com/" 
+    },
+    {
+      "nombre": "Alexys Lozada",
+      "imagen": "/image-2.jpg",
+      "usuarioSocial": "@alexyslozada",
+      "enlacePerfil": "/perfil/alexys"
+    },
+    {
+      "nombre": "Beto Quiroga",
+      "imagen": "/image-3.jpg",
+      "usuarioSocial": "@betoquiroga",
+      "enlacePerfil": "/perfil/beto"
+    }
+  ],
+   "paraQuienEs": [
+      "Principiantes sin experiencia previa en programación.",
+      "Profesionales de otras áreas que buscan una transición al desarrollo de software.",
+      "Estudiantes interesados en integrar la IA desde el inicio de su aprendizaje de código.",
+      "Cualquier persona curiosa sobre cómo la IA puede potenciar el desarrollo de software."
+    ],
+    "conocimientosPrevios": [
+      "No se requieren conocimientos previos de programación.",
+      "Familiaridad básica con el uso de computadoras e internet."
+    ],
+    "temarios": [
+      {
+        "title": "Módulo 1: Fundamentos de Programación",
+        "items": [
+          "Introducción a la programación y su importancia en la era de la IA",
+          "Conceptos básicos: variables, tipos de datos, operadores",
+          "Estructuras de control de flujo: condicionales y bucles",
+          "Funciones: definición, invocación y parámetros",
+          "Introducción a la programación orientada a objetos (POO)"
+        ]
+      },
+      {
+        "title": "Módulo 2: Algoritmos y Estructuras de Datos",
+        "items": [
+          "Concepto de algoritmo y su diseño",
+          "Estructuras de datos fundamentales: arreglos, listas, diccionarios/mapas",
+          "Algoritmos de búsqueda y ordenamiento básicos",
+          "Complejidad algorítmica (Big O notation)",
+          "Aplicación de algoritmos en problemas reales"
+        ]
+      },
+      {
+        "title": "Módulo 3: Desarrollo Web Básico con IA",
+        "items": [
+          "Introducción a HTML, CSS y JavaScript para el frontend",
+          "Creación de interfaces de usuario sencillas",
+          "Uso de IA para generar fragmentos de código HTML/CSS/JS",
+          "Automatización de tareas de desarrollo web con herramientas de IA",
+          "Principios de diseño responsivo asistido por IA"
+        ]
+      },
+      {
+        "title": "Módulo 4: Consumo y Uso de APIs y Servicios Web",
+        "items": [
+          "¿Qué es una API? Conceptos RESTful",
+          "Consumo de APIs públicas (ej. APIs de datos, clima)",
+          "Integración de servicios web de terceros (ej. Stripe, Google Maps)",
+          "Uso de IA para entender y documentar APIs",
+          "Generación de código para llamadas a APIs con IA"
+        ]
+      },
+      {
+        "title": "Módulo 5: Integración de IA en Proyectos de Software (Nivel Básico)",
+        "items": [
+          "Introducción a los modelos de lenguaje grandes (LLMs)",
+          "Uso de APIs de IA (ej. OpenAI GPT, Gemini API)",
+          "Generación de texto: resúmenes, descripciones",
+          "Generación de código: funciones, clases, scripts",
+          "Asistencia de IA en depuración y optimización de código"
+        ]
+      },
+      {
+        "title": "Módulo 6: Buenas Prácticas y Herramientas con IA",
+        "items": [
+          "Control de versiones con Git y GitHub asistido por IA",
+          "Entornos de desarrollo integrados (IDE) y sus funcionalidades de IA",
+          "Manejo de errores y depuración inteligente",
+          "Escritura de código limpio y mantenible con sugerencias de IA",
+          "Colaboración en proyectos de software con herramientas de IA"
+        ]
+      },
+      {
+        "title": "Módulo 7: Publicación y Mantenimiento de Proyectos",
+        "items": [
+          "Conceptos de hosting y dominios",
+          "Despliegue de aplicaciones web sencillas (ej. Vercel, Netlify)",
+          "Monitoreo básico de aplicaciones con ayuda de IA",
+          "Actualizaciones y mantenimiento de proyectos",
+          "Resolución de problemas post-despliegue con asistencia de IA"
+        ]
+      },
+      {
+        "title": "Módulo 8: Proyecto Final y Próximos Pasos",
+        "items": [
+          "Desarrollo de un proyecto práctico aplicando lo aprendido",
+          "Integración de múltiples herramientas y conceptos",
+          "Presentación del proyecto y feedback",
+          "Recursos para continuar aprendiendo sobre programación e IA",
+          "Tendencias futuras en el desarrollo de software con IA"
+        ]
+      }
+    ],
+    "fecha": "2025-06-28T00:00:00",
+    "learnings": [
+      "Comprender las bases de la programación",
+      "Comprender los requerimientos de un proyecto",
+      "Traducir los requerimientos a buenos prompts para la IA",
+      "Entender y analizar el código que entrega la IA",
+      "Publicar el proyecto en internet",
+      "Hacer mejoras al proyecto luego de publicado"
+    ],
+    "details": {
+      "date": "28 Jun 2025",
+      "duration": "8 horas",
+      "level": "Básico",
+      "offer": "Mira las primeras clases gratis"
+    },
+    "remainingSeats": "Quedan pocos asientos disponibles"
+
+  },
+  {
+    "id": "marketing-digital",
+    "slug": "marketing-digital",
+    "category": "Inteligencia Artificial" ,
+  "src": "/fondo.jpg",
+  "name": "IA desde Cero",
+  "titulo": "Programación desde cero con Inteligencia Artificial",
+  "descripcion": "Aprende a programar desde cero integrando la Inteligencia Artificial en todas las etapas del desarrollo de software. Curso presencial en Miraflores, Lima - Perú.",
+  "fechatext": "Disponible desde el sábado 28 de junio",
+  "about": "Este curso está diseñado para aquellos que desean aprender a programar desde cero, integrando la Inteligencia Artificial en cada etapa del desarrollo de software. A lo largo de 8 horas, los estudiantes adquirirán conocimientos fundamentales de programación y aprenderán a utilizar herramientas de IA para optimizar su proceso de aprendizaje y desarrollo.",
+  "profesores": [ 
+    {
+      "nombre": "Alvaro Felipe Chávez",
+      "imagen": "/image-1.jpg", 
+      "usuarioSocial": "@alvaro",
+      "enlacePerfil": "https://vercel.com/" 
+    },
+    {
+      "nombre": "Alexys Lozada",
+      "imagen": "/image-2.jpg",
+      "usuarioSocial": "@alexyslozada",
+      "enlacePerfil": "/perfil/alexys"
+    },
+    {
+      "nombre": "Beto Quiroga",
+      "imagen": "/image-3.jpg",
+      "usuarioSocial": "@betoquiroga",
+      "enlacePerfil": "/perfil/beto"
+    }
+  ],
+   "paraQuienEs": [
+      "Principiantes sin experiencia previa en programación.",
+      "Profesionales de otras áreas que buscan una transición al desarrollo de software.",
+      "Estudiantes interesados en integrar la IA desde el inicio de su aprendizaje de código.",
+      "Cualquier persona curiosa sobre cómo la IA puede potenciar el desarrollo de software."
+    ],
+    "conocimientosPrevios": [
+      "No se requieren conocimientos previos de programación.",
+      "Familiaridad básica con el uso de computadoras e internet."
+    ],
+    "temarios": [
+      {
+        "title": "Módulo 1: Fundamentos de Programación",
+        "items": [
+          "Introducción a la programación y su importancia en la era de la IA",
+          "Conceptos básicos: variables, tipos de datos, operadores",
+          "Estructuras de control de flujo: condicionales y bucles",
+          "Funciones: definición, invocación y parámetros",
+          "Introducción a la programación orientada a objetos (POO)"
+        ]
+      },
+      {
+        "title": "Módulo 2: Algoritmos y Estructuras de Datos",
+        "items": [
+          "Concepto de algoritmo y su diseño",
+          "Estructuras de datos fundamentales: arreglos, listas, diccionarios/mapas",
+          "Algoritmos de búsqueda y ordenamiento básicos",
+          "Complejidad algorítmica (Big O notation)",
+          "Aplicación de algoritmos en problemas reales"
+        ]
+      },
+      {
+        "title": "Módulo 3: Desarrollo Web Básico con IA",
+        "items": [
+          "Introducción a HTML, CSS y JavaScript para el frontend",
+          "Creación de interfaces de usuario sencillas",
+          "Uso de IA para generar fragmentos de código HTML/CSS/JS",
+          "Automatización de tareas de desarrollo web con herramientas de IA",
+          "Principios de diseño responsivo asistido por IA"
+        ]
+      },
+      {
+        "title": "Módulo 4: Consumo y Uso de APIs y Servicios Web",
+        "items": [
+          "¿Qué es una API? Conceptos RESTful",
+          "Consumo de APIs públicas (ej. APIs de datos, clima)",
+          "Integración de servicios web de terceros (ej. Stripe, Google Maps)",
+          "Uso de IA para entender y documentar APIs",
+          "Generación de código para llamadas a APIs con IA"
+        ]
+      },
+      {
+        "title": "Módulo 5: Integración de IA en Proyectos de Software (Nivel Básico)",
+        "items": [
+          "Introducción a los modelos de lenguaje grandes (LLMs)",
+          "Uso de APIs de IA (ej. OpenAI GPT, Gemini API)",
+          "Generación de texto: resúmenes, descripciones",
+          "Generación de código: funciones, clases, scripts",
+          "Asistencia de IA en depuración y optimización de código"
+        ]
+      },
+      {
+        "title": "Módulo 6: Buenas Prácticas y Herramientas con IA",
+        "items": [
+          "Control de versiones con Git y GitHub asistido por IA",
+          "Entornos de desarrollo integrados (IDE) y sus funcionalidades de IA",
+          "Manejo de errores y depuración inteligente",
+          "Escritura de código limpio y mantenible con sugerencias de IA",
+          "Colaboración en proyectos de software con herramientas de IA"
+        ]
+      },
+      {
+        "title": "Módulo 7: Publicación y Mantenimiento de Proyectos",
+        "items": [
+          "Conceptos de hosting y dominios",
+          "Despliegue de aplicaciones web sencillas (ej. Vercel, Netlify)",
+          "Monitoreo básico de aplicaciones con ayuda de IA",
+          "Actualizaciones y mantenimiento de proyectos",
+          "Resolución de problemas post-despliegue con asistencia de IA"
+        ]
+      },
+      {
+        "title": "Módulo 8: Proyecto Final y Próximos Pasos",
+        "items": [
+          "Desarrollo de un proyecto práctico aplicando lo aprendido",
+          "Integración de múltiples herramientas y conceptos",
+          "Presentación del proyecto y feedback",
+          "Recursos para continuar aprendiendo sobre programación e IA",
+          "Tendencias futuras en el desarrollo de software con IA"
+        ]
+      }
+    ],
+    "fecha": "2025-06-28T00:00:00",
+    "learnings": [
+      "Comprender las bases de la programación",
+      "Comprender los requerimientos de un proyecto",
+      "Traducir los requerimientos a buenos prompts para la IA",
+      "Entender y analizar el código que entrega la IA",
+      "Publicar el proyecto en internet",
+      "Hacer mejoras al proyecto luego de publicado"
+    ],
+    "details": {
+      "date": "28 Jun 2025",
+      "duration": "8 horas",
+      "level": "Básico",
+      "offer": "Mira las primeras clases gratis"
+    },
+    "remainingSeats": "Quedan pocos asientos disponibles"
+
+  },
+  {
+    "id": "desarrollo-web-ia",
+    "slug": "desarrollo-web-ia",
+    "category": "desarrollo web" ,
+  "src": "/paypal.jpg",
+  "name": "IA desde Cero",
+  "titulo": "Programación desde cero con Inteligencia Artificial",
+  "descripcion": "Aprende a programar desde cero integrando la Inteligencia Artificial en todas las etapas del desarrollo de software. Curso presencial en Miraflores, Lima - Perú.",
+  "fechatext": "Disponible desde el sábado 28 de junio",
+  "about": "Este curso está diseñado para aquellos que desean aprender a programar desde cero, integrando la Inteligencia Artificial en cada etapa del desarrollo de software. A lo largo de 8 horas, los estudiantes adquirirán conocimientos fundamentales de programación y aprenderán a utilizar herramientas de IA para optimizar su proceso de aprendizaje y desarrollo.",
+  "profesores": [ 
+    {
+      "nombre": "Alvaro Felipe Chávez",
+      "imagen": "/image-1.jpg", 
+      "usuarioSocial": "@alvaro",
+      "enlacePerfil": "https://vercel.com/" 
+    },
+    {
+      "nombre": "Alexys Lozada",
+      "imagen": "/image-2.jpg",
+      "usuarioSocial": "@alexyslozada",
+      "enlacePerfil": "/perfil/alexys"
+    },
+    {
+      "nombre": "Beto Quiroga",
+      "imagen": "/image-3.jpg",
+      "usuarioSocial": "@betoquiroga",
+      "enlacePerfil": "/perfil/beto"
+    }
+  ],
+   "paraQuienEs": [
+      "Principiantes sin experiencia previa en programación.",
+      "Profesionales de otras áreas que buscan una transición al desarrollo de software.",
+      "Estudiantes interesados en integrar la IA desde el inicio de su aprendizaje de código.",
+      "Cualquier persona curiosa sobre cómo la IA puede potenciar el desarrollo de software."
+    ],
+    "conocimientosPrevios": [
+      "No se requieren conocimientos previos de programación.",
+      "Familiaridad básica con el uso de computadoras e internet."
+    ],
+    "temarios": [
+      {
+        "title": "Módulo 1: Fundamentos de Programación",
+        "items": [
+          "Introducción a la programación y su importancia en la era de la IA",
+          "Conceptos básicos: variables, tipos de datos, operadores",
+          "Estructuras de control de flujo: condicionales y bucles",
+          "Funciones: definición, invocación y parámetros",
+          "Introducción a la programación orientada a objetos (POO)"
+        ]
+      },
+      {
+        "title": "Módulo 2: Algoritmos y Estructuras de Datos",
+        "items": [
+          "Concepto de algoritmo y su diseño",
+          "Estructuras de datos fundamentales: arreglos, listas, diccionarios/mapas",
+          "Algoritmos de búsqueda y ordenamiento básicos",
+          "Complejidad algorítmica (Big O notation)",
+          "Aplicación de algoritmos en problemas reales"
+        ]
+      },
+      {
+        "title": "Módulo 3: Desarrollo Web Básico con IA",
+        "items": [
+          "Introducción a HTML, CSS y JavaScript para el frontend",
+          "Creación de interfaces de usuario sencillas",
+          "Uso de IA para generar fragmentos de código HTML/CSS/JS",
+          "Automatización de tareas de desarrollo web con herramientas de IA",
+          "Principios de diseño responsivo asistido por IA"
+        ]
+      },
+      {
+        "title": "Módulo 4: Consumo y Uso de APIs y Servicios Web",
+        "items": [
+          "¿Qué es una API? Conceptos RESTful",
+          "Consumo de APIs públicas (ej. APIs de datos, clima)",
+          "Integración de servicios web de terceros (ej. Stripe, Google Maps)",
+          "Uso de IA para entender y documentar APIs",
+          "Generación de código para llamadas a APIs con IA"
+        ]
+      },
+      {
+        "title": "Módulo 5: Integración de IA en Proyectos de Software (Nivel Básico)",
+        "items": [
+          "Introducción a los modelos de lenguaje grandes (LLMs)",
+          "Uso de APIs de IA (ej. OpenAI GPT, Gemini API)",
+          "Generación de texto: resúmenes, descripciones",
+          "Generación de código: funciones, clases, scripts",
+          "Asistencia de IA en depuración y optimización de código"
+        ]
+      },
+      {
+        "title": "Módulo 6: Buenas Prácticas y Herramientas con IA",
+        "items": [
+          "Control de versiones con Git y GitHub asistido por IA",
+          "Entornos de desarrollo integrados (IDE) y sus funcionalidades de IA",
+          "Manejo de errores y depuración inteligente",
+          "Escritura de código limpio y mantenible con sugerencias de IA",
+          "Colaboración en proyectos de software con herramientas de IA"
+        ]
+      },
+      {
+        "title": "Módulo 7: Publicación y Mantenimiento de Proyectos",
+        "items": [
+          "Conceptos de hosting y dominios",
+          "Despliegue de aplicaciones web sencillas (ej. Vercel, Netlify)",
+          "Monitoreo básico de aplicaciones con ayuda de IA",
+          "Actualizaciones y mantenimiento de proyectos",
+          "Resolución de problemas post-despliegue con asistencia de IA"
+        ]
+      },
+      {
+        "title": "Módulo 8: Proyecto Final y Próximos Pasos",
+        "items": [
+          "Desarrollo de un proyecto práctico aplicando lo aprendido",
+          "Integración de múltiples herramientas y conceptos",
+          "Presentación del proyecto y feedback",
+          "Recursos para continuar aprendiendo sobre programación e IA",
+          "Tendencias futuras en el desarrollo de software con IA"
+        ]
+      }
+    ],
+    "fecha": "2025-06-28T00:00:00",
+    "learnings": [
+      "Comprender las bases de la programación",
+      "Comprender los requerimientos de un proyecto",
+      "Traducir los requerimientos a buenos prompts para la IA",
+      "Entender y analizar el código que entrega la IA",
+      "Publicar el proyecto en internet",
+      "Hacer mejoras al proyecto luego de publicado"
+    ],
+    "details": {
+      "date": "28 Jun 2025",
+      "duration": "8 horas",
+      "level": "Básico",
+      "offer": "Mira las primeras clases gratis"
+    },
+    "remainingSeats": "Quedan pocos asientos disponibles"
+
+  },
+  {
+    "id": "robotica",
+    "slug": "robotica",
+    "category": "desarrollo web" ,
+  "src": "/audi.jpg",
+  "name": "IA desde Cero",
+  "titulo": "Programación desde cero con Inteligencia Artificial",
+  "descripcion": "Aprende a programar desde cero integrando la Inteligencia Artificial en todas las etapas del desarrollo de software. Curso presencial en Miraflores, Lima - Perú.",
+  "fechatext": "Disponible desde el sábado 28 de junio",
+  "about": "Este curso está diseñado para aquellos que desean aprender a programar desde cero, integrando la Inteligencia Artificial en cada etapa del desarrollo de software. A lo largo de 8 horas, los estudiantes adquirirán conocimientos fundamentales de programación y aprenderán a utilizar herramientas de IA para optimizar su proceso de aprendizaje y desarrollo.",
+  "profesores": [ 
+    {
+      "nombre": "Alvaro Felipe Chávez",
+      "imagen": "/image-1.jpg", 
+      "usuarioSocial": "@alvaro",
+      "enlacePerfil": "https://vercel.com/" 
+    },
+    {
+      "nombre": "Alexys Lozada",
+      "imagen": "/image-2.jpg",
+      "usuarioSocial": "@alexyslozada",
+      "enlacePerfil": "/perfil/alexys"
+    },
+    {
+      "nombre": "Beto Quiroga",
+      "imagen": "/image-3.jpg",
+      "usuarioSocial": "@betoquiroga",
+      "enlacePerfil": "/perfil/beto"
+    }
+  ],
+   "paraQuienEs": [
+      "Principiantes sin experiencia previa en programación.",
+      "Profesionales de otras áreas que buscan una transición al desarrollo de software.",
+      "Estudiantes interesados en integrar la IA desde el inicio de su aprendizaje de código.",
+      "Cualquier persona curiosa sobre cómo la IA puede potenciar el desarrollo de software."
+    ],
+    "conocimientosPrevios": [
+      "No se requieren conocimientos previos de programación.",
+      "Familiaridad básica con el uso de computadoras e internet."
+    ],
+    "temarios": [
+      {
+        "title": "Módulo 1: Fundamentos de Programación",
+        "items": [
+          "Introducción a la programación y su importancia en la era de la IA",
+          "Conceptos básicos: variables, tipos de datos, operadores",
+          "Estructuras de control de flujo: condicionales y bucles",
+          "Funciones: definición, invocación y parámetros",
+          "Introducción a la programación orientada a objetos (POO)"
+        ]
+      },
+      {
+        "title": "Módulo 2: Algoritmos y Estructuras de Datos",
+        "items": [
+          "Concepto de algoritmo y su diseño",
+          "Estructuras de datos fundamentales: arreglos, listas, diccionarios/mapas",
+          "Algoritmos de búsqueda y ordenamiento básicos",
+          "Complejidad algorítmica (Big O notation)",
+          "Aplicación de algoritmos en problemas reales"
+        ]
+      },
+      {
+        "title": "Módulo 3: Desarrollo Web Básico con IA",
+        "items": [
+          "Introducción a HTML, CSS y JavaScript para el frontend",
+          "Creación de interfaces de usuario sencillas",
+          "Uso de IA para generar fragmentos de código HTML/CSS/JS",
+          "Automatización de tareas de desarrollo web con herramientas de IA",
+          "Principios de diseño responsivo asistido por IA"
+        ]
+      },
+      {
+        "title": "Módulo 4: Consumo y Uso de APIs y Servicios Web",
+        "items": [
+          "¿Qué es una API? Conceptos RESTful",
+          "Consumo de APIs públicas (ej. APIs de datos, clima)",
+          "Integración de servicios web de terceros (ej. Stripe, Google Maps)",
+          "Uso de IA para entender y documentar APIs",
+          "Generación de código para llamadas a APIs con IA"
+        ]
+      },
+      {
+        "title": "Módulo 5: Integración de IA en Proyectos de Software (Nivel Básico)",
+        "items": [
+          "Introducción a los modelos de lenguaje grandes (LLMs)",
+          "Uso de APIs de IA (ej. OpenAI GPT, Gemini API)",
+          "Generación de texto: resúmenes, descripciones",
+          "Generación de código: funciones, clases, scripts",
+          "Asistencia de IA en depuración y optimización de código"
+        ]
+      },
+      {
+        "title": "Módulo 6: Buenas Prácticas y Herramientas con IA",
+        "items": [
+          "Control de versiones con Git y GitHub asistido por IA",
+          "Entornos de desarrollo integrados (IDE) y sus funcionalidades de IA",
+          "Manejo de errores y depuración inteligente",
+          "Escritura de código limpio y mantenible con sugerencias de IA",
+          "Colaboración en proyectos de software con herramientas de IA"
+        ]
+      },
+      {
+        "title": "Módulo 7: Publicación y Mantenimiento de Proyectos",
+        "items": [
+          "Conceptos de hosting y dominios",
+          "Despliegue de aplicaciones web sencillas (ej. Vercel, Netlify)",
+          "Monitoreo básico de aplicaciones con ayuda de IA",
+          "Actualizaciones y mantenimiento de proyectos",
+          "Resolución de problemas post-despliegue con asistencia de IA"
+        ]
+      },
+      {
+        "title": "Módulo 8: Proyecto Final y Próximos Pasos",
+        "items": [
+          "Desarrollo de un proyecto práctico aplicando lo aprendido",
+          "Integración de múltiples herramientas y conceptos",
+          "Presentación del proyecto y feedback",
+          "Recursos para continuar aprendiendo sobre programación e IA",
+          "Tendencias futuras en el desarrollo de software con IA"
+        ]
+      }
+    ],
+    "fecha": "2025-06-28T00:00:00",
+    "learnings": [
+      "Comprender las bases de la programación",
+      "Comprender los requerimientos de un proyecto",
+      "Traducir los requerimientos a buenos prompts para la IA",
+      "Entender y analizar el código que entrega la IA",
+      "Publicar el proyecto en internet",
+      "Hacer mejoras al proyecto luego de publicado"
+    ],
+    "details": {
+      "date": "28 Jun 2025",
+      "duration": "8 horas",
+      "level": "Básico",
+      "offer": "Mira las primeras clases gratis"
+    },
+    "remainingSeats": "Quedan pocos asientos disponibles"
+
+  },
+  {
+    "id": "derecho",
+    "slug": "derecho",
+    "category": "desarrollo web" ,
+  "src": "/visa.jpg",
+  "name": "IA desde Cero",
+  "titulo": "Programación desde cero con Inteligencia Artificial",
+  "descripcion": "Aprende a programar desde cero integrando la Inteligencia Artificial en todas las etapas del desarrollo de software. Curso presencial en Miraflores, Lima - Perú.",
+  "fechatext": "Disponible desde el sábado 28 de junio",
+  "about": "Este curso está diseñado para aquellos que desean aprender a programar desde cero, integrando la Inteligencia Artificial en cada etapa del desarrollo de software. A lo largo de 8 horas, los estudiantes adquirirán conocimientos fundamentales de programación y aprenderán a utilizar herramientas de IA para optimizar su proceso de aprendizaje y desarrollo.",
+  "profesores": [ 
+    {
+      "nombre": "Alvaro Felipe Chávez",
+      "imagen": "/image-1.jpg", 
+      "usuarioSocial": "@alvaro",
+      "enlacePerfil": "https://vercel.com/" 
+    },
+    {
+      "nombre": "Alexys Lozada",
+      "imagen": "/image-2.jpg",
+      "usuarioSocial": "@alexyslozada",
+      "enlacePerfil": "/perfil/alexys"
+    },
+    {
+      "nombre": "Beto Quiroga",
+      "imagen": "/image-3.jpg",
+      "usuarioSocial": "@betoquiroga",
+      "enlacePerfil": "/perfil/beto"
+    }
+  ],
+   "paraQuienEs": [
+      "Principiantes sin experiencia previa en programación.",
+      "Profesionales de otras áreas que buscan una transición al desarrollo de software.",
+      "Estudiantes interesados en integrar la IA desde el inicio de su aprendizaje de código.",
+      "Cualquier persona curiosa sobre cómo la IA puede potenciar el desarrollo de software."
+    ],
+    "conocimientosPrevios": [
+      "No se requieren conocimientos previos de programación.",
+      "Familiaridad básica con el uso de computadoras e internet."
+    ],
+    "temarios": [
+      {
+        "title": "Módulo 1: Fundamentos de Programación",
+        "items": [
+          "Introducción a la programación y su importancia en la era de la IA",
+          "Conceptos básicos: variables, tipos de datos, operadores",
+          "Estructuras de control de flujo: condicionales y bucles",
+          "Funciones: definición, invocación y parámetros",
+          "Introducción a la programación orientada a objetos (POO)"
+        ]
+      },
+      {
+        "title": "Módulo 2: Algoritmos y Estructuras de Datos",
+        "items": [
+          "Concepto de algoritmo y su diseño",
+          "Estructuras de datos fundamentales: arreglos, listas, diccionarios/mapas",
+          "Algoritmos de búsqueda y ordenamiento básicos",
+          "Complejidad algorítmica (Big O notation)",
+          "Aplicación de algoritmos en problemas reales"
+        ]
+      },
+      {
+        "title": "Módulo 3: Desarrollo Web Básico con IA",
+        "items": [
+          "Introducción a HTML, CSS y JavaScript para el frontend",
+          "Creación de interfaces de usuario sencillas",
+          "Uso de IA para generar fragmentos de código HTML/CSS/JS",
+          "Automatización de tareas de desarrollo web con herramientas de IA",
+          "Principios de diseño responsivo asistido por IA"
+        ]
+      },
+      {
+        "title": "Módulo 4: Consumo y Uso de APIs y Servicios Web",
+        "items": [
+          "¿Qué es una API? Conceptos RESTful",
+          "Consumo de APIs públicas (ej. APIs de datos, clima)",
+          "Integración de servicios web de terceros (ej. Stripe, Google Maps)",
+          "Uso de IA para entender y documentar APIs",
+          "Generación de código para llamadas a APIs con IA"
+        ]
+      },
+      {
+        "title": "Módulo 5: Integración de IA en Proyectos de Software (Nivel Básico)",
+        "items": [
+          "Introducción a los modelos de lenguaje grandes (LLMs)",
+          "Uso de APIs de IA (ej. OpenAI GPT, Gemini API)",
+          "Generación de texto: resúmenes, descripciones",
+          "Generación de código: funciones, clases, scripts",
+          "Asistencia de IA en depuración y optimización de código"
+        ]
+      },
+      {
+        "title": "Módulo 6: Buenas Prácticas y Herramientas con IA",
+        "items": [
+          "Control de versiones con Git y GitHub asistido por IA",
+          "Entornos de desarrollo integrados (IDE) y sus funcionalidades de IA",
+          "Manejo de errores y depuración inteligente",
+          "Escritura de código limpio y mantenible con sugerencias de IA",
+          "Colaboración en proyectos de software con herramientas de IA"
+        ]
+      },
+      {
+        "title": "Módulo 7: Publicación y Mantenimiento de Proyectos",
+        "items": [
+          "Conceptos de hosting y dominios",
+          "Despliegue de aplicaciones web sencillas (ej. Vercel, Netlify)",
+          "Monitoreo básico de aplicaciones con ayuda de IA",
+          "Actualizaciones y mantenimiento de proyectos",
+          "Resolución de problemas post-despliegue con asistencia de IA"
+        ]
+      },
+      {
+        "title": "Módulo 8: Proyecto Final y Próximos Pasos",
+        "items": [
+          "Desarrollo de un proyecto práctico aplicando lo aprendido",
+          "Integración de múltiples herramientas y conceptos",
+          "Presentación del proyecto y feedback",
+          "Recursos para continuar aprendiendo sobre programación e IA",
+          "Tendencias futuras en el desarrollo de software con IA"
+        ]
+      }
+    ],
+    "fecha": "2025-06-28T00:00:00",
+    "learnings": [
+      "Comprender las bases de la programación",
+      "Comprender los requerimientos de un proyecto",
+      "Traducir los requerimientos a buenos prompts para la IA",
+      "Entender y analizar el código que entrega la IA",
+      "Publicar el proyecto en internet",
+      "Hacer mejoras al proyecto luego de publicado"
+    ],
+    "details": {
+      "date": "28 Jun 2025",
+      "duration": "8 horas",
+      "level": "Básico",
+      "offer": "Mira las primeras clases gratis"
+    },
+    "remainingSeats": "Quedan pocos asientos disponibles"
+
   }
+  
+  
 ]

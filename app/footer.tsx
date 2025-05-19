@@ -47,7 +47,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-white border-t border-gray-200">
+    <footer className="bg-[#E1F5FE] border-t border-gray-200">
       <div className="container mx-auto px-4 py-8 md:py-12">
         {/* Logo y título principal para móviles */}
         <div className="md:hidden flex flex-col items-center mb-8">
