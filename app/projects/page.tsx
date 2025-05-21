@@ -1,12 +1,12 @@
 import Footer from "../footer";
 
 import Navbar from "../navbar";
-import ProjectHero from "./hero";
+import Certificado from "./certificado";
 
 const Projects = () => {
     return ( <div>
         <Navbar />
-<ProjectHero />
+        <Certificado/>
         <Footer />
     </div> );
 }
