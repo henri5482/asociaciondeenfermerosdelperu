@@ -1,849 +1,724 @@
 [
-
-    {
-      "id": "programacion-ia",
-      "slug": "programacion-ia",
-      "category": "Inteligencia Artificial",
-      "src": "/paypal.jpg",
-      "name": "IA desde Cero",
-      "titulo": "Programación desde cero con Inteligencia Artificial",
-      "descripcion": "Aprende a programar desde cero integrando la Inteligencia Artificial en todas las etapas del desarrollo de software. Curso presencial en Miraflores, Lima - Perú.",
-      "fechatext": "Disponible desde el sábado 28 de junio",
-      "about": "Este curso está diseñado para aquellos que desean aprender a programar desde cero, integrando la Inteligencia Artificial en cada etapa del desarrollo de software. A lo largo de 8 horas, los estudiantes adquirirán conocimientos fundamentales de programación y aprenderán a utilizar herramientas de IA para optimizar su proceso de aprendizaje y desarrollo.",
-      "profesores": [
-        {
-          "nombre": "Alvaro Felipe Chávez",
-          "imagen": "/image-1.jpg",
-          "usuarioSocial": "@alvaro",
-          "enlacePerfil": "https://vercel.com/"
-        },
-        {
-          "nombre": "Alexys Lozada",
-          "imagen": "/image-2.jpg",
-          "usuarioSocial": "@alexyslozada",
-          "enlacePerfil": "/perfil/alexys"
-        },
-        {
-          "nombre": "Beto Quiroga",
-          "imagen": "/image-3.jpg",
-          "usuarioSocial": "@betoquiroga",
-          "enlacePerfil": "/perfil/beto"
-        }
-      ],
-      "paraQuienEs": [
-        "Principiantes sin experiencia previa en programación.",
-        "Profesionales de otras áreas que buscan una transición al desarrollo de software.",
-        "Estudiantes interesados en integrar la IA desde el inicio de su aprendizaje de código.",
-        "Cualquier persona curiosa sobre cómo la IA puede potenciar el desarrollo de software."
-      ],
-      "conocimientosPrevios": [
-        "No se requieren conocimientos previos de programación.",
-        "Familiaridad básica con el uso de computadoras e internet."
-      ],
-       "temarios": [
-          {
-            "title": "Módulo 1: Fundamentos de Programación",
-            "items": [
-              "Introducción a la programación y su importancia en la era de la IA",
-              "Conceptos básicos: variables, tipos de datos, operadores",
-              "Estructuras de control de flujo: condicionales y bucles",
-              "Funciones: definición, invocación y parámetros",
-              "Introducción a la programación orientada a objetos (POO)"
-            ]
-          },
-          {
-            "title": "Módulo 2: Algoritmos y Estructuras de Datos",
-            "items": [
-              "Concepto de algoritmo y su diseño",
-              "Estructuras de datos fundamentales: arreglos, listas, diccionarios/mapas",
-              "Algoritmos de búsqueda y ordenamiento básicos",
-              "Complejidad algorítmica (Big O notation)",
-              "Aplicación de algoritmos en problemas reales"
-            ]
-          },
-          {
-            "title": "Módulo 3: Desarrollo Web Básico con IA",
-            "items": [
-              "Introducción a HTML, CSS y JavaScript para el frontend",
-              "Creación de interfaces de usuario sencillas",
-              "Uso de IA para generar fragmentos de código HTML/CSS/JS",
-              "Automatización de tareas de desarrollo web con herramientas de IA",
-              "Principios de diseño responsivo asistido por IA"
-            ]
-          },
-          {
-            "title": "Módulo 4: Consumo y Uso de APIs y Servicios Web",
-            "items": [
-              "¿Qué es una API? Conceptos RESTful",
-              "Consumo de APIs públicas (ej. APIs de datos, clima)",
-              "Integración de servicios web de terceros (ej. Stripe, Google Maps)",
-              "Uso de IA para entender y documentar APIs",
-              "Generación de código para llamadas a APIs con IA"
-            ]
-          },
-          {
-            "title": "Módulo 5: Integración de IA en Proyectos de Software (Nivel Básico)",
-            "items": [
-              "Introducción a los modelos de lenguaje grandes (LLMs)",
-              "Uso de APIs de IA (ej. OpenAI GPT, Gemini API)",
-              "Generación de texto: resúmenes, descripciones",
-              "Generación de código: funciones, clases, scripts",
-              "Asistencia de IA en depuración y optimización de código"
-            ]
-          },
-          {
-            "title": "Módulo 6: Buenas Prácticas y Herramientas con IA",
-            "items": [
-              "Control de versiones con Git y GitHub asistido por IA",
-              "Entornos de desarrollo integrados (IDE) y sus funcionalidades de IA",
-              "Manejo de errores y depuración inteligente",
-              "Escritura de código limpio y mantenible con sugerencias de IA",
-              "Colaboración en proyectos de software con herramientas de IA"
-            ]
-          },
-          {
-            "title": "Módulo 7: Publicación y Mantenimiento de Proyectos",
-            "items": [
-              "Conceptos de hosting y dominios",
-              "Despliegue de aplicaciones web sencillas (ej. Vercel, Netlify)",
-              "Monitoreo básico de aplicaciones con ayuda de IA",
-              "Actualizaciones y mantenimiento de proyectos",
-              "Resolución de problemas post-despliegue con asistencia de IA"
-            ]
-          },
-          {
-            "title": "Módulo 8: Proyecto Final y Próximos Pasos",
-            "items": [
-              "Desarrollo de un proyecto práctico aplicando lo aprendido",
-              "Integración de múltiples herramientas y conceptos",
-              "Presentación del proyecto y feedback",
-              "Recursos para continuar aprendiendo sobre programación e IA",
-              "Tendencias futuras en el desarrollo de software con IA"
-            ]
-          }
-        ],
-      "fecha": "2025-06-28T00:00:00",
-      "learnings": [
-        "Comprender las bases de la programación",
-        "Comprender los requerimientos de un proyecto",
-        "Traducir los requerimientos a buenos prompts para la IA",
-        "Entender y analizar el código que entrega la IA",
-        "Publicar el proyecto en internet",
-        "Hacer mejoras al proyecto luego de publicado"
-      ],
-      "details": {
-        "date": "28 Jun 2025",
-        "duration": "8 horas",
-        "level": "Básico",
-        "offer": "Mira las primeras clases gratis"
+  {
+    "id": "desarrollo-web-ia",
+    "slug": "desarrollo-web-ia",
+    "category": "Desarrollo ",
+    "src": "/redbull.jpg",
+    "name": "Desarrollo ",
+    "titulo": "Construye Sitios Web Modernos con Asistencia de IA",
+    "descripcion": "Aprende a desarrollar sitios web interactivos y responsivos utilizando herramientas de Inteligencia Artificial para agilizar el proceso. Curso presencial en Miraflores, Lima - Perú.",
+    "fechatext": "Disponible desde el viernes 11 de julio",
+    "about": "Este curso de 10 horas te sumergirá en el mundo del desarrollo web moderno, enseñándote a aprovechar la IA para generar código, optimizar diseños y automatizar tareas. Es ideal para quienes desean construir su primer sitio web o mejorar su flujo de trabajo.",
+    "profesores": [
+      {
+        "nombre": "Alvaro Felipe Chávez",
+        "imagen": "/image-1.jpg",
+        "usuarioSocial": "@alvaro",
+        "enlacePerfil": "https://vercel.com/"
       },
-      "remainingSeats": "19 estudiantes",
-      "precio": 28,
-      "descuento": 0.15 
+      {
+        "nombre": "Alexys Lozada",
+        "imagen": "/image-2.jpg",
+        "usuarioSocial": "@alexyslozada",
+        "enlacePerfil": "/perfil/alexys"
+      }
+    ],
+    "paraQuienEs": [
+      "Diseñadores que quieren incursionar en el código.",
+      "Emprendedores que buscan crear su propia presencia online.",
+      "Estudiantes de programación que quieren acelerar su aprendizaje.",
+      "Cualquier persona interesada en el desarrollo web asistido por IA."
+    ],
+    "conocimientosPrevios": [
+      "Familiaridad básica con el uso de computadoras e internet."
+    ],
+    "temarios": [
+      {
+        "title": "Módulo 1: Fundamentos de HTML y CSS con IA",
+        "items": [
+          "Estructura de documentos HTML con IA",
+          "Estilos CSS para diseño responsivo con asistencia de IA",
+          "Generación de layouts con IA",
+          "Optimización de imágenes para la web con IA"
+        ]
+      },
+      {
+        "title": "Módulo 2: JavaScript Interactivo con IA",
+        "items": [
+          "Conceptos básicos de JavaScript",
+          "Manipulación del DOM con IA",
+          "Eventos e interactividad en el navegador",
+          "Validación de formularios con asistencia de IA"
+        ]
+      },
+      {
+        "title": "Módulo 3: Herramientas de IA para Diseño y Prototipado",
+        "items": [
+          "Figma y herramientas de diseño con plugins de IA",
+          "Generación de wireframes y maquetas con IA",
+          "Creación de paletas de colores y tipografías con IA",
+          "Prototipos interactivos asistidos por IA"
+        ]
+      }
+    ],
+    "fecha": "2025-07-11T00:00:00",
+    "learnings": [
+      "Diseñar y construir sitios web modernos.",
+      "Utilizar IA para generar código y optimizar el diseño.",
+      "Desplegar sitios web en la nube.",
+      "Resolver problemas comunes de desarrollo web con IA."
+    ],
+    "details": {
+      "date": "11 Jul 2025",
+      "duration": "10 horas",
+      "level": "Básico",
+      "offer": "Acceso a plantillas de IA exclusivas"
     },
-     {
-      "id": "programacion-ia",
-      "slug": "programacion-ia",
-      "category": "Inteligencia Artificial",
-      "src": "/paypal.jpg",
-      "name": "IA desde Cero",
-      "titulo": "Programación desde cero con Inteligencia Artificial",
-      "descripcion": "Aprende a programar desde cero integrando la Inteligencia Artificial en todas las etapas del desarrollo de software. Curso presencial en Miraflores, Lima - Perú.",
-      "fechatext": "Disponible desde el sábado 28 de junio",
-      "about": "Este curso está diseñado para aquellos que desean aprender a programar desde cero, integrando la Inteligencia Artificial en cada etapa del desarrollo de software. A lo largo de 8 horas, los estudiantes adquirirán conocimientos fundamentales de programación y aprenderán a utilizar herramientas de IA para optimizar su proceso de aprendizaje y desarrollo.",
-      "profesores": [
-        {
-          "nombre": "Alvaro Felipe Chávez",
-          "imagen": "/image-1.jpg",
-          "usuarioSocial": "@alvaro",
-          "enlacePerfil": "https://vercel.com/"
-        },
-        {
-          "nombre": "Alexys Lozada",
-          "imagen": "/image-2.jpg",
-          "usuarioSocial": "@alexyslozada",
-          "enlacePerfil": "/perfil/alexys"
-        },
-        {
-          "nombre": "Beto Quiroga",
-          "imagen": "/image-3.jpg",
-          "usuarioSocial": "@betoquiroga",
-          "enlacePerfil": "/perfil/beto"
-        }
-      ],
-      "paraQuienEs": [
-        "Principiantes sin experiencia previa en programación.",
-        "Profesionales de otras áreas que buscan una transición al desarrollo de software.",
-        "Estudiantes interesados en integrar la IA desde el inicio de su aprendizaje de código.",
-        "Cualquier persona curiosa sobre cómo la IA puede potenciar el desarrollo de software."
-      ],
-      "conocimientosPrevios": [
-        "No se requieren conocimientos previos de programación.",
-        "Familiaridad básica con el uso de computadoras e internet."
-      ],
-       "temarios": [
-          {
-            "title": "Módulo 1: Fundamentos de Programación",
-            "items": [
-              "Introducción a la programación y su importancia en la era de la IA",
-              "Conceptos básicos: variables, tipos de datos, operadores",
-              "Estructuras de control de flujo: condicionales y bucles",
-              "Funciones: definición, invocación y parámetros",
-              "Introducción a la programación orientada a objetos (POO)"
-            ]
-          },
-          {
-            "title": "Módulo 2: Algoritmos y Estructuras de Datos",
-            "items": [
-              "Concepto de algoritmo y su diseño",
-              "Estructuras de datos fundamentales: arreglos, listas, diccionarios/mapas",
-              "Algoritmos de búsqueda y ordenamiento básicos",
-              "Complejidad algorítmica (Big O notation)",
-              "Aplicación de algoritmos en problemas reales"
-            ]
-          },
-          {
-            "title": "Módulo 3: Desarrollo Web Básico con IA",
-            "items": [
-              "Introducción a HTML, CSS y JavaScript para el frontend",
-              "Creación de interfaces de usuario sencillas",
-              "Uso de IA para generar fragmentos de código HTML/CSS/JS",
-              "Automatización de tareas de desarrollo web con herramientas de IA",
-              "Principios de diseño responsivo asistido por IA"
-            ]
-          },
-          {
-            "title": "Módulo 4: Consumo y Uso de APIs y Servicios Web",
-            "items": [
-              "¿Qué es una API? Conceptos RESTful",
-              "Consumo de APIs públicas (ej. APIs de datos, clima)",
-              "Integración de servicios web de terceros (ej. Stripe, Google Maps)",
-              "Uso de IA para entender y documentar APIs",
-              "Generación de código para llamadas a APIs con IA"
-            ]
-          },
-          {
-            "title": "Módulo 5: Integración de IA en Proyectos de Software (Nivel Básico)",
-            "items": [
-              "Introducción a los modelos de lenguaje grandes (LLMs)",
-              "Uso de APIs de IA (ej. OpenAI GPT, Gemini API)",
-              "Generación de texto: resúmenes, descripciones",
-              "Generación de código: funciones, clases, scripts",
-              "Asistencia de IA en depuración y optimización de código"
-            ]
-          },
-          {
-            "title": "Módulo 6: Buenas Prácticas y Herramientas con IA",
-            "items": [
-              "Control de versiones con Git y GitHub asistido por IA",
-              "Entornos de desarrollo integrados (IDE) y sus funcionalidades de IA",
-              "Manejo de errores y depuración inteligente",
-              "Escritura de código limpio y mantenible con sugerencias de IA",
-              "Colaboración en proyectos de software con herramientas de IA"
-            ]
-          },
-          {
-            "title": "Módulo 7: Publicación y Mantenimiento de Proyectos",
-            "items": [
-              "Conceptos de hosting y dominios",
-              "Despliegue de aplicaciones web sencillas (ej. Vercel, Netlify)",
-              "Monitoreo básico de aplicaciones con ayuda de IA",
-              "Actualizaciones y mantenimiento de proyectos",
-              "Resolución de problemas post-despliegue con asistencia de IA"
-            ]
-          },
-          {
-            "title": "Módulo 8: Proyecto Final y Próximos Pasos",
-            "items": [
-              "Desarrollo de un proyecto práctico aplicando lo aprendido",
-              "Integración de múltiples herramientas y conceptos",
-              "Presentación del proyecto y feedback",
-              "Recursos para continuar aprendiendo sobre programación e IA",
-              "Tendencias futuras en el desarrollo de software con IA"
-            ]
-          }
-        ],
-      "fecha": "2025-06-28T00:00:00",
-      "learnings": [
-        "Comprender las bases de la programación",
-        "Comprender los requerimientos de un proyecto",
-        "Traducir los requerimientos a buenos prompts para la IA",
-        "Entender y analizar el código que entrega la IA",
-        "Publicar el proyecto en internet",
-        "Hacer mejoras al proyecto luego de publicado"
-      ],
-      "details": {
-        "date": "28 Jun 2025",
-        "duration": "8 horas",
-        "level": "Básico",
-        "offer": "Mira las primeras clases gratis"
+    "remainingSeats": "15 estudiantes",
+    "precio": 35,
+    "descuento": 0.10
+  },
+  {
+    "id": "data-science-ia",
+    "slug": "data-science-ia",
+    "category": "Desarrollo",
+    "src": "/ai.jpg",
+    "name": "Data Science con IA",
+    "titulo": "Análisis de Datos y Machine Learning con IA",
+    "descripcion": "Sumérgete en el mundo de la Ciencia de Datos y el Machine Learning, utilizando la Inteligencia Artificial para simplificar y acelerar el proceso de análisis. Curso presencial en Miraflores, Lima - Perú.",
+    "fechatext": "Disponible desde el sábado 26 de julio",
+    "about": "En 12 horas, este curso te guiará a través de los conceptos esenciales de la ciencia de datos, desde la recolección y limpieza de datos hasta la creación de modelos predictivos, todo con la asistencia de herramientas de IA.",
+    "profesores": [
+      {
+        "nombre": "Beto Quiroga",
+        "imagen": "/image-3.jpg",
+        "usuarioSocial": "@betoquiroga",
+        "enlacePerfil": "/perfil/beto"
       },
-      "remainingSeats": "19 estudiantes",
-      "precio": 28,
-      "descuento": 0.15 
+      {
+        "nombre": "Alvaro Felipe Chávez",
+        "imagen": "/image-1.jpg",
+        "usuarioSocial": "@alvaro",
+        "enlacePerfil": "https://vercel.com/"
+      }
+    ],
+    "paraQuienEs": [
+      "Estudiantes o profesionales con interés en el análisis de datos.",
+      "Científicos de datos que buscan herramientas para acelerar su trabajo.",
+      "Cualquier persona que quiera entender cómo la IA se aplica en la ciencia de datos."
+    ],
+    "conocimientosPrevios": [
+      "Nociones básicas de matemáticas y estadística son recomendables."
+    ],
+    "temarios": [
+      {
+        "title": "Módulo 1: Introducción a la Ciencia de Datos con IA",
+        "items": [
+          "El rol de la IA en el análisis de datos",
+          "Recolección y preparación de datos asistida por IA",
+          "Visualización de datos inteligente",
+          "Conceptos básicos de estadística con IA"
+        ]
+      },
+      {
+        "title": "Módulo 2: Machine Learning Esencial con IA",
+        "items": [
+          "Tipos de algoritmos de Machine Learning",
+          "Entrenamiento y evaluación de modelos con IA",
+          "Regresión y clasificación asistidas por IA",
+          "Introducción a Redes Neuronales con IA"
+        ]
+      },
+      {
+        "title": "Módulo 3: Herramientas y Proyectos con IA",
+        "items": [
+          "Uso de Python (Pandas, Scikit-learn) con asistencia de IA",
+          "Jupyter Notebooks para el análisis de datos",
+          "Casos de estudio y proyectos prácticos con IA",
+          "Consideraciones éticas en la ciencia de datos con IA"
+        ]
+      }
+    ],
+    "fecha": "2025-07-26T00:00:00",
+    "learnings": [
+      "Realizar análisis de datos completos.",
+      "Construir modelos de Machine Learning.",
+      "Interpretar resultados y tomar decisiones basadas en datos.",
+      "Utilizar la IA para optimizar el flujo de trabajo en ciencia de datos."
+    ],
+    "details": {
+      "date": "26 Jul 2025",
+      "duration": "12 horas",
+      "level": "Intermedio",
+      "offer": "Acceso a datasets premium"
     },
-     {
-      "id": "programacion-ia",
-      "slug": "programacion-ia",
-      "category": "Inteligencia Artificial",
-      "src": "/paypal.jpg",
-      "name": "IA desde Cero",
-      "titulo": "Programación desde cero con Inteligencia Artificial",
-      "descripcion": "Aprende a programar desde cero integrando la Inteligencia Artificial en todas las etapas del desarrollo de software. Curso presencial en Miraflores, Lima - Perú.",
-      "fechatext": "Disponible desde el sábado 28 de junio",
-      "about": "Este curso está diseñado para aquellos que desean aprender a programar desde cero, integrando la Inteligencia Artificial en cada etapa del desarrollo de software. A lo largo de 8 horas, los estudiantes adquirirán conocimientos fundamentales de programación y aprenderán a utilizar herramientas de IA para optimizar su proceso de aprendizaje y desarrollo.",
-      "profesores": [
-        {
-          "nombre": "Alvaro Felipe Chávez",
-          "imagen": "/image-1.jpg",
-          "usuarioSocial": "@alvaro",
-          "enlacePerfil": "https://vercel.com/"
-        },
-        {
-          "nombre": "Alexys Lozada",
-          "imagen": "/image-2.jpg",
-          "usuarioSocial": "@alexyslozada",
-          "enlacePerfil": "/perfil/alexys"
-        },
-        {
-          "nombre": "Beto Quiroga",
-          "imagen": "/image-3.jpg",
-          "usuarioSocial": "@betoquiroga",
-          "enlacePerfil": "/perfil/beto"
-        }
-      ],
-      "paraQuienEs": [
-        "Principiantes sin experiencia previa en programación.",
-        "Profesionales de otras áreas que buscan una transición al desarrollo de software.",
-        "Estudiantes interesados en integrar la IA desde el inicio de su aprendizaje de código.",
-        "Cualquier persona curiosa sobre cómo la IA puede potenciar el desarrollo de software."
-      ],
-      "conocimientosPrevios": [
-        "No se requieren conocimientos previos de programación.",
-        "Familiaridad básica con el uso de computadoras e internet."
-      ],
-       "temarios": [
-          {
-            "title": "Módulo 1: Fundamentos de Programación",
-            "items": [
-              "Introducción a la programación y su importancia en la era de la IA",
-              "Conceptos básicos: variables, tipos de datos, operadores",
-              "Estructuras de control de flujo: condicionales y bucles",
-              "Funciones: definición, invocación y parámetros",
-              "Introducción a la programación orientada a objetos (POO)"
-            ]
-          },
-          {
-            "title": "Módulo 2: Algoritmos y Estructuras de Datos",
-            "items": [
-              "Concepto de algoritmo y su diseño",
-              "Estructuras de datos fundamentales: arreglos, listas, diccionarios/mapas",
-              "Algoritmos de búsqueda y ordenamiento básicos",
-              "Complejidad algorítmica (Big O notation)",
-              "Aplicación de algoritmos en problemas reales"
-            ]
-          },
-          {
-            "title": "Módulo 3: Desarrollo Web Básico con IA",
-            "items": [
-              "Introducción a HTML, CSS y JavaScript para el frontend",
-              "Creación de interfaces de usuario sencillas",
-              "Uso de IA para generar fragmentos de código HTML/CSS/JS",
-              "Automatización de tareas de desarrollo web con herramientas de IA",
-              "Principios de diseño responsivo asistido por IA"
-            ]
-          },
-          {
-            "title": "Módulo 4: Consumo y Uso de APIs y Servicios Web",
-            "items": [
-              "¿Qué es una API? Conceptos RESTful",
-              "Consumo de APIs públicas (ej. APIs de datos, clima)",
-              "Integración de servicios web de terceros (ej. Stripe, Google Maps)",
-              "Uso de IA para entender y documentar APIs",
-              "Generación de código para llamadas a APIs con IA"
-            ]
-          },
-          {
-            "title": "Módulo 5: Integración de IA en Proyectos de Software (Nivel Básico)",
-            "items": [
-              "Introducción a los modelos de lenguaje grandes (LLMs)",
-              "Uso de APIs de IA (ej. OpenAI GPT, Gemini API)",
-              "Generación de texto: resúmenes, descripciones",
-              "Generación de código: funciones, clases, scripts",
-              "Asistencia de IA en depuración y optimización de código"
-            ]
-          },
-          {
-            "title": "Módulo 6: Buenas Prácticas y Herramientas con IA",
-            "items": [
-              "Control de versiones con Git y GitHub asistido por IA",
-              "Entornos de desarrollo integrados (IDE) y sus funcionalidades de IA",
-              "Manejo de errores y depuración inteligente",
-              "Escritura de código limpio y mantenible con sugerencias de IA",
-              "Colaboración en proyectos de software con herramientas de IA"
-            ]
-          },
-          {
-            "title": "Módulo 7: Publicación y Mantenimiento de Proyectos",
-            "items": [
-              "Conceptos de hosting y dominios",
-              "Despliegue de aplicaciones web sencillas (ej. Vercel, Netlify)",
-              "Monitoreo básico de aplicaciones con ayuda de IA",
-              "Actualizaciones y mantenimiento de proyectos",
-              "Resolución de problemas post-despliegue con asistencia de IA"
-            ]
-          },
-          {
-            "title": "Módulo 8: Proyecto Final y Próximos Pasos",
-            "items": [
-              "Desarrollo de un proyecto práctico aplicando lo aprendido",
-              "Integración de múltiples herramientas y conceptos",
-              "Presentación del proyecto y feedback",
-              "Recursos para continuar aprendiendo sobre programación e IA",
-              "Tendencias futuras en el desarrollo de software con IA"
-            ]
-          }
-        ],
-      "fecha": "2025-06-28T00:00:00",
-      "learnings": [
-        "Comprender las bases de la programación",
-        "Comprender los requerimientos de un proyecto",
-        "Traducir los requerimientos a buenos prompts para la IA",
-        "Entender y analizar el código que entrega la IA",
-        "Publicar el proyecto en internet",
-        "Hacer mejoras al proyecto luego de publicado"
-      ],
-      "details": {
-        "date": "28 Jun 2025",
-        "duration": "8 horas",
-        "level": "Básico",
-        "offer": "Mira las primeras clases gratis"
+    "remainingSeats": "12 estudiantes",
+    "precio": 45,
+    "descuento": 0.20
+  },
+  {
+    "id": "marketing-digital-ia",
+    "slug": "marketing-digital-ia",
+    "category": "Desarrollo",
+    "src": "/banner.png",
+    "name": "Marketing Digital con IA",
+    "titulo": "Estrategias de Marketing Potenciadas por Inteligencia Artificial",
+    "descripcion": "Descubre cómo la Inteligencia Artificial puede transformar tus campañas de marketing digital, desde la creación de contenido hasta la optimización de anuncios. Curso presencial en Miraflores, Lima - Perú.",
+    "fechatext": "Disponible desde el sábado 9 de agosto",
+    "about": "Este curso de 8 horas te enseñará a utilizar herramientas de IA para mejorar tu estrategia de marketing digital, aumentar tu alcance y optimizar tu ROI.",
+    "profesores": [
+      {
+        "nombre": "Alexys Lozada",
+        "imagen": "/image-2.jpg",
+        "usuarioSocial": "@alexyslozada",
+        "enlacePerfil": "/perfil/alexys"
       },
-      "remainingSeats": "19 estudiantes",
-      "precio": 28,
-      "descuento": 0.15 
+      {
+        "nombre": "Beto Quiroga",
+        "imagen": "/image-3.jpg",
+        "usuarioSocial": "@betoquiroga",
+        "enlacePerfil": "/perfil/beto"
+      }
+    ],
+    "paraQuienEs": [
+      "Profesionales de marketing que buscan innovar con IA.",
+      "Emprendedores que quieren potenciar su marca online.",
+      "Estudiantes de marketing y comunicación."
+    ],
+    "conocimientosPrevios": [
+      "Nociones básicas de marketing digital."
+    ],
+    "temarios": [
+      {
+        "title": "Módulo 1: Fundamentos de Marketing Digital y IA",
+        "items": [
+          "Introducción al marketing digital y su evolución con IA",
+          "Análisis de audiencia y segmentación con IA",
+          "Creación de buyer personas asistida por IA",
+          "Automatización de marketing con herramientas de IA"
+        ]
+      },
+      {
+        "title": "Módulo 2: Contenido y SEO con IA",
+        "items": [
+          "Generación de contenido (textos, imágenes) con IA",
+          "Optimización SEO con herramientas de IA",
+          "Estrategias de email marketing potenciadas por IA",
+          "Personalización de la experiencia del usuario con IA"
+        ]
+      },
+      {
+        "title": "Módulo 3: Publicidad y Analítica con IA",
+        "items": [
+          "Optimización de campañas de PPC (Google Ads, Facebook Ads) con IA",
+          "Análisis de rendimiento y atribución con IA",
+          "Chatbots y atención al cliente con IA",
+          "Tendencias futuras en marketing digital y IA"
+        ]
+      }
+    ],
+    "fecha": "2025-08-09T00:00:00",
+    "learnings": [
+      "Desarrollar estrategias de marketing digital efectivas.",
+      "Utilizar herramientas de IA para la creación de contenido y optimización.",
+      "Analizar métricas y mejorar el rendimiento de las campañas.",
+      "Implementar soluciones de IA en tus proyectos de marketing."
+    ],
+    "details": {
+      "date": "09 Ago 2025",
+      "duration": "8 horas",
+      "level": "Básico",
+      "offer": "Guías de prompts para marketing"
     },
-     {
-      "id": "programacion-ia",
-      "slug": "programacion-ia",
-      "category": "Inteligencia Artificial",
-      "src": "/paypal.jpg",
-      "name": "IA desde Cero",
-      "titulo": "Programación desde cero con Inteligencia Artificial",
-      "descripcion": "Aprende a programar desde cero integrando la Inteligencia Artificial en todas las etapas del desarrollo de software. Curso presencial en Miraflores, Lima - Perú.",
-      "fechatext": "Disponible desde el sábado 28 de junio",
-      "about": "Este curso está diseñado para aquellos que desean aprender a programar desde cero, integrando la Inteligencia Artificial en cada etapa del desarrollo de software. A lo largo de 8 horas, los estudiantes adquirirán conocimientos fundamentales de programación y aprenderán a utilizar herramientas de IA para optimizar su proceso de aprendizaje y desarrollo.",
-      "profesores": [
-        {
-          "nombre": "Alvaro Felipe Chávez",
-          "imagen": "/image-1.jpg",
-          "usuarioSocial": "@alvaro",
-          "enlacePerfil": "https://vercel.com/"
-        },
-        {
-          "nombre": "Alexys Lozada",
-          "imagen": "/image-2.jpg",
-          "usuarioSocial": "@alexyslozada",
-          "enlacePerfil": "/perfil/alexys"
-        },
-        {
-          "nombre": "Beto Quiroga",
-          "imagen": "/image-3.jpg",
-          "usuarioSocial": "@betoquiroga",
-          "enlacePerfil": "/perfil/beto"
-        }
-      ],
-      "paraQuienEs": [
-        "Principiantes sin experiencia previa en programación.",
-        "Profesionales de otras áreas que buscan una transición al desarrollo de software.",
-        "Estudiantes interesados en integrar la IA desde el inicio de su aprendizaje de código.",
-        "Cualquier persona curiosa sobre cómo la IA puede potenciar el desarrollo de software."
-      ],
-      "conocimientosPrevios": [
-        "No se requieren conocimientos previos de programación.",
-        "Familiaridad básica con el uso de computadoras e internet."
-      ],
-       "temarios": [
-          {
-            "title": "Módulo 1: Fundamentos de Programación",
-            "items": [
-              "Introducción a la programación y su importancia en la era de la IA",
-              "Conceptos básicos: variables, tipos de datos, operadores",
-              "Estructuras de control de flujo: condicionales y bucles",
-              "Funciones: definición, invocación y parámetros",
-              "Introducción a la programación orientada a objetos (POO)"
-            ]
-          },
-          {
-            "title": "Módulo 2: Algoritmos y Estructuras de Datos",
-            "items": [
-              "Concepto de algoritmo y su diseño",
-              "Estructuras de datos fundamentales: arreglos, listas, diccionarios/mapas",
-              "Algoritmos de búsqueda y ordenamiento básicos",
-              "Complejidad algorítmica (Big O notation)",
-              "Aplicación de algoritmos en problemas reales"
-            ]
-          },
-          {
-            "title": "Módulo 3: Desarrollo Web Básico con IA",
-            "items": [
-              "Introducción a HTML, CSS y JavaScript para el frontend",
-              "Creación de interfaces de usuario sencillas",
-              "Uso de IA para generar fragmentos de código HTML/CSS/JS",
-              "Automatización de tareas de desarrollo web con herramientas de IA",
-              "Principios de diseño responsivo asistido por IA"
-            ]
-          },
-          {
-            "title": "Módulo 4: Consumo y Uso de APIs y Servicios Web",
-            "items": [
-              "¿Qué es una API? Conceptos RESTful",
-              "Consumo de APIs públicas (ej. APIs de datos, clima)",
-              "Integración de servicios web de terceros (ej. Stripe, Google Maps)",
-              "Uso de IA para entender y documentar APIs",
-              "Generación de código para llamadas a APIs con IA"
-            ]
-          },
-          {
-            "title": "Módulo 5: Integración de IA en Proyectos de Software (Nivel Básico)",
-            "items": [
-              "Introducción a los modelos de lenguaje grandes (LLMs)",
-              "Uso de APIs de IA (ej. OpenAI GPT, Gemini API)",
-              "Generación de texto: resúmenes, descripciones",
-              "Generación de código: funciones, clases, scripts",
-              "Asistencia de IA en depuración y optimización de código"
-            ]
-          },
-          {
-            "title": "Módulo 6: Buenas Prácticas y Herramientas con IA",
-            "items": [
-              "Control de versiones con Git y GitHub asistido por IA",
-              "Entornos de desarrollo integrados (IDE) y sus funcionalidades de IA",
-              "Manejo de errores y depuración inteligente",
-              "Escritura de código limpio y mantenible con sugerencias de IA",
-              "Colaboración en proyectos de software con herramientas de IA"
-            ]
-          },
-          {
-            "title": "Módulo 7: Publicación y Mantenimiento de Proyectos",
-            "items": [
-              "Conceptos de hosting y dominios",
-              "Despliegue de aplicaciones web sencillas (ej. Vercel, Netlify)",
-              "Monitoreo básico de aplicaciones con ayuda de IA",
-              "Actualizaciones y mantenimiento de proyectos",
-              "Resolución de problemas post-despliegue con asistencia de IA"
-            ]
-          },
-          {
-            "title": "Módulo 8: Proyecto Final y Próximos Pasos",
-            "items": [
-              "Desarrollo de un proyecto práctico aplicando lo aprendido",
-              "Integración de múltiples herramientas y conceptos",
-              "Presentación del proyecto y feedback",
-              "Recursos para continuar aprendiendo sobre programación e IA",
-              "Tendencias futuras en el desarrollo de software con IA"
-            ]
-          }
-        ],
-      "fecha": "2025-06-28T00:00:00",
-      "learnings": [
-        "Comprender las bases de la programación",
-        "Comprender los requerimientos de un proyecto",
-        "Traducir los requerimientos a buenos prompts para la IA",
-        "Entender y analizar el código que entrega la IA",
-        "Publicar el proyecto en internet",
-        "Hacer mejoras al proyecto luego de publicado"
-      ],
-      "details": {
-        "date": "28 Jun 2025",
-        "duration": "8 horas",
-        "level": "Básico",
-        "offer": "Mira las primeras clases gratis"
+    "remainingSeats": "18 estudiantes",
+    "precio": 30,
+    "descuento": 0.15
+  },
+  {
+    "id": "ux-ui-ia",
+    "slug": "ux-ui-ia",
+    "category": "Desarrollo",
+    "src": "/under-armour.jpg",
+    "name": "Diseño UX/UI con IA",
+    "titulo": "Diseño de Experiencias y Interfaces con Inteligencia Artificial",
+    "descripcion": "Aprende a crear experiencias de usuario (UX) e interfaces de usuario (UI) innovadoras, aprovechando las capacidades de la Inteligencia Artificial. Curso presencial en Miraflores, Lima - Perú.",
+    "fechatext": "Disponible desde el viernes 22 de agosto",
+    "about": "Este curso de 10 horas te equipará con las habilidades para diseñar interfaces intuitivas y experiencias de usuario atractivas, integrando herramientas de IA para optimizar tu flujo de trabajo de diseño.",
+    "profesores": [
+      {
+        "nombre": "Alvaro Felipe Chávez",
+        "imagen": "/image-1.jpg",
+        "usuarioSocial": "@alvaro",
+        "enlacePerfil": "https://vercel.com/"
       },
-      "remainingSeats": "19 estudiantes",
-      "precio": 28,
-      "descuento": 0.15 
+      {
+        "nombre": "Alexys Lozada",
+        "imagen": "/image-2.jpg",
+        "usuarioSocial": "@alexyslozada",
+        "enlacePerfil": "/perfil/alexys"
+      }
+    ],
+    "paraQuienEs": [
+      "Diseñadores gráficos y web que buscan expandir sus habilidades.",
+      "Emprendedores interesados en el diseño centrado en el usuario.",
+      "Cualquier persona que quiera diseñar productos digitales atractivos y funcionales."
+    ],
+    "conocimientosPrevios": [
+      "Nociones básicas de diseño gráfico son útiles pero no obligatorias."
+    ],
+    "temarios": [
+      {
+        "title": "Módulo 1: Fundamentos de UX/UI y el rol de la IA",
+        "items": [
+          "Principios de Diseño UX/UI",
+          "Investigación de usuarios asistida por IA",
+          "Creación de user flows y wireframes con IA",
+          "Análisis de usabilidad con herramientas de IA"
+        ]
+      },
+      {
+        "title": "Módulo 2: Diseño de Interfaces con IA",
+        "items": [
+          "Principios de diseño visual y tipografía con IA",
+          "Creación de prototipos de alta fidelidad con IA",
+          "Sistemas de diseño y bibliotecas de componentes con IA",
+          "Accesibilidad y diseño inclusivo asistido por IA"
+        ]
+      },
+      {
+        "title": "Módulo 3: Testing y Optimización con IA",
+        "items": [
+          "Realización de pruebas de usuario con IA",
+          "Recopilación de feedback y mejora iterativa con IA",
+          "Personalización de interfaces con IA",
+          "Tendencias futuras en UX/UI y IA"
+        ]
+      }
+    ],
+    "fecha": "2025-08-22T00:00:00",
+    "learnings": [
+      "Diseñar experiencias de usuario intuitivas.",
+      "Crear interfaces de usuario visualmente atractivas.",
+      "Utilizar IA para acelerar el proceso de diseño.",
+      "Realizar pruebas de usuario y optimizar interfaces."
+    ],
+    "details": {
+      "date": "22 Ago 2025",
+      "duration": "10 horas",
+      "level": "Básico",
+      "offer": "Plantillas de diseño con IA"
     },
-     {
-      "id": "programacion-ia",
-      "slug": "programacion-ia",
-      "category": "esta es prueba 02",
-      "src": "/visa.jpg",
-      "name": "IA desde Cero",
-      "titulo": "Programación desde cero con Inteligencia Artificial",
-      "descripcion": "Aprende a programar desde cero integrando la Inteligencia Artificial en todas las etapas del desarrollo de software. Curso presencial en Miraflores, Lima - Perú.",
-      "fechatext": "Disponible desde el sábado 28 de junio",
-      "about": "Este curso está diseñado para aquellos que desean aprender a programar desde cero, integrando la Inteligencia Artificial en cada etapa del desarrollo de software. A lo largo de 8 horas, los estudiantes adquirirán conocimientos fundamentales de programación y aprenderán a utilizar herramientas de IA para optimizar su proceso de aprendizaje y desarrollo.",
-      "profesores": [
-        {
-          "nombre": "Alvaro Felipe Chávez",
-          "imagen": "/image-1.jpg",
-          "usuarioSocial": "@alvaro",
-          "enlacePerfil": "https://vercel.com/"
-        },
-        {
-          "nombre": "Alexys Lozada",
-          "imagen": "/image-2.jpg",
-          "usuarioSocial": "@alexyslozada",
-          "enlacePerfil": "/perfil/alexys"
-        },
-        {
-          "nombre": "Beto Quiroga",
-          "imagen": "/image-3.jpg",
-          "usuarioSocial": "@betoquiroga",
-          "enlacePerfil": "/perfil/beto"
-        }
-      ],
-      "paraQuienEs": [
-        "Principiantes sin experiencia previa en programación.",
-        "Profesionales de otras áreas que buscan una transición al desarrollo de software.",
-        "Estudiantes interesados en integrar la IA desde el inicio de su aprendizaje de código.",
-        "Cualquier persona curiosa sobre cómo la IA puede potenciar el desarrollo de software."
-      ],
-      "conocimientosPrevios": [
-        "No se requieren conocimientos previos de programación.",
-        "Familiaridad básica con el uso de computadoras e internet."
-      ],
-       "temarios": [
-          {
-            "title": "Módulo 1: Fundamentos de Programación",
-            "items": [
-              "Introducción a la programación y su importancia en la era de la IA",
-              "Conceptos básicos: variables, tipos de datos, operadores",
-              "Estructuras de control de flujo: condicionales y bucles",
-              "Funciones: definición, invocación y parámetros",
-              "Introducción a la programación orientada a objetos (POO)"
-            ]
-          },
-          {
-            "title": "Módulo 2: Algoritmos y Estructuras de Datos",
-            "items": [
-              "Concepto de algoritmo y su diseño",
-              "Estructuras de datos fundamentales: arreglos, listas, diccionarios/mapas",
-              "Algoritmos de búsqueda y ordenamiento básicos",
-              "Complejidad algorítmica (Big O notation)",
-              "Aplicación de algoritmos en problemas reales"
-            ]
-          },
-          {
-            "title": "Módulo 3: Desarrollo Web Básico con IA",
-            "items": [
-              "Introducción a HTML, CSS y JavaScript para el frontend",
-              "Creación de interfaces de usuario sencillas",
-              "Uso de IA para generar fragmentos de código HTML/CSS/JS",
-              "Automatización de tareas de desarrollo web con herramientas de IA",
-              "Principios de diseño responsivo asistido por IA"
-            ]
-          },
-          {
-            "title": "Módulo 4: Consumo y Uso de APIs y Servicios Web",
-            "items": [
-              "¿Qué es una API? Conceptos RESTful",
-              "Consumo de APIs públicas (ej. APIs de datos, clima)",
-              "Integración de servicios web de terceros (ej. Stripe, Google Maps)",
-              "Uso de IA para entender y documentar APIs",
-              "Generación de código para llamadas a APIs con IA"
-            ]
-          },
-          {
-            "title": "Módulo 5: Integración de IA en Proyectos de Software (Nivel Básico)",
-            "items": [
-              "Introducción a los modelos de lenguaje grandes (LLMs)",
-              "Uso de APIs de IA (ej. OpenAI GPT, Gemini API)",
-              "Generación de texto: resúmenes, descripciones",
-              "Generación de código: funciones, clases, scripts",
-              "Asistencia de IA en depuración y optimización de código"
-            ]
-          },
-          {
-            "title": "Módulo 6: Buenas Prácticas y Herramientas con IA",
-            "items": [
-              "Control de versiones con Git y GitHub asistido por IA",
-              "Entornos de desarrollo integrados (IDE) y sus funcionalidades de IA",
-              "Manejo de errores y depuración inteligente",
-              "Escritura de código limpio y mantenible con sugerencias de IA",
-              "Colaboración en proyectos de software con herramientas de IA"
-            ]
-          },
-          {
-            "title": "Módulo 7: Publicación y Mantenimiento de Proyectos",
-            "items": [
-              "Conceptos de hosting y dominios",
-              "Despliegue de aplicaciones web sencillas (ej. Vercel, Netlify)",
-              "Monitoreo básico de aplicaciones con ayuda de IA",
-              "Actualizaciones y mantenimiento de proyectos",
-              "Resolución de problemas post-despliegue con asistencia de IA"
-            ]
-          },
-          {
-            "title": "Módulo 8: Proyecto Final y Próximos Pasos",
-            "items": [
-              "Desarrollo de un proyecto práctico aplicando lo aprendido",
-              "Integración de múltiples herramientas y conceptos",
-              "Presentación del proyecto y feedback",
-              "Recursos para continuar aprendiendo sobre programación e IA",
-              "Tendencias futuras en el desarrollo de software con IA"
-            ]
-          }
-        ],
-      "fecha": "2025-06-28T00:00:00",
-      "learnings": [
-        "Comprender las bases de la programación",
-        "Comprender los requerimientos de un proyecto",
-        "Traducir los requerimientos a buenos prompts para la IA",
-        "Entender y analizar el código que entrega la IA",
-        "Publicar el proyecto en internet",
-        "Hacer mejoras al proyecto luego de publicado"
-      ],
-      "details": {
-        "date": "28 Jun 2025",
-        "duration": "8 horas",
-        "level": "Básico",
-        "offer": "Mira las primeras clases gratis"
+    "remainingSeats": "17 estudiantes",
+    "precio": 40,
+    "descuento": 0.10
+  },
+  {
+    "id": "ciberseguridad-ia",
+    "slug": "ciberseguridad-ia",
+    "category": "Desarrollo",
+    "src": "/zara.jpeg",
+    "name": "Ciberseguridad con IA",
+    "titulo": "Protege tus Sistemas con Inteligencia Artificial",
+    "descripcion": "Conoce cómo la Inteligencia Artificial se aplica en la ciberseguridad para detectar amenazas, prevenir ataques y proteger datos. Curso presencial en Miraflores, Lima - Perú.",
+    "fechatext": "Disponible desde el sábado 6 de septiembre",
+    "about": "En 12 horas, este curso te introducirá a las técnicas de ciberseguridad avanzadas potenciadas por IA, preparándote para enfrentar los desafíos de la seguridad digital moderna.",
+    "profesores": [
+      {
+        "nombre": "Beto Quiroga",
+        "imagen": "/image-3.jpg",
+        "usuarioSocial": "@betoquiroga",
+        "enlacePerfil": "/perfil/beto"
       },
-      "remainingSeats": "19 estudiantes",
-      "precio": 28,
-      "descuento": 0.15 
+      {
+        "nombre": "Alvaro Felipe Chávez",
+        "imagen": "/image-1.jpg",
+        "usuarioSocial": "@alvaro",
+        "enlacePerfil": "https://vercel.com/"
+      }
+    ],
+    "paraQuienEs": [
+      "Profesionales de TI y seguridad informática.",
+      "Estudiantes de sistemas y redes.",
+      "Cualquier persona preocupada por la seguridad de sus datos."
+    ],
+    "conocimientosPrevios": [
+      "Nociones básicas de redes y sistemas operativos."
+    ],
+    "temarios": [
+      {
+        "title": "Módulo 1: Introducción a la Ciberseguridad y la IA",
+        "items": [
+          "Fundamentos de ciberseguridad",
+          "El rol de la IA en la detección de amenazas",
+          "Análisis de vulnerabilidades con IA",
+          "Principios de seguridad de la información"
+        ]
+      },
+      {
+        "title": "Módulo 2: Detección y Prevención de Amenazas con IA",
+        "items": [
+          "Sistemas de detección de intrusiones (IDS) con IA",
+          "Machine Learning para la detección de malware",
+          "Análisis de comportamiento de usuarios con IA",
+          "Protección de redes con soluciones de IA"
+        ]
+      },
+      {
+        "title": "Módulo 3: Respuesta a Incidentes y Seguridad de Datos con IA",
+        "items": [
+          "Automatización de la respuesta a incidentes con IA",
+          "Cifrado de datos y privacidad asistida por IA",
+          "Auditorías de seguridad con herramientas de IA",
+          "Desafíos y futuro de la ciberseguridad con IA"
+        ]
+      }
+    ],
+    "fecha": "2025-09-06T00:00:00",
+    "learnings": [
+      "Identificar y mitigar amenazas cibernéticas.",
+      "Implementar soluciones de seguridad basadas en IA.",
+      "Proteger sistemas y datos de ataques.",
+      "Mantenerse actualizado sobre las últimas tendencias en ciberseguridad con IA."
+    ],
+    "details": {
+      "date": "06 Sep 2025",
+      "duration": "12 horas",
+      "level": "Intermedio",
+      "offer": "Simulaciones de ciberataques"
     },
-     {
-      "id": "desarrollo-web",
-      "slug": "desarrollo-web",
-      "category": "Inteligencia Artificial",
-      "src": "/spalding.jpg",
-      "name": "esta es una prueba",
-      "titulo": "esta es una prueba",
-      "descripcion": "Aprende a programar desde cero integrando la Inteligencia Artificial en todas las etapas del desarrollo de software. Curso presencial en Miraflores, Lima - Perú.",
-      "fechatext": "Disponible desde el sábado 28 de junio",
-      "about": "Este curso está diseñado para aquellos que desean aprender a programar desde cero, integrando la Inteligencia Artificial en cada etapa del desarrollo de software. A lo largo de 8 horas, los estudiantes adquirirán conocimientos fundamentales de programación y aprenderán a utilizar herramientas de IA para optimizar su proceso de aprendizaje y desarrollo.",
-      "profesores": [
-        {
-          "nombre": "Alvaro Felipe Chávez",
-          "imagen": "/image-1.jpg",
-          "usuarioSocial": "@alvaro",
-          "enlacePerfil": "https://vercel.com/"
-        },
-        {
-          "nombre": "Alexys Lozada",
-          "imagen": "/image-2.jpg",
-          "usuarioSocial": "@alexyslozada",
-          "enlacePerfil": "/perfil/alexys"
-        },
-        {
-          "nombre": "Beto Quiroga",
-          "imagen": "/image-3.jpg",
-          "usuarioSocial": "@betoquiroga",
-          "enlacePerfil": "/perfil/beto"
-        }
-      ],
-      "paraQuienEs": [
-        "Principiantes sin experiencia previa en programación.",
-        "Profesionales de otras áreas que buscan una transición al desarrollo de software.",
-        "Estudiantes interesados en integrar la IA desde el inicio de su aprendizaje de código.",
-        "Cualquier persona curiosa sobre cómo la IA puede potenciar el desarrollo de software."
-      ],
-      "conocimientosPrevios": [
-        "No se requieren conocimientos previos de programación.",
-        "Familiaridad básica con el uso de computadoras e internet."
-      ],
-       "temarios": [
-          {
-            "title": "Módulo 1: Fundamentos de Programación",
-            "items": [
-              "Introducción a la programación y su importancia en la era de la IA",
-              "Conceptos básicos: variables, tipos de datos, operadores",
-              "Estructuras de control de flujo: condicionales y bucles",
-              "Funciones: definición, invocación y parámetros",
-              "Introducción a la programación orientada a objetos (POO)"
-            ]
-          },
-          {
-            "title": "Módulo 2: Algoritmos y Estructuras de Datos",
-            "items": [
-              "Concepto de algoritmo y su diseño",
-              "Estructuras de datos fundamentales: arreglos, listas, diccionarios/mapas",
-              "Algoritmos de búsqueda y ordenamiento básicos",
-              "Complejidad algorítmica (Big O notation)",
-              "Aplicación de algoritmos en problemas reales"
-            ]
-          },
-          {
-            "title": "Módulo 3: Desarrollo Web Básico con IA",
-            "items": [
-              "Introducción a HTML, CSS y JavaScript para el frontend",
-              "Creación de interfaces de usuario sencillas",
-              "Uso de IA para generar fragmentos de código HTML/CSS/JS",
-              "Automatización de tareas de desarrollo web con herramientas de IA",
-              "Principios de diseño responsivo asistido por IA"
-            ]
-          },
-          {
-            "title": "Módulo 4: Consumo y Uso de APIs y Servicios Web",
-            "items": [
-              "¿Qué es una API? Conceptos RESTful",
-              "Consumo de APIs públicas (ej. APIs de datos, clima)",
-              "Integración de servicios web de terceros (ej. Stripe, Google Maps)",
-              "Uso de IA para entender y documentar APIs",
-              "Generación de código para llamadas a APIs con IA"
-            ]
-          },
-          {
-            "title": "Módulo 5: Integración de IA en Proyectos de Software (Nivel Básico)",
-            "items": [
-              "Introducción a los modelos de lenguaje grandes (LLMs)",
-              "Uso de APIs de IA (ej. OpenAI GPT, Gemini API)",
-              "Generación de texto: resúmenes, descripciones",
-              "Generación de código: funciones, clases, scripts",
-              "Asistencia de IA en depuración y optimización de código"
-            ]
-          },
-          {
-            "title": "Módulo 6: Buenas Prácticas y Herramientas con IA",
-            "items": [
-              "Control de versiones con Git y GitHub asistido por IA",
-              "Entornos de desarrollo integrados (IDE) y sus funcionalidades de IA",
-              "Manejo de errores y depuración inteligente",
-              "Escritura de código limpio y mantenible con sugerencias de IA",
-              "Colaboración en proyectos de software con herramientas de IA"
-            ]
-          },
-          {
-            "title": "Módulo 7: Publicación y Mantenimiento de Proyectos",
-            "items": [
-              "Conceptos de hosting y dominios",
-              "Despliegue de aplicaciones web sencillas (ej. Vercel, Netlify)",
-              "Monitoreo básico de aplicaciones con ayuda de IA",
-              "Actualizaciones y mantenimiento de proyectos",
-              "Resolución de problemas post-despliegue con asistencia de IA"
-            ]
-          },
-          {
-            "title": "Módulo 8: Proyecto Final y Próximos Pasos",
-            "items": [
-              "Desarrollo de un proyecto práctico aplicando lo aprendido",
-              "Integración de múltiples herramientas y conceptos",
-              "Presentación del proyecto y feedback",
-              "Recursos para continuar aprendiendo sobre programación e IA",
-              "Tendencias futuras en el desarrollo de software con IA"
-            ]
-          }
-        ],
-      "fecha": "2025-06-28T00:00:00",
-      "learnings": [
-        "Comprender las bases de la programación",
-        "Comprender los requerimientos de un proyecto",
-        "Traducir los requerimientos a buenos prompts para la IA",
-        "Entender y analizar el código que entrega la IA",
-        "Publicar el proyecto en internet",
-        "Hacer mejoras al proyecto luego de publicado"
-      ],
-      "details": {
-        "date": "28 Jun 2025",
-        "duration": "8 horas",
-        "level": "Básico",
-        "offer": "Mira las primeras clases gratis"
+    "remainingSeats": "10 estudiantes",
+    "precio": 50,
+    "descuento": 0.25
+  },
+  {
+    "id": "cloud-computing-ia",
+    "slug": "cloud-computing-ia",
+    "category": "Desarrollo",
+    "src": "/sony.jpg",
+    "name": "Cloud Computing con IA",
+    "titulo": "Gestión y Optimización de Infraestructura en la Nube con IA",
+    "descripcion": "Aprende a desplegar, gestionar y optimizar aplicaciones en la nube, utilizando la Inteligencia Artificial para mejorar la eficiencia y el rendimiento. Curso presencial en Miraflores, Lima - Perú.",
+    "fechatext": "Disponible desde el viernes 19 de septiembre",
+    "about": "Este curso de 10 horas te proporcionará las bases para trabajar con plataformas en la nube, enfocándose en cómo la IA puede automatizar tareas y optimizar el uso de recursos.",
+    "profesores": [
+      {
+        "nombre": "Alexys Lozada",
+        "imagen": "/image-2.jpg",
+        "usuarioSocial": "@alexyslozada",
+        "enlacePerfil": "/perfil/alexys"
       },
-      "remainingSeats": "19 estudiantes",
-      "precio": 28,
-      "descuento": 0.15 
-    }
+      {
+        "nombre": "Beto Quiroga",
+        "imagen": "/image-3.jpg",
+        "usuarioSocial": "@betoquiroga",
+        "enlacePerfil": "/perfil/beto"
+      }
+    ],
+    "paraQuienEs": [
+      "Administradores de sistemas y DevOps.",
+      "Desarrolladores que trabajan con servicios en la nube.",
+      "Profesionales de TI interesados en la optimización con IA."
+    ],
+    "conocimientosPrevios": [
+      "Familiaridad básica con sistemas operativos y redes."
+    ],
+    "temarios": [
+      {
+        "title": "Módulo 1: Introducción a Cloud Computing y la IA",
+        "items": [
+          "Conceptos de la nube (IaaS, PaaS, SaaS)",
+          "Proveedores de servicios en la nube (AWS, Azure, GCP)",
+          "El papel de la IA en la gestión de la nube",
+          "Optimización de costos en la nube con IA"
+        ]
+      },
+      {
+        "title": "Módulo 2: Despliegue y Operaciones con IA",
+        "items": [
+          "Despliegue de aplicaciones en la nube con asistencia de IA",
+          "Monitoreo y logging inteligente con IA",
+          "Automatización de operaciones en la nube con IA",
+          "Escalabilidad y balanceo de carga asistido por IA"
+        ]
+      },
+      {
+        "title": "Módulo 3: Servicios de IA en la Nube",
+        "items": [
+          "Uso de servicios de IA pre-entrenados (visión, lenguaje, etc.)",
+          "Creación de modelos de Machine Learning en la nube",
+          "Seguridad en la nube con soluciones de IA",
+          "Futuro de Cloud Computing y la IA"
+        ]
+      }
+    ],
+    "fecha": "2025-09-19T00:00:00",
+    "learnings": [
+      "Gestionar eficientemente recursos en la nube.",
+      "Desplegar y mantener aplicaciones en entornos cloud.",
+      "Utilizar IA para la optimización de costos y rendimiento.",
+      "Integrar servicios de IA en proyectos basados en la nube."
+    ],
+    "details": {
+      "date": "19 Sep 2025",
+      "duration": "10 horas",
+      "level": "Intermedio",
+      "offer": "Créditos en plataformas cloud"
+    },
+    "remainingSeats": "14 estudiantes",
+    "precio": 48,
+    "descuento": 0.18
+  },
+  {
+    "id": "emprendimiento-ia",
+    "slug": "emprendimiento-ia",
+    "category": "Desarrollo",
+    "src": "/nord.jpg",
+    "name": "Emprendimiento con IA",
+    "titulo": "Crea y Escala tu Startup con Inteligencia Artificial",
+    "descripcion": "Aprende a idear, validar y escalar tu negocio utilizando herramientas y estrategias de Inteligencia Artificial. Curso presencial en Miraflores, Lima - Perú.",
+    "fechatext": "Disponible desde el sábado 4 de octubre",
+    "about": "Este curso de 8 horas está diseñado para emprendedores que buscan una ventaja competitiva, mostrándote cómo la IA puede ayudarte en cada etapa de tu startup, desde la investigación de mercado hasta el crecimiento.",
+    "profesores": [
+      {
+        "nombre": "Alvaro Felipe Chávez",
+        "imagen": "/image-1.jpg",
+        "usuarioSocial": "@alvaro",
+        "enlacePerfil": "https://vercel.com/"
+      },
+      {
+        "nombre": "Alexys Lozada",
+        "imagen": "/image-2.jpg",
+        "usuarioSocial": "@alexyslozada",
+        "enlacePerfil": "/perfil/alexys"
+      },
+      {
+        "nombre": "Beto Quiroga",
+        "imagen": "/image-3.jpg",
+        "usuarioSocial": "@betoquiroga",
+        "enlacePerfil": "/perfil/beto"
+      }
+    ],
+    "paraQuienEs": [
+      "Emprendedores con una idea de negocio.",
+      "Personas que quieren iniciar su propia startup.",
+      "Profesionales que buscan aplicar la IA en el ámbito empresarial."
+    ],
+    "conocimientosPrevios": [
+      "No se requieren conocimientos previos de programación o IA, solo entusiasmo por emprender."
+    ],
+    "temarios": [
+      {
+        "title": "Módulo 1: Ideación y Validación con IA",
+        "items": [
+          "Generación de ideas de negocio con IA",
+          "Investigación de mercado y análisis de competencia con IA",
+          "Creación de propuestas de valor y modelos de negocio con IA",
+          "Validación de hipótesis y MVPs con asistencia de IA"
+        ]
+      },
+      {
+        "title": "Módulo 2: Desarrollo de Producto y Marketing con IA",
+        "items": [
+          "Diseño de productos y servicios asistido por IA",
+          "Estrategias de lanzamiento y crecimiento con IA",
+          "Automatización de marketing y ventas con IA",
+          "Gestión de relaciones con clientes (CRM) con IA"
+        ]
+      },
+      {
+        "title": "Módulo 3: Finanzas y Escalado con IA",
+        "items": [
+          "Análisis financiero y proyecciones con IA",
+          "Optimización de operaciones y procesos con IA",
+          "Búsqueda de financiación y pitch decks con IA",
+          "Retos y oportunidades futuras del emprendimiento con IA"
+        ]
+      }
+    ],
+    "fecha": "2025-10-04T00:00:00",
+    "learnings": [
+      "Idear y validar oportunidades de negocio.",
+      "Utilizar la IA para optimizar procesos de startup.",
+      "Desarrollar estrategias de marketing y crecimiento.",
+      "Escalar tu negocio con el apoyo de la Inteligencia Artificial."
+    ],
+    "details": {
+      "date": "04 Oct 2025",
+      "duration": "8 horas",
+      "level": "Básico",
+      "offer": "Acceso a una comunidad de emprendedores"
+    },
+    "remainingSeats": "20 estudiantes",
+    "precio": 32,
+    "descuento": 0.12
+  },
+  {
+    "id": "emprendimiento-ia",
+    "slug": "emprendimiento-ia",
+    "category": "Desarrollo",
+    "src": "/nord.jpg",
+    "name": "Emprendimiento con IA",
+    "titulo": "Crea y Escala tu Startup con Inteligencia Artificial",
+    "descripcion": "Aprende a idear, validar y escalar tu negocio utilizando herramientas y estrategias de Inteligencia Artificial. Curso presencial en Miraflores, Lima - Perú.",
+    "fechatext": "Disponible desde el sábado 4 de octubre",
+    "about": "Este curso de 8 horas está diseñado para emprendedores que buscan una ventaja competitiva, mostrándote cómo la IA puede ayudarte en cada etapa de tu startup, desde la investigación de mercado hasta el crecimiento.",
+    "profesores": [
+      {
+        "nombre": "Alvaro Felipe Chávez",
+        "imagen": "/image-1.jpg",
+        "usuarioSocial": "@alvaro",
+        "enlacePerfil": "https://vercel.com/"
+      },
+      {
+        "nombre": "Alexys Lozada",
+        "imagen": "/image-2.jpg",
+        "usuarioSocial": "@alexyslozada",
+        "enlacePerfil": "/perfil/alexys"
+      },
+      {
+        "nombre": "Beto Quiroga",
+        "imagen": "/image-3.jpg",
+        "usuarioSocial": "@betoquiroga",
+        "enlacePerfil": "/perfil/beto"
+      }
+    ],
+    "paraQuienEs": [
+      "Emprendedores con una idea de negocio.",
+      "Personas que quieren iniciar su propia startup.",
+      "Profesionales que buscan aplicar la IA en el ámbito empresarial."
+    ],
+    "conocimientosPrevios": [
+      "No se requieren conocimientos previos de programación o IA, solo entusiasmo por emprender."
+    ],
+    "temarios": [
+      {
+        "title": "Módulo 1: Ideación y Validación con IA",
+        "items": [
+          "Generación de ideas de negocio con IA",
+          "Investigación de mercado y análisis de competencia con IA",
+          "Creación de propuestas de valor y modelos de negocio con IA",
+          "Validación de hipótesis y MVPs con asistencia de IA"
+        ]
+      },
+      {
+        "title": "Módulo 2: Desarrollo de Producto y Marketing con IA",
+        "items": [
+          "Diseño de productos y servicios asistido por IA",
+          "Estrategias de lanzamiento y crecimiento con IA",
+          "Automatización de marketing y ventas con IA",
+          "Gestión de relaciones con clientes (CRM) con IA"
+        ]
+      },
+      {
+        "title": "Módulo 3: Finanzas y Escalado con IA",
+        "items": [
+          "Análisis financiero y proyecciones con IA",
+          "Optimización de operaciones y procesos con IA",
+          "Búsqueda de financiación y pitch decks con IA",
+          "Retos y oportunidades futuras del emprendimiento con IA"
+        ]
+      }
+    ],
+    "fecha": "2025-10-04T00:00:00",
+    "learnings": [
+      "Idear y validar oportunidades de negocio.",
+      "Utilizar la IA para optimizar procesos de startup.",
+      "Desarrollar estrategias de marketing y crecimiento.",
+      "Escalar tu negocio con el apoyo de la Inteligencia Artificial."
+    ],
+    "details": {
+      "date": "04 Oct 2025",
+      "duration": "8 horas",
+      "level": "Básico",
+      "offer": "Acceso a una comunidad de emprendedores"
+    },
+    "remainingSeats": "20 estudiantes",
+    "precio": 32,
+    "descuento": 0.12
+  },
+  {
+    "id": "emprendimiento-ia",
+    "slug": "emprendimiento-ia",
+    "category": "Desarrollo",
+    "src": "/nord.jpg",
+    "name": "Emprendimiento con IA",
+    "titulo": "Crea y Escala tu Startup con Inteligencia Artificial",
+    "descripcion": "Aprende a idear, validar y escalar tu negocio utilizando herramientas y estrategias de Inteligencia Artificial. Curso presencial en Miraflores, Lima - Perú.",
+    "fechatext": "Disponible desde el sábado 4 de octubre",
+    "about": "Este curso de 8 horas está diseñado para emprendedores que buscan una ventaja competitiva, mostrándote cómo la IA puede ayudarte en cada etapa de tu startup, desde la investigación de mercado hasta el crecimiento.",
+    "profesores": [
+      {
+        "nombre": "Alvaro Felipe Chávez",
+        "imagen": "/image-1.jpg",
+        "usuarioSocial": "@alvaro",
+        "enlacePerfil": "https://vercel.com/"
+      },
+      {
+        "nombre": "Alexys Lozada",
+        "imagen": "/image-2.jpg",
+        "usuarioSocial": "@alexyslozada",
+        "enlacePerfil": "/perfil/alexys"
+      },
+      {
+        "nombre": "Beto Quiroga",
+        "imagen": "/image-3.jpg",
+        "usuarioSocial": "@betoquiroga",
+        "enlacePerfil": "/perfil/beto"
+      }
+    ],
+    "paraQuienEs": [
+      "Emprendedores con una idea de negocio.",
+      "Personas que quieren iniciar su propia startup.",
+      "Profesionales que buscan aplicar la IA en el ámbito empresarial."
+    ],
+    "conocimientosPrevios": [
+      "No se requieren conocimientos previos de programación o IA, solo entusiasmo por emprender."
+    ],
+    "temarios": [
+      {
+        "title": "Módulo 1: Ideación y Validación con IA",
+        "items": [
+          "Generación de ideas de negocio con IA",
+          "Investigación de mercado y análisis de competencia con IA",
+          "Creación de propuestas de valor y modelos de negocio con IA",
+          "Validación de hipótesis y MVPs con asistencia de IA"
+        ]
+      },
+      {
+        "title": "Módulo 2: Desarrollo de Producto y Marketing con IA",
+        "items": [
+          "Diseño de productos y servicios asistido por IA",
+          "Estrategias de lanzamiento y crecimiento con IA",
+          "Automatización de marketing y ventas con IA",
+          "Gestión de relaciones con clientes (CRM) con IA"
+        ]
+      },
+      {
+        "title": "Módulo 3: Finanzas y Escalado con IA",
+        "items": [
+          "Análisis financiero y proyecciones con IA",
+          "Optimización de operaciones y procesos con IA",
+          "Búsqueda de financiación y pitch decks con IA",
+          "Retos y oportunidades futuras del emprendimiento con IA"
+        ]
+      }
+    ],
+    "fecha": "2025-10-04T00:00:00",
+    "learnings": [
+      "Idear y validar oportunidades de negocio.",
+      "Utilizar la IA para optimizar procesos de startup.",
+      "Desarrollar estrategias de marketing y crecimiento.",
+      "Escalar tu negocio con el apoyo de la Inteligencia Artificial."
+    ],
+    "details": {
+      "date": "04 Oct 2025",
+      "duration": "8 horas",
+      "level": "Básico",
+      "offer": "Acceso a una comunidad de emprendedores"
+    },
+    "remainingSeats": "20 estudiantes",
+    "precio": 32,
+    "descuento": 0.12
+  }
+  
 ]

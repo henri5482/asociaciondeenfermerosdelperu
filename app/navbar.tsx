@@ -9,7 +9,7 @@ import { useState } from "react";
 
 const links = [
   { href: "/cursosall", label: "Cursos" },
-  { href: "/projects", label: "Certificados" },
+  { href: "/certificados", label: "Certificados" },
   { href: "/about", label: "Nosotros" },
   { href: "/contact", label: "Trabaja con nosotros" },
 ];

@@ -168,83 +168,113 @@ export default async function CourseDetail({
                   </ul>
                 </div>
               )}
-              <div className="flex flex-col items-start gap-4 rounded-xl">
-      <div className="flex flex-col sm:flex-row items-start gap-4">
+              <div className="flex flex-col md:flex-row items-center gap-4 mt-8 w-full">
+  {/* Botón "Ver más cursos" */}
+  <Button
+    className="bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-500 hover:to-amber-600 text-gray-900 font-semibold py-5 px-1 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-[1.02] flex items-center gap-3 min-w-[200px] justify-center"
+    asChild
+  >
+    <Link href="/premium-subscription">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className="h-6 w-6"
+      >
+        <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z" />
+        <path d="M5 3v4" />
+        <path d="M19 17v4" />
+        <path d="M3 5h4" />
+        <path d="M17 19h4" />
+      </svg>
+      <span className="text-lg">Explorar cursos</span>
+    </Link>
+  </Button>
 
-        {/* Premium Subscription Button (Left Button from Image) */}
-        <Button
-          className="bg-[#FFC94A] hover:bg-[#E6B342] text-black font-semibold py-5 px-8 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg whitespace-nowrap flex items-center gap-2"
-          asChild
-        >
-          <Link href="/premium-subscription">
+  {/* Botón "Comprar curso" */}
+  <div className="relative w-full max-w-min">
+    <Button
+      className={`w-full bg-gradient-to-r ${
+        course.descuento ? 'from-purple-600 to-indigo-600' : 'from-blue-600 to-cyan-600'
+      } hover:from-purple-700 hover:to-indigo-700 text-white font-bold py-5 px-0 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-[1.02] flex items-center justify-between group`}
+      asChild
+    >
+      <Link href="/checkout">
+        <div className="flex items-center gap-2">
+          <div className="bg-white/20 p-3 rounded-lg group-hover:bg-white/30 transition-all">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="lucide lucide-star h-5 w-5" // Placeholder icon for the star/arrow
-            >
-              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-              <path d="M12 17v-4" />
-              <path d="m14.5 12.5-2.5-2.5-2.5 2.5" />
-            </svg>
-            Ver mas cursos
-          </Link>
-        </Button>
-
-        {/* Buy This Course Button (Right Button from Image) */}
-        <Button
-          className="bg-[#2D3748] hover:bg-[#202933] text-white font-semibold py-5 px-8 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg flex items-center gap-2 border border-gray-600 text-left" // Removed whitespace-nowrap, added text-left
-          asChild
-        >
-          <Link href="/checkout" className="flex items-center gap-2">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
+              className="h-6 w-6"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
+              strokeWidth={2}
             >
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                strokeWidth={2}
-                d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+                d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
               />
             </svg>
-            Compra este curso:{" "}
-            {course.descuento && course.precio ? (
-              <>
-                {/* Original price (strikethrough) followed by discounted price */}
-                <span className="line-through text-gray-400">
-                  S/{course.precio.toFixed(2)}
-                </span>
-                <span className="ml-1">
-                  S/{(course.precio * (1 - course.descuento)).toFixed(2)}
-                </span>
-                {/* Oferta especial badge */}
-                <span className="bg-orange-500 text-white text-xs px-2 py-1 rounded-md font-bold ml-2">
-                  Oferta especial
-                </span>
-              </>
-            ) : (
-              // Display only price if no discount
-              <span>S/{course.precio?.toFixed(2)}</span>
-            )}
-            SOLES
-          </Link>
-        </Button>
-      </div>
+          </div>
+          <div className="text-left">
+            <div className="text-sm font-medium opacity-90"></div>
+            <div className="text-xl font-bold">
+              {course.descuento && course.precio ? (
+                <>
+                  <span className="text-white  mr-2">S/{(course.precio * (1 - course.descuento)).toFixed(2)}</span>
+                  <span className="line-through text-white/70 text-sm">
+                    S/{course.precio.toFixed(2)}
+                  </span>
+                </>
+              ) : (
+                <span>S/{course.precio?.toFixed(2)}</span>
+              )}
+            </div>
+          </div>
+        </div>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-5 w-5 opacity-80 group-hover:translate-x-1 transition-transform"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+        >
+          <path
+            fillRule="evenodd"
+            d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
+            clipRule="evenodd"
+          />
+        </svg>
+      </Link>
+    </Button>
 
-      <p className="text-sm text-gray-400">
-        * Acceso de por vida solo a este curso
-      </p>
-    </div>
+    {course.descuento && (
+      <div className="absolute -top-3 -right-3 z-10">
+        <div className="bg-gradient-to-r from-orange-500 to-pink-500 text-white text-xs font-bold px-4 py-1 rounded-full transform rotate-6 shadow-lg flex items-center">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-4 w-4 mr-1"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+            <path
+              fillRule="evenodd"
+              d="M5 2a2 2 0 00-2 2v14l3.5-2 3.5 2 3.5-2 3.5 2V4a2 2 0 00-2-2H5zm4.707 5.707a1 1 0 00-1.414-1.414l-3 3a1 1 0 000 1.414l3 3a1 1 0 001.414-1.414L8.414 10l1.293-1.293zm4 0a1 1 0 010 1.414L13.586 10l-1.293 1.293a1 1 0 01-1.414-1.414l3-3a1 1 0 011.414 0z"
+              clipRule="evenodd"
+            />
+          </svg>
+          {Math.round(course.descuento * 100)}% OFF
+        </div>
+      </div>
+    )}
+  </div>
+</div>
 
             </div>
 
