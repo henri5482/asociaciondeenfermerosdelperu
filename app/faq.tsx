@@ -1,15 +1,23 @@
-
 'use client';
 
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
+import Autoplay from 'embla-carousel-autoplay';
 import { motion } from 'framer-motion';
 import { StarIcon } from 'lucide-react';
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 
-const testimonials = [
+interface TestimonialItem {
+  id: number;
+  name: string;
+  role: string;
+  avatar: string;
+  comment: string;
+  rating: number;
+}
+
+const testimonials: TestimonialItem[] = [
   {
     id: 1,
     name: "Jesus Espinoza",
@@ -37,96 +45,167 @@ const testimonials = [
       "El curso me sirvió para poder dar el primer paso en mi aprendizaje sobre Python. Agradezco sinceramente este curso que parte desde la base y no da nada por sentado.",
     rating: 5,
   },
+  {
+    id: 4,
+    name: "Maria Rodriguez",
+    role: "🇨🇴",
+    avatar: "/avatar4.jpg",
+    comment:
+      "Excelente contenido y muy bien explicado. Me ayudó a solidificar mis conocimientos y a sentirme más segura en mi camino como desarrolladora. ¡Altamente recomendado!",
+    rating: 5,
+  },
+  {
+    id: 5,
+    name: "Carlos Sanchez",
+    role: "🇪🇸",
+    avatar: "/avatar5.jpg",
+    comment:
+      "Los instructores son muy profesionales y el material didáctico es de primera. Lo que más valoro es la atención personalizada que brindan, resolviendo todas mis dudas.",
+    rating: 4,
+  },
 ];
+
+// Animation variants for section header elements
+const sectionHeaderVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.7, ease: "easeOut" },
+  },
+};
+
+// Animation variants for carousel items (testimonial cards)
+const carouselItemVariants = {
+  hidden: { opacity: 0, scale: 0.9, y: 20 },
+  visible: (i: number) => ({
+    opacity: 1,
+    scale: 1,
+    y: 0,
+    transition: {
+      delay: i * 0.1,
+      duration: 0.6,
+      ease: "easeOut",
+      type: "spring",
+      stiffness: 100,
+      damping: 10,
+    },
+  }),
+};
 
 export default function SuccessStoriesCarousel() {
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
+  const autoplay = useRef(Autoplay({ delay: 5000, stopOnInteraction: false }));
 
   useEffect(() => {
-    // Handle responsive layout
     const checkScreenSize = () => {
+      // isMobile will be true if window.innerWidth < 640px (sm breakpoint)
       setIsMobile(window.innerWidth < 640);
+      // isTablet will be true for screen sizes between sm (640px) and lg (1024px)
       setIsTablet(window.innerWidth >= 640 && window.innerWidth < 1024);
     };
 
-    // Initial check
     checkScreenSize();
-
-    // Set up event listener for window resize
     window.addEventListener('resize', checkScreenSize);
-
-    // Clean up
     return () => window.removeEventListener('resize', checkScreenSize);
   }, []);
 
+  const getCarouselItemBasis = useCallback(() => {
+    if (isMobile) return 'basis-full'; // Full width on mobile (xs and sm)
+    if (isTablet) return 'basis-1/2'; // Half width on tablet (md, lg)
+    return 'basis-1/3'; // One-third width on desktop (xl and beyond)
+  }, [isMobile, isTablet]);
+
   return (
-    <div className="w-full px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-24">
-      <div className="text-center mb-8 sm:mb-12 lg:mb-16">
+    <section className="w-full px-4 sm:px-6 lg:px-8 py-16 md:py-24 bg-[#0f1e26] text-gray-50 overflow-hidden relative">
+      {/* Background radial gradient for visual flair */}
+      <div className="absolute inset-0 z-0 radial-gradient-custom opacity-30"></div>
+
+      <div className="text-center mb-12 md:mb-16 lg:mb-20 relative z-10">
         <motion.h2
-          className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-2 sm:mb-4"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          className="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-3 sm:mb-5 text-gray-100 leading-tight"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+          variants={sectionHeaderVariants}
         >
-          Tú puedes ser la próxima <span className="text-primary">historia de éxito</span>
+          Tú puedes ser la próxima{' '}
+          <span className="inline-block text-[#00c2a8] font-extrabold drop-shadow-md">
+            historia de éxito
+          </span>
         </motion.h2>
         <motion.p
-          className="text-muted-foreground text-base sm:text-lg lg:text-xl"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ delay: 0.2, duration: 0.6 }}
+          className="text-gray-400 text-base sm:text-lg lg:text-xl max-w-3xl mx-auto leading-relaxed"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+          variants={sectionHeaderVariants}
         >
-          Así como ellos tú también puedes alcanzar tus metas.
+          Así como ellos, tú también puedes alcanzar tus metas y transformar tu futuro. Únete a nuestra comunidad.
         </motion.p>
       </div>
 
-      <div className="max-w-7xl mx-auto">
-        <Carousel className="w-full">
-          <CarouselContent className="-ml-2 sm:-ml-4">
+      <div className="max-w-7xl mx-auto relative px-4 z-10">
+        <Carousel
+          plugins={[autoplay.current]}
+          className="w-full"
+          opts={{ align: "start", loop: true }}
+          onMouseEnter={autoplay.current.stop}
+          onMouseLeave={autoplay.current.reset}
+        >
+          <CarouselContent className="-ml-4">
             {testimonials.map((testimonial, index) => (
               <CarouselItem
                 key={testimonial.id}
-                className={`pl-2 sm:pl-4 ${
-                  isMobile ? 'basis-full' : isTablet ? 'basis-3/4' : 'basis-1/2'
-                }`}
+                className={`pl-4 ${getCarouselItemBasis()}`}
               >
                 <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="h-full"
+                  custom={index}
+                  variants={carouselItemVariants}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, amount: 0.4 }}
+                  whileHover={{ scale: 1.03, boxShadow: "0 25px 50px rgba(0,0,0,0.3)", transition: { type: "spring", stiffness: 200, damping: 15 } }}
+                  className="h-full transform transition-all duration-300"
                 >
-                  <Card className="p-4 sm:p-6 lg:p-8 bg-background/80 backdrop-blur-sm border border-border/40 shadow-lg sm:shadow-xl h-auto sm:h-[280px] lg:h-[300px] flex flex-col justify-between hover:scale-[1.02] transition-transform duration-300">
-                    <CardHeader className="flex flex-row items-start gap-3 sm:gap-4 p-0 pb-4 sm:pb-6">
-                      <Avatar className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 border-2 border-primary/20">
+                  <Card
+                    className="p-4 sm:p-6 lg:p-8 bg-[#1f232b] text-gray-200 border border-[#373e4a] rounded-xl h-full flex flex-col justify-between shadow-lg hover:shadow-2xl transition-shadow duration-300 relative overflow-hidden"
+                  >
+                    {/* Subtle inner glow effect */}
+                    <div className="absolute inset-0 border-[0.5px] border-transparent rounded-xl pointer-events-none"
+                      style={{
+                        background: 'linear-gradient(180deg, rgba(0,194,168,0.1) 0%, rgba(0,194,168,0) 50%)',
+                        mask: 'linear-gradient(white, white) padding-box, linear-gradient(white, white)',
+                        maskComposite: 'exclude',
+                        WebkitMaskComposite: 'exclude',
+                      }}
+                    ></div>
+
+                    <CardHeader className="flex flex-row items-start gap-3 p-0 pb-4 sm:gap-4 sm:pb-5">
+                      <Avatar className="w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 border-2 border-[#00c2a8] flex-shrink-0 shadow-md">
                         <AvatarImage src={testimonial.avatar} alt={testimonial.name} />
-                        <AvatarFallback>{testimonial.name.charAt(0)}</AvatarFallback>
+                        <AvatarFallback className="bg-[#00c2a8]/20 text-[#00c2a8] font-bold text-lg sm:text-xl">{testimonial.name.charAt(0)}</AvatarFallback>
                       </Avatar>
                       <div className="flex-1">
-                        <CardTitle className="text-lg sm:text-xl font-semibold">{testimonial.name}</CardTitle>
-                        <CardDescription className="text-sm sm:text-base">{testimonial.role}</CardDescription>
-                        <div className="flex items-center gap-1 mt-1 sm:mt-2">
+                        <CardTitle className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-100 mb-0 sm:mb-1">{testimonial.name}</CardTitle>
+                        <CardDescription className="text-sm sm:text-base text-gray-400">{testimonial.role}</CardDescription>
+                        <div className="flex items-center gap-0.5 mt-1 sm:mt-2">
                           {[...Array(5)].map((_, i) => (
                             <StarIcon
                               key={i}
-                              className={`w-4 h-4 sm:w-5 sm:h-5 ${
-                                i < testimonial.rating
-                                  ? 'fill-primary text-primary'
-                                  : 'fill-muted text-muted-foreground'
+                              className={`w-4 h-4 sm:w-5 sm:h-5 transition-colors duration-200 ${
+                                i < testimonial.rating ? 'fill-yellow-500 text-yellow-500' : 'fill-gray-600 text-gray-600'
                               }`}
                             />
                           ))}
                         </div>
                       </div>
                     </CardHeader>
-                    <CardContent className="p-0 text-base sm:text-lg leading-relaxed">
-                      <blockquote className="italic text-muted-foreground pl-3 sm:pl-4 border-l-4 border-primary/30 text-sm sm:text-base">
+                    <CardContent className="p-0 text-sm sm:text-base leading-relaxed flex-grow overflow-hidden pt-3">
+                      <blockquote className="italic text-gray-300 pl-3 border-l-3 border-[#00c2a8] text-sm sm:text-base">
                         &quot;{testimonial.comment}&quot;
                       </blockquote>
-                      <Button variant="link" className="mt-4 sm:mt-6 px-0 text-primary hover:text-primary/80 text-sm sm:text-base">
-                        Lee la historia completa →
-                      </Button>
                     </CardContent>
                   </Card>
                 </motion.div>
@@ -134,25 +213,13 @@ export default function SuccessStoriesCarousel() {
             ))}
           </CarouselContent>
 
-          {/* Navigation controls - hidden on very small screens */}
-          <div className={`${isMobile ? 'hidden' : 'block'}`}>
-            <CarouselPrevious className="absolute -left-2 sm:-left-5 top-1/2 -translate-y-1/2 bg-primary text-white z-10" />
-            <CarouselNext className="absolute -right-2 sm:-right-5 top-1/2 -translate-y-1/2 bg-primary text-white z-10" />
+          {/* Navigation controls - Hidden on screens smaller than 'md' (768px) */}
+          <div className="absolute top-1/2 -translate-y-1/2 -left-3 sm:-left-6 right-0 md:flex justify-between px-2 sm:px-4 pointer-events-none z-20 hidden">
+            <CarouselPrevious className="relative h-10 w-10 sm:h-12 sm:w-12 bg-[#373e4a] text-gray-200 hover:bg-[#4f5869] rounded-full shadow-lg transition-colors duration-200 pointer-events-auto flex items-center justify-center border border-[#4f5869]" />
+            <CarouselNext className="relative h-10 w-10 sm:h-12 sm:w-12 bg-[#373e4a] text-gray-200 hover:bg-[#4f5869] rounded-full shadow-lg transition-colors duration-200 pointer-events-auto flex items-center justify-center border border-[#4f5869]" />
           </div>
         </Carousel>
       </div>
-      
-      {/* Mobile indicators */}
-      {isMobile && (
-        <div className="flex justify-center mt-4 gap-2">
-          {testimonials.map((_, index) => (
-            <div 
-              key={index} 
-              className="w-2 h-2 rounded-full bg-primary/30"
-            />
-          ))}
-        </div>
-      )}
-    </div>
+    </section>
   );
 }

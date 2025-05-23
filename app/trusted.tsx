@@ -43,7 +43,7 @@ const Trusted = () => {
   return (
     <div className={cn(
 
-      "w-full overflow-hidden bg-white py-12 "
+      "w-full overflow-hidden  py-12  bg-[#E1F5FE]" 
     )}>
       <div className="mb-8 text-center">
         <h2 className="text-2xl font-semibold text-gray-900 mb-4">

@@ -14,7 +14,6 @@ const Cursos = () => {
   const [filteredCursos, setFilteredCursos] = useState<Curso[]>([]);
   const [searchTimeout, setSearchTimeout] = useState<NodeJS.Timeout | null>(null);
 
-  // Función para filtrar cursos con debounce
   const filterCursos = useCallback((term: string, cursosList: Curso[]) => {
     if (term.trim() === "") {
       setFilteredCursos(cursosList);
@@ -23,12 +22,11 @@ const Cursos = () => {
 
     const lowercasedTerm = term.toLowerCase();
     const results = cursosList.filter((curso) => {
-      // Campos principales de búsqueda
       const matches = [
         curso.name?.toLowerCase().includes(lowercasedTerm),
         curso.descripcion?.toLowerCase().includes(lowercasedTerm),
         curso.category?.toLowerCase().includes(lowercasedTerm),
-        curso.learnings?.some(learning => 
+        curso.learnings?.some(learning =>
           learning.toLowerCase().includes(lowercasedTerm)
         ),
         curso.temarios?.some(modulo =>
@@ -46,17 +44,14 @@ const Cursos = () => {
     setFilteredCursos(results);
   }, []);
 
-  // Manejar cambio en el input de búsqueda con debounce
   const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
     setSearchTerm(value);
 
-    // Limpiar timeout anterior si existe
     if (searchTimeout) {
       clearTimeout(searchTimeout);
     }
 
-    // Establecer nuevo timeout para el debounce
     setSearchTimeout(
       setTimeout(() => {
         filterCursos(value, cursos);
@@ -64,17 +59,15 @@ const Cursos = () => {
     );
   };
 
-  // Limpiar búsqueda
   const clearSearch = () => {
     setSearchTerm("");
     setFilteredCursos(cursos);
-    
+
     if (searchTimeout) {
       clearTimeout(searchTimeout);
     }
   };
 
-  // Cargar cursos iniciales
   useEffect(() => {
     const fetchCursos = async () => {
       try {
@@ -95,7 +88,6 @@ const Cursos = () => {
 
     fetchCursos();
 
-    // Limpiar timeout al desmontar el componente
     return () => {
       if (searchTimeout) {
         clearTimeout(searchTimeout);
@@ -125,7 +117,7 @@ const Cursos = () => {
         Explora Nuestros Cursos Exclusivos
       </h2>
 
-      {/* Campo de búsqueda mejorado */}
+      {/* Buscador */}
       <div className="mb-10 flex justify-center relative max-w-lg mx-auto">
         <div className="relative w-full">
           <FiSearch className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400" />
@@ -148,13 +140,14 @@ const Cursos = () => {
         </div>
       </div>
 
-      {/* Contador de resultados */}
+      {/* Resultados */}
       {searchTerm && (
         <div className="text-center text-gray-400 mb-6">
           {filteredCursos.length} {filteredCursos.length === 1 ? 'curso encontrado' : 'cursos encontrados'}
         </div>
       )}
 
+      {/* Cursos */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10">
         {filteredCursos.length > 0 ? (
           filteredCursos.map((curso) => {
@@ -163,14 +156,16 @@ const Cursos = () => {
             return (
               <Link href={`/cursosall/${curso.slug}`} key={curso.id} passHref>
                 <div className="bg-[#1f2937] rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden flex flex-col h-full transform hover:-translate-y-2 cursor-pointer group">
-                  {/* Course Image */}
-                  <div className="relative w-full h-52 bg-gray-800 flex items-center justify-center rounded-t-2xl overflow-hidden">
+                  
+                  {/* Imagen: RESPONSIVA y no cortada */}
+                  <div className="relative w-full aspect-video bg-gray-800 overflow-hidden">
                     <Image
                       src={curso.src}
                       alt={curso.name}
-                      layout="fill"
-                      objectFit="cover"
-                      className="transition-transform duration-300 group-hover:scale-110"
+                      fill
+                      className="object-cover group-hover:scale-110 transition-transform duration-300"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                      priority
                     />
                     {curso.descuento > 0 && (
                       <span className="absolute top-3 right-3 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">
@@ -179,46 +174,35 @@ const Cursos = () => {
                     )}
                   </div>
 
-                  {/* Course Content */}
+                  {/* Contenido */}
                   <div className="p-7 flex-grow flex flex-col">
-                    {/* Category Tag */}
                     <span className="text-sm font-semibold text-blue-400 uppercase tracking-wide mb-3">
                       {curso.category}
                     </span>
 
-                    {/* Course Title */}
                     <h3 className="text-2xl font-bold text-white mb-4 leading-tight group-hover:text-blue-300 transition-colors duration-300">
                       {curso.name}
                     </h3>
 
-                    {/* Course Description */}
                     <p className="text-gray-400 text-sm mb-5 flex-grow line-clamp-3">
                       {curso.descripcion}
                     </p>
 
-                    {/* Course Details */}
                     <div className="text-gray-500 text-xs space-y-2 mb-6 border-t border-gray-700 pt-4">
                       <p>
-                        <span className="font-semibold text-gray-300">
-                          Fecha:
-                        </span>{" "}
+                        <span className="font-semibold text-gray-300">Fecha:</span>{" "}
                         {curso.details.date}
                       </p>
                       <p>
-                        <span className="font-semibold text-gray-300">
-                          Duración:
-                        </span>{" "}
+                        <span className="font-semibold text-gray-300">Duración:</span>{" "}
                         {curso.details.duration}
                       </p>
                       <p>
-                        <span className="font-semibold text-gray-300">
-                          Nivel:
-                        </span>{" "}
+                        <span className="font-semibold text-gray-300">Nivel:</span>{" "}
                         {curso.details.level}
                       </p>
                     </div>
 
-                    {/* Price Information */}
                     <div className="mt-auto flex items-center justify-between">
                       <p className="text-2xl font-extrabold text-green-400">
                         S/{finalPrice.toFixed(2)}
@@ -236,8 +220,8 @@ const Cursos = () => {
           })
         ) : (
           <div className="col-span-full text-center text-gray-400 text-xl py-10">
-            {searchTerm 
-              ? "No se encontraron cursos que coincidan con tu búsqueda." 
+            {searchTerm
+              ? "No se encontraron cursos que coincidan con tu búsqueda."
               : "No hay cursos disponibles en este momento."}
           </div>
         )}
