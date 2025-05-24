@@ -2,8 +2,8 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
-import { FiSearch, FiX } from "react-icons/fi";
+import { useEffect, useState, useMemo } from "react";
+import { FiSearch, FiX, FiChevronDown } from "react-icons/fi"; // Importa FiChevronDown
 import { Curso } from "../types/curso";
 
 const Cursos = () => {
@@ -12,42 +12,77 @@ const Cursos = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<Error | null>(null);
   const [searchTerm, setSearchTerm] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState<string>("All"); // Estado para la categoría seleccionada
 
-  // Función de filtrado simple
-  const filterCourses = (term: string, cursosList: Curso[]) => {
-    if (!term.trim()) return cursosList;
-    
-    const lowerTerm = term.toLowerCase();
-    return cursosList.filter((curso) => {
-      return (
-        curso.name?.toLowerCase().includes(lowerTerm) ||
-        curso.descripcion?.toLowerCase().includes(lowerTerm) ||
-        curso.category?.toLowerCase().includes(lowerTerm) ||
-        curso.learnings?.some(learning => 
-          learning?.toLowerCase().includes(lowerTerm)
-        ) ||
-        curso.profesores?.some(profesor => 
-          profesor.nombre?.toLowerCase().includes(lowerTerm)
-        )
+  // Función de filtrado combinada para búsqueda y categoría
+  const filterCourses = (term: string, category: string, cursosList: Curso[]) => {
+    let currentFiltered = cursosList;
+
+    // 1. Filtrar por categoría primero (si no es 'All')
+    if (category && category !== "Todos los cursos") {
+      currentFiltered = currentFiltered.filter(
+        (curso) => curso.category?.toLowerCase() === category.toLowerCase()
       );
-    });
+      // console.log(`Filter: Cursos filtrados por categoría "${category}":`, currentFiltered.length); // LOG F3
+    }
+
+    // 2. Luego, aplicar el filtro de búsqueda si hay un término
+    if (term.trim()) {
+      const lowerTerm = term.toLowerCase();
+      currentFiltered = currentFiltered.filter((curso) => {
+        return (
+          curso.name?.toLowerCase().includes(lowerTerm) ||
+          curso.descripcion?.toLowerCase().includes(lowerTerm) ||
+          curso.category?.toLowerCase().includes(lowerTerm) ||
+          curso.learnings?.some(learning =>
+            learning?.toLowerCase().includes(lowerTerm)
+          ) ||
+          curso.profesores?.some(profesor =>
+            profesor.nombre?.toLowerCase().includes(lowerTerm)
+          )
+        );
+      });
+      // console.log(`Filter: Cursos filtrados por término "${term}" (después de categoría):`, currentFiltered.length); // LOG F4
+    } else {
+      // console.log("Filter: El término de búsqueda está vacío. Se muestran los cursos filtrados solo por categoría."); // LOG F5
+    }
+
+    return currentFiltered;
   };
 
-  // Manejar cambios en el buscador
+  // Manejar cambios en el input del buscador
   const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
+    // console.log("handleSearchChange: Valor actual del input:", value); // LOG H1
     setSearchTerm(value);
-    const filtered = filterCourses(value, cursos);
+    const filtered = filterCourses(value, selectedCategory, cursos);
+    // console.log("handleSearchChange: Estableciendo filteredCursos a", filtered.length, "elementos."); // LOG H2
     setFilteredCursos(filtered);
   };
 
-  // Limpiar búsqueda
-  const clearSearch = () => {
-    setSearchTerm("");
-    setFilteredCursos(cursos);
+  // Manejar cambio de categoría desde el selector
+  const handleCategoryChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const category = e.target.value;
+    // console.log("handleCategoryChange: Categoría seleccionada:", category); // LOG CAT1
+    setSelectedCategory(category);
+    // Vuelve a aplicar el filtro con la nueva categoría y el término de búsqueda actual
+    const filtered = filterCourses(searchTerm, category, cursos);
+    // console.log("handleCategoryChange: Estableciendo filteredCursos a", filtered.length, "elementos."); // LOG CAT2
+    setFilteredCursos(filtered);
   };
 
-  // Cargar datos iniciales
+  // Limpiar el buscador y restablecer todos los cursos (y categoría a 'All')
+  const clearSearch = () => {
+    // console.log("clearSearch: Limpiando término de búsqueda y restableciendo cursos."); // LOG C1
+    setSearchTerm("");
+    setSelectedCategory("Todos los cursos"); // También resetea la categoría a "All"
+    // Al limpiar la búsqueda, re-filtra usando el término vacío y la categoría 'All'
+    const filtered = filterCourses("", "Todos los cursos", cursos);
+    setFilteredCursos(filtered);
+    // console.log("clearSearch: filteredCursos restablecido a", cursos.length, "elementos (todos los cursos originales)."); // LOG C2
+  };
+
+  // Cargar los datos iniciales de los cursos
   useEffect(() => {
     const fetchCursos = async () => {
       try {
@@ -56,9 +91,11 @@ const Cursos = () => {
         if (!res.ok) throw new Error(`Error: ${res.status}`);
         const data = await res.json();
         setCursos(data);
-        setFilteredCursos(data);
+        setFilteredCursos(data); // Inicialmente, los cursos filtrados son todos los cursos
+        // console.log("useEffect: Datos iniciales cargados.", data.length, "cursos."); // LOG E1
       } catch (err) {
-        setError(err instanceof Error ? err : new Error("Error al cargar"));
+        setError(err instanceof Error ? err : new Error("Error al cargar los cursos"));
+        // console.error("useEffect: Error al cargar los cursos:", err); // LOG E2
       } finally {
         setLoading(false);
       }
@@ -66,6 +103,17 @@ const Cursos = () => {
 
     fetchCursos();
   }, []);
+
+  // Obtener categorías únicas dinámicamente de los cursos
+  const categories = useMemo(() => {
+    const uniqueCategories = new Set<string>();
+    cursos.forEach((curso) => {
+      if (curso.category) {
+        uniqueCategories.add(curso.category);
+      }
+    });
+    return ["Todos los cursos", ...Array.from(uniqueCategories).sort()]; // 'All' y luego las categorías ordenadas
+  }, [cursos]);
 
   if (loading) {
     return <LoadingMessage />;
@@ -81,20 +129,32 @@ const Cursos = () => {
         Explora Nuestros Cursos Exclusivos
       </h2>
 
-      <SearchBar
-        searchTerm={searchTerm}
-        onChange={handleSearchChange}
-        onClear={clearSearch}
-      />
+      <div className="flex flex-col md:flex-row gap-4 mb-10 justify-center items-center">
+        {/* Barra de búsqueda */}
+        <SearchBar
+          searchTerm={searchTerm}
+          onChange={handleSearchChange}
+          onClear={clearSearch}
+        />
 
+        {/* Selector de categorías */}
+        <CategorySelector
+          categories={categories}
+          selectedCategory={selectedCategory}
+          onChange={handleCategoryChange}
+        />
+      </div>
+
+      {/* Muestra el número de resultados */}
       <SearchResults count={filteredCursos.length} searchTerm={searchTerm} />
 
+      {/* La grilla de cursos */}
       <CourseGrid cursos={filteredCursos} searchTerm={searchTerm} />
     </div>
   );
 };
 
-// Componentes separados para mejor organización
+// --- Componentes Separados ---
 
 const LoadingMessage = () => (
   <div className="text-center text-white py-10 text-2xl font-semibold">
@@ -117,36 +177,64 @@ const SearchBar = ({
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   onClear: () => void;
 }) => (
-  <div className="mb-10 flex justify-center relative max-w-lg mx-auto">
-    <div className="relative w-full">
-      <FiSearch className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400" />
-      <input
-        type="text"
-        placeholder="Buscar cursos..."
-        className="w-full pl-12 pr-10 py-4 rounded-full border border-gray-600 bg-[#0f1e26] text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
-        value={searchTerm}
-        onChange={onChange}
-        aria-label="Buscar cursos"
-      />
-      {searchTerm && (
-        <button
-          onClick={onClear}
-          className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white transition-colors"
-          aria-label="Limpiar búsqueda"
-        >
-          <FiX size={20} />
-        </button>
-      )}
+  // Ajuste el max-w-lg para que coexista mejor con el selector en pantallas grandes
+  <div className="relative w-full max-w-md">
+    <FiSearch className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400" />
+    <input
+      type="text"
+      placeholder="Buscar cursos..."
+      className="w-full pl-12 pr-10 py-4 rounded-full border border-gray-600 bg-[#0f1e26] text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+      value={searchTerm}
+      onChange={onChange}
+      aria-label="Buscar cursos"
+    />
+    {searchTerm && (
+      <button
+        onClick={onClear}
+        className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white transition-colors"
+        aria-label="Limpiar búsqueda"
+      >
+        <FiX size={20} />
+      </button>
+    )}
+  </div>
+);
+
+// Nuevo componente para el selector de categorías
+const CategorySelector = ({
+  categories,
+  selectedCategory,
+  onChange
+}: {
+  categories: string[];
+  selectedCategory: string;
+  onChange: (e: React.ChangeEvent<HTMLSelectElement>) => void;
+}) => (
+  <div className="relative w-full max-w-sm"> {/* Ajuste el max-w-sm */}
+    <select
+      value={selectedCategory}
+      onChange={onChange}
+      className="block w-full appearance-none bg-[#0f1e26] border border-gray-600 text-white py-4 pl-5 pr-10 rounded-full leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 cursor-pointer"
+      aria-label="Filtrar por categoría"
+    >
+      {categories.map((category) => (
+        <option key={category} value={category.toLowerCase() === "all" ? "All" : category}>
+          {category}
+        </option>
+      ))}
+    </select>
+    <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-400">
+      <FiChevronDown className="h-5 w-5" />
     </div>
   </div>
 );
 
 const SearchResults = ({ count, searchTerm }: { count: number; searchTerm: string }) => (
-  searchTerm && (
+  searchTerm ? (
     <div className="text-center text-gray-400 mb-6">
       {count} {count === 1 ? "curso encontrado" : "cursos encontrados"}
     </div>
-  )
+  ) : null
 );
 
 const CourseGrid = ({ cursos, searchTerm }: { cursos: Curso[]; searchTerm: string }) => (
@@ -156,8 +244,8 @@ const CourseGrid = ({ cursos, searchTerm }: { cursos: Curso[]; searchTerm: strin
     ) : (
       <div className="col-span-full text-center text-gray-400 text-xl py-10">
         {searchTerm
-          ? "No se encontraron cursos"
-          : "No hay cursos disponibles"}
+          ? "No se encontraron cursos con ese criterio de búsqueda."
+          : "No hay cursos disponibles para esta categoría."}
       </div>
     )}
   </div>

@@ -18,7 +18,7 @@ export interface CourseDetails {
 }
 
 export interface Curso {
-  id: string;
+  id: string; // Es CRUCIAL que este ID sea ÚNICO para cada curso en tu JSON
   slug: string;
   category: string;
   src: string;
