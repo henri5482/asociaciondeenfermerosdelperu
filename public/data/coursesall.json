@@ -2,7 +2,7 @@
   {
     "id": "desarrollo-web-ia",
     "slug": "desarrollo-web-ia",
-    "category": "Desarrollo ",
+    "category": "Urgencias y Emergencias",
     "src": "/Group65.png",
     "name": "Desarrollo ",
     "titulo": "Construye Sitios Web Modernos con Asistencia de IA",
@@ -76,12 +76,12 @@
     },
     "remainingSeats": "15 estudiantes",
     "precio": 35,
-    "descuento": 0.10
+    "descuento": 0.1
   },
   {
     "id": "data-science-ia",
     "slug": "data-science-ia",
-    "category": "Desarrollo",
+    "category": "Urgencias y Emergencias",
     "src": "/Group65.png",
     "name": "Data Science con IA",
     "titulo": "Análisis de Datos y Machine Learning con IA",
@@ -154,12 +154,12 @@
     },
     "remainingSeats": "12 estudiantes",
     "precio": 45,
-    "descuento": 0.20
+    "descuento": 0.2
   },
   {
     "id": "marketing-digital-ia",
     "slug": "marketing-digital-ia",
-    "category": "Desarrollo",
+    "category": "Urgencias y Emergencias",
     "src": "/Group65.png",
     "name": "Marketing Digital con IA",
     "titulo": "Estrategias de Marketing Potenciadas por Inteligencia Artificial",
@@ -185,9 +185,7 @@
       "Emprendedores que quieren potenciar su marca online.",
       "Estudiantes de marketing y comunicación."
     ],
-    "conocimientosPrevios": [
-      "Nociones básicas de marketing digital."
-    ],
+    "conocimientosPrevios": ["Nociones básicas de marketing digital."],
     "temarios": [
       {
         "title": "Módulo 1: Fundamentos de Marketing Digital y IA",
@@ -237,7 +235,7 @@
   {
     "id": "ux-ui-ia",
     "slug": "ux-ui-ia",
-    "category": "Desarrollo",
+    "category": "Urgencias y Emergencias",
     "src": "/Group65.png",
     "name": "Diseño UX/UI con IA",
     "titulo": "Diseño de Experiencias y Interfaces con Inteligencia Artificial",
@@ -310,12 +308,16 @@
     },
     "remainingSeats": "17 estudiantes",
     "precio": 40,
-    "descuento": 0.10
+    "descuento": 0.1
   },
+
+
+
+
   {
     "id": "ciberseguridad-ia",
     "slug": "ciberseguridad-ia",
-    "category": "Desarrollo",
+    "category": "Cuidados Críticos y Unidad de Cuidados Intensivos ",
     "src": "/Group65.png",
     "name": "Ciberseguridad con IA",
     "titulo": "Protege tus Sistemas con Inteligencia Artificial",
@@ -393,7 +395,7 @@
   {
     "id": "cloud-computing-ia",
     "slug": "cloud-computing-ia",
-    "category": "Desarrollo",
+    "category": "Cuidados Críticos y Unidad de Cuidados Intensivos ",
     "src": "/Group65.png",
     "name": "Cloud Computing con IA",
     "titulo": "Gestión y Optimización de Infraestructura en la Nube con IA",
@@ -471,7 +473,7 @@
   {
     "id": "emprendimiento-ia",
     "slug": "emprendimiento-ia",
-    "category": "Desarrollo",
+    "category": "Cuidados Críticos y Unidad de Cuidados Intensivos ",
     "src": "/Group65.png",
     "name": "Emprendimiento con IA",
     "titulo": "Crea y Escala tu Startup con Inteligencia Artificial",
@@ -553,9 +555,97 @@
     "descuento": 0.12
   },
   {
-    "id": "emprendimiento-ia",
-    "slug": "emprendimiento-ia",
-    "category": "Desarrollo",
+    "id": "figma-ia",
+    "slug": "figma-ia",
+    "category": "Cuidados Críticos y Unidad de Cuidados Intensivos ",
+    "src": "/Group65.png",
+    "name": "Emprendimiento con IA",
+    "titulo": "Crea y Escala tu Startup con Inteligencia Artificial",
+    "descripcion": "Aprende a idear, validar y escalar tu negocio utilizando herramientas y estrategias de Inteligencia Artificial. Curso presencial en Miraflores, Lima - Perú.",
+    "fechatext": "Disponible desde el sábado 4 de octubre",
+    "about": "Este curso de 8 horas está diseñado para emprendedores que buscan una ventaja competitiva, mostrándote cómo la IA puede ayudarte en cada etapa de tu startup, desde la investigación de mercado hasta el crecimiento.",
+    "profesores": [
+      {
+        "nombre": "Alvaro Felipe Chávez",
+        "imagen": "/image-1.jpg",
+        "usuarioSocial": "@alvaro",
+        "enlacePerfil": "https://vercel.com/"
+      },
+      {
+        "nombre": "Alexys Lozada",
+        "imagen": "/image-2.jpg",
+        "usuarioSocial": "@alexyslozada",
+        "enlacePerfil": "/perfil/alexys"
+      },
+      {
+        "nombre": "Beto Quiroga",
+        "imagen": "/image-3.jpg",
+        "usuarioSocial": "@betoquiroga",
+        "enlacePerfil": "/perfil/beto"
+      }
+    ],
+    "paraQuienEs": [
+      "Emprendedores con una idea de negocio.",
+      "Personas que quieren iniciar su propia startup.",
+      "Profesionales que buscan aplicar la IA en el ámbito empresarial."
+    ],
+    "conocimientosPrevios": [
+      "No se requieren conocimientos previos de programación o IA, solo entusiasmo por emprender."
+    ],
+    "temarios": [
+      {
+        "title": "Módulo 1: Ideación y Validación con IA",
+        "items": [
+          "Generación de ideas de negocio con IA",
+          "Investigación de mercado y análisis de competencia con IA",
+          "Creación de propuestas de valor y modelos de negocio con IA",
+          "Validación de hipótesis y MVPs con asistencia de IA"
+        ]
+      },
+      {
+        "title": "Módulo 2: Desarrollo de Producto y Marketing con IA",
+        "items": [
+          "Diseño de productos y servicios asistido por IA",
+          "Estrategias de lanzamiento y crecimiento con IA",
+          "Automatización de marketing y ventas con IA",
+          "Gestión de relaciones con clientes (CRM) con IA"
+        ]
+      },
+      {
+        "title": "Módulo 3: Finanzas y Escalado con IA",
+        "items": [
+          "Análisis financiero y proyecciones con IA",
+          "Optimización de operaciones y procesos con IA",
+          "Búsqueda de financiación y pitch decks con IA",
+          "Retos y oportunidades futuras del emprendimiento con IA"
+        ]
+      }
+    ],
+    "fecha": "2025-10-04T00:00:00",
+    "learnings": [
+      "Idear y validar oportunidades de negocio.",
+      "Utilizar la IA para optimizar procesos de startup.",
+      "Desarrollar estrategias de marketing y crecimiento.",
+      "Escalar tu negocio con el apoyo de la Inteligencia Artificial."
+    ],
+    "details": {
+      "date": "04 Oct 2025",
+      "duration": "8 horas",
+      "level": "Básico",
+      "offer": "Acceso a una comunidad de emprendedores"
+    },
+    "remainingSeats": "20 estudiantes",
+    "precio": 32,
+    "descuento": 0.12
+  },
+
+
+
+
+  {
+    "id": "Neonatología",
+    "slug": "Neonatología",
+    "category": "Neonatología y Pediatría",
     "src": "/Group65.png",
     "name": "Emprendimiento con IA",
     "titulo": "Crea y Escala tu Startup con Inteligencia Artificial",
@@ -637,9 +727,2550 @@
     "descuento": 0.12
   },
   {
-    "id": "emprendimiento-ia",
-    "slug": "emprendimiento-ia",
-    "category": "Desarrollo",
+    "id": "Pediatría",
+    "slug": "Pediatría",
+    "category": "Neonatología y Pediatría",
+    "src": "/Group65.png",
+    "name": "Emprendimiento con IA",
+    "titulo": "Crea y Escala tu Startup con Inteligencia Artificial",
+    "descripcion": "Aprende a idear, validar y escalar tu negocio utilizando herramientas y estrategias de Inteligencia Artificial. Curso presencial en Miraflores, Lima - Perú.",
+    "fechatext": "Disponible desde el sábado 4 de octubre",
+    "about": "Este curso de 8 horas está diseñado para emprendedores que buscan una ventaja competitiva, mostrándote cómo la IA puede ayudarte en cada etapa de tu startup, desde la investigación de mercado hasta el crecimiento.",
+    "profesores": [
+      {
+        "nombre": "Alvaro Felipe Chávez",
+        "imagen": "/image-1.jpg",
+        "usuarioSocial": "@alvaro",
+        "enlacePerfil": "https://vercel.com/"
+      },
+      {
+        "nombre": "Alexys Lozada",
+        "imagen": "/image-2.jpg",
+        "usuarioSocial": "@alexyslozada",
+        "enlacePerfil": "/perfil/alexys"
+      },
+      {
+        "nombre": "Beto Quiroga",
+        "imagen": "/image-3.jpg",
+        "usuarioSocial": "@betoquiroga",
+        "enlacePerfil": "/perfil/beto"
+      }
+    ],
+    "paraQuienEs": [
+      "Emprendedores con una idea de negocio.",
+      "Personas que quieren iniciar su propia startup.",
+      "Profesionales que buscan aplicar la IA en el ámbito empresarial."
+    ],
+    "conocimientosPrevios": [
+      "No se requieren conocimientos previos de programación o IA, solo entusiasmo por emprender."
+    ],
+    "temarios": [
+      {
+        "title": "Módulo 1: Ideación y Validación con IA",
+        "items": [
+          "Generación de ideas de negocio con IA",
+          "Investigación de mercado y análisis de competencia con IA",
+          "Creación de propuestas de valor y modelos de negocio con IA",
+          "Validación de hipótesis y MVPs con asistencia de IA"
+        ]
+      },
+      {
+        "title": "Módulo 2: Desarrollo de Producto y Marketing con IA",
+        "items": [
+          "Diseño de productos y servicios asistido por IA",
+          "Estrategias de lanzamiento y crecimiento con IA",
+          "Automatización de marketing y ventas con IA",
+          "Gestión de relaciones con clientes (CRM) con IA"
+        ]
+      },
+      {
+        "title": "Módulo 3: Finanzas y Escalado con IA",
+        "items": [
+          "Análisis financiero y proyecciones con IA",
+          "Optimización de operaciones y procesos con IA",
+          "Búsqueda de financiación y pitch decks con IA",
+          "Retos y oportunidades futuras del emprendimiento con IA"
+        ]
+      }
+    ],
+    "fecha": "2025-10-04T00:00:00",
+    "learnings": [
+      "Idear y validar oportunidades de negocio.",
+      "Utilizar la IA para optimizar procesos de startup.",
+      "Desarrollar estrategias de marketing y crecimiento.",
+      "Escalar tu negocio con el apoyo de la Inteligencia Artificial."
+    ],
+    "details": {
+      "date": "04 Oct 2025",
+      "duration": "8 horas",
+      "level": "Básico",
+      "offer": "Acceso a una comunidad de emprendedores"
+    },
+    "remainingSeats": "20 estudiantes",
+    "precio": 32,
+    "descuento": 0.12
+  },
+  {
+    "id": "Neonatología-ia",
+    "slug": "Neonatología-ia",
+    "category": "Neonatología y Pediatría",
+    "src": "/Group65.png",
+    "name": "Emprendimiento con IA",
+    "titulo": "Crea y Escala tu Startup con Inteligencia Artificial",
+    "descripcion": "Aprende a idear, validar y escalar tu negocio utilizando herramientas y estrategias de Inteligencia Artificial. Curso presencial en Miraflores, Lima - Perú.",
+    "fechatext": "Disponible desde el sábado 4 de octubre",
+    "about": "Este curso de 8 horas está diseñado para emprendedores que buscan una ventaja competitiva, mostrándote cómo la IA puede ayudarte en cada etapa de tu startup, desde la investigación de mercado hasta el crecimiento.",
+    "profesores": [
+      {
+        "nombre": "Alvaro Felipe Chávez",
+        "imagen": "/image-1.jpg",
+        "usuarioSocial": "@alvaro",
+        "enlacePerfil": "https://vercel.com/"
+      },
+      {
+        "nombre": "Alexys Lozada",
+        "imagen": "/image-2.jpg",
+        "usuarioSocial": "@alexyslozada",
+        "enlacePerfil": "/perfil/alexys"
+      },
+      {
+        "nombre": "Beto Quiroga",
+        "imagen": "/image-3.jpg",
+        "usuarioSocial": "@betoquiroga",
+        "enlacePerfil": "/perfil/beto"
+      }
+    ],
+    "paraQuienEs": [
+      "Emprendedores con una idea de negocio.",
+      "Personas que quieren iniciar su propia startup.",
+      "Profesionales que buscan aplicar la IA en el ámbito empresarial."
+    ],
+    "conocimientosPrevios": [
+      "No se requieren conocimientos previos de programación o IA, solo entusiasmo por emprender."
+    ],
+    "temarios": [
+      {
+        "title": "Módulo 1: Ideación y Validación con IA",
+        "items": [
+          "Generación de ideas de negocio con IA",
+          "Investigación de mercado y análisis de competencia con IA",
+          "Creación de propuestas de valor y modelos de negocio con IA",
+          "Validación de hipótesis y MVPs con asistencia de IA"
+        ]
+      },
+      {
+        "title": "Módulo 2: Desarrollo de Producto y Marketing con IA",
+        "items": [
+          "Diseño de productos y servicios asistido por IA",
+          "Estrategias de lanzamiento y crecimiento con IA",
+          "Automatización de marketing y ventas con IA",
+          "Gestión de relaciones con clientes (CRM) con IA"
+        ]
+      },
+      {
+        "title": "Módulo 3: Finanzas y Escalado con IA",
+        "items": [
+          "Análisis financiero y proyecciones con IA",
+          "Optimización de operaciones y procesos con IA",
+          "Búsqueda de financiación y pitch decks con IA",
+          "Retos y oportunidades futuras del emprendimiento con IA"
+        ]
+      }
+    ],
+    "fecha": "2025-10-04T00:00:00",
+    "learnings": [
+      "Idear y validar oportunidades de negocio.",
+      "Utilizar la IA para optimizar procesos de startup.",
+      "Desarrollar estrategias de marketing y crecimiento.",
+      "Escalar tu negocio con el apoyo de la Inteligencia Artificial."
+    ],
+    "details": {
+      "date": "04 Oct 2025",
+      "duration": "8 horas",
+      "level": "Básico",
+      "offer": "Acceso a una comunidad de emprendedores"
+    },
+    "remainingSeats": "20 estudiantes",
+    "precio": 32,
+    "descuento": 0.12
+  },
+  {
+    "id": "Pediatría-ia",
+    "slug": "Pediatría-ia",
+    "category": "Neonatología y Pediatría",
+    "src": "/Group65.png",
+    "name": "Emprendimiento con IA",
+    "titulo": "Crea y Escala tu Startup con Inteligencia Artificial",
+    "descripcion": "Aprende a idear, validar y escalar tu negocio utilizando herramientas y estrategias de Inteligencia Artificial. Curso presencial en Miraflores, Lima - Perú.",
+    "fechatext": "Disponible desde el sábado 4 de octubre",
+    "about": "Este curso de 8 horas está diseñado para emprendedores que buscan una ventaja competitiva, mostrándote cómo la IA puede ayudarte en cada etapa de tu startup, desde la investigación de mercado hasta el crecimiento.",
+    "profesores": [
+      {
+        "nombre": "Alvaro Felipe Chávez",
+        "imagen": "/image-1.jpg",
+        "usuarioSocial": "@alvaro",
+        "enlacePerfil": "https://vercel.com/"
+      },
+      {
+        "nombre": "Alexys Lozada",
+        "imagen": "/image-2.jpg",
+        "usuarioSocial": "@alexyslozada",
+        "enlacePerfil": "/perfil/alexys"
+      },
+      {
+        "nombre": "Beto Quiroga",
+        "imagen": "/image-3.jpg",
+        "usuarioSocial": "@betoquiroga",
+        "enlacePerfil": "/perfil/beto"
+      }
+    ],
+    "paraQuienEs": [
+      "Emprendedores con una idea de negocio.",
+      "Personas que quieren iniciar su propia startup.",
+      "Profesionales que buscan aplicar la IA en el ámbito empresarial."
+    ],
+    "conocimientosPrevios": [
+      "No se requieren conocimientos previos de programación o IA, solo entusiasmo por emprender."
+    ],
+    "temarios": [
+      {
+        "title": "Módulo 1: Ideación y Validación con IA",
+        "items": [
+          "Generación de ideas de negocio con IA",
+          "Investigación de mercado y análisis de competencia con IA",
+          "Creación de propuestas de valor y modelos de negocio con IA",
+          "Validación de hipótesis y MVPs con asistencia de IA"
+        ]
+      },
+      {
+        "title": "Módulo 2: Desarrollo de Producto y Marketing con IA",
+        "items": [
+          "Diseño de productos y servicios asistido por IA",
+          "Estrategias de lanzamiento y crecimiento con IA",
+          "Automatización de marketing y ventas con IA",
+          "Gestión de relaciones con clientes (CRM) con IA"
+        ]
+      },
+      {
+        "title": "Módulo 3: Finanzas y Escalado con IA",
+        "items": [
+          "Análisis financiero y proyecciones con IA",
+          "Optimización de operaciones y procesos con IA",
+          "Búsqueda de financiación y pitch decks con IA",
+          "Retos y oportunidades futuras del emprendimiento con IA"
+        ]
+      }
+    ],
+    "fecha": "2025-10-04T00:00:00",
+    "learnings": [
+      "Idear y validar oportunidades de negocio.",
+      "Utilizar la IA para optimizar procesos de startup.",
+      "Desarrollar estrategias de marketing y crecimiento.",
+      "Escalar tu negocio con el apoyo de la Inteligencia Artificial."
+    ],
+    "details": {
+      "date": "04 Oct 2025",
+      "duration": "8 horas",
+      "level": "Básico",
+      "offer": "Acceso a una comunidad de emprendedores"
+    },
+    "remainingSeats": "20 estudiantes",
+    "precio": 32,
+    "descuento": 0.12
+  },
+
+
+
+
+  {
+    "id": "enfermeria-medico-quirurgica",
+    "slug": "enfermeria-medico-quirurgica",
+    "category": "Enfermería Médico-Quirúrgica",
+    "src": "/Group65.png",
+    "name": "Emprendimiento con IA",
+    "titulo": "Crea y Escala tu Startup con Inteligencia Artificial",
+    "descripcion": "Aprende a idear, validar y escalar tu negocio utilizando herramientas y estrategias de Inteligencia Artificial. Curso presencial en Miraflores, Lima - Perú.",
+    "fechatext": "Disponible desde el sábado 4 de octubre",
+    "about": "Este curso de 8 horas está diseñado para emprendedores que buscan una ventaja competitiva, mostrándote cómo la IA puede ayudarte en cada etapa de tu startup, desde la investigación de mercado hasta el crecimiento.",
+    "profesores": [
+      {
+        "nombre": "Alvaro Felipe Chávez",
+        "imagen": "/image-1.jpg",
+        "usuarioSocial": "@alvaro",
+        "enlacePerfil": "https://vercel.com/"
+      },
+      {
+        "nombre": "Alexys Lozada",
+        "imagen": "/image-2.jpg",
+        "usuarioSocial": "@alexyslozada",
+        "enlacePerfil": "/perfil/alexys"
+      },
+      {
+        "nombre": "Beto Quiroga",
+        "imagen": "/image-3.jpg",
+        "usuarioSocial": "@betoquiroga",
+        "enlacePerfil": "/perfil/beto"
+      }
+    ],
+    "paraQuienEs": [
+      "Emprendedores con una idea de negocio.",
+      "Personas que quieren iniciar su propia startup.",
+      "Profesionales que buscan aplicar la IA en el ámbito empresarial."
+    ],
+    "conocimientosPrevios": [
+      "No se requieren conocimientos previos de programación o IA, solo entusiasmo por emprender."
+    ],
+    "temarios": [
+      {
+        "title": "Módulo 1: Ideación y Validación con IA",
+        "items": [
+          "Generación de ideas de negocio con IA",
+          "Investigación de mercado y análisis de competencia con IA",
+          "Creación de propuestas de valor y modelos de negocio con IA",
+          "Validación de hipótesis y MVPs con asistencia de IA"
+        ]
+      },
+      {
+        "title": "Módulo 2: Desarrollo de Producto y Marketing con IA",
+        "items": [
+          "Diseño de productos y servicios asistido por IA",
+          "Estrategias de lanzamiento y crecimiento con IA",
+          "Automatización de marketing y ventas con IA",
+          "Gestión de relaciones con clientes (CRM) con IA"
+        ]
+      },
+      {
+        "title": "Módulo 3: Finanzas y Escalado con IA",
+        "items": [
+          "Análisis financiero y proyecciones con IA",
+          "Optimización de operaciones y procesos con IA",
+          "Búsqueda de financiación y pitch decks con IA",
+          "Retos y oportunidades futuras del emprendimiento con IA"
+        ]
+      }
+    ],
+    "fecha": "2025-10-04T00:00:00",
+    "learnings": [
+      "Idear y validar oportunidades de negocio.",
+      "Utilizar la IA para optimizar procesos de startup.",
+      "Desarrollar estrategias de marketing y crecimiento.",
+      "Escalar tu negocio con el apoyo de la Inteligencia Artificial."
+    ],
+    "details": {
+      "date": "04 Oct 2025",
+      "duration": "8 horas",
+      "level": "Básico",
+      "offer": "Acceso a una comunidad de emprendedores"
+    },
+    "remainingSeats": "20 estudiantes",
+    "precio": 32,
+    "descuento": 0.12
+  },
+  {
+    "id": "enfermeria",
+    "slug": "enfermeria",
+    "category": "Enfermería Médico-Quirúrgica",
+    "src": "/Group65.png",
+    "name": "Emprendimiento con IA",
+    "titulo": "Crea y Escala tu Startup con Inteligencia Artificial",
+    "descripcion": "Aprende a idear, validar y escalar tu negocio utilizando herramientas y estrategias de Inteligencia Artificial. Curso presencial en Miraflores, Lima - Perú.",
+    "fechatext": "Disponible desde el sábado 4 de octubre",
+    "about": "Este curso de 8 horas está diseñado para emprendedores que buscan una ventaja competitiva, mostrándote cómo la IA puede ayudarte en cada etapa de tu startup, desde la investigación de mercado hasta el crecimiento.",
+    "profesores": [
+      {
+        "nombre": "Alvaro Felipe Chávez",
+        "imagen": "/image-1.jpg",
+        "usuarioSocial": "@alvaro",
+        "enlacePerfil": "https://vercel.com/"
+      },
+      {
+        "nombre": "Alexys Lozada",
+        "imagen": "/image-2.jpg",
+        "usuarioSocial": "@alexyslozada",
+        "enlacePerfil": "/perfil/alexys"
+      },
+      {
+        "nombre": "Beto Quiroga",
+        "imagen": "/image-3.jpg",
+        "usuarioSocial": "@betoquiroga",
+        "enlacePerfil": "/perfil/beto"
+      }
+    ],
+    "paraQuienEs": [
+      "Emprendedores con una idea de negocio.",
+      "Personas que quieren iniciar su propia startup.",
+      "Profesionales que buscan aplicar la IA en el ámbito empresarial."
+    ],
+    "conocimientosPrevios": [
+      "No se requieren conocimientos previos de programación o IA, solo entusiasmo por emprender."
+    ],
+    "temarios": [
+      {
+        "title": "Módulo 1: Ideación y Validación con IA",
+        "items": [
+          "Generación de ideas de negocio con IA",
+          "Investigación de mercado y análisis de competencia con IA",
+          "Creación de propuestas de valor y modelos de negocio con IA",
+          "Validación de hipótesis y MVPs con asistencia de IA"
+        ]
+      },
+      {
+        "title": "Módulo 2: Desarrollo de Producto y Marketing con IA",
+        "items": [
+          "Diseño de productos y servicios asistido por IA",
+          "Estrategias de lanzamiento y crecimiento con IA",
+          "Automatización de marketing y ventas con IA",
+          "Gestión de relaciones con clientes (CRM) con IA"
+        ]
+      },
+      {
+        "title": "Módulo 3: Finanzas y Escalado con IA",
+        "items": [
+          "Análisis financiero y proyecciones con IA",
+          "Optimización de operaciones y procesos con IA",
+          "Búsqueda de financiación y pitch decks con IA",
+          "Retos y oportunidades futuras del emprendimiento con IA"
+        ]
+      }
+    ],
+    "fecha": "2025-10-04T00:00:00",
+    "learnings": [
+      "Idear y validar oportunidades de negocio.",
+      "Utilizar la IA para optimizar procesos de startup.",
+      "Desarrollar estrategias de marketing y crecimiento.",
+      "Escalar tu negocio con el apoyo de la Inteligencia Artificial."
+    ],
+    "details": {
+      "date": "04 Oct 2025",
+      "duration": "8 horas",
+      "level": "Básico",
+      "offer": "Acceso a una comunidad de emprendedores"
+    },
+    "remainingSeats": "20 estudiantes",
+    "precio": 32,
+    "descuento": 0.12
+  },
+  {
+    "id": "enfermeria-medico",
+    "slug": "enfermeria-medico",
+    "category": "Enfermería Médico-Quirúrgica",
+    "src": "/Group65.png",
+    "name": "Emprendimiento con IA",
+    "titulo": "Crea y Escala tu Startup con Inteligencia Artificial",
+    "descripcion": "Aprende a idear, validar y escalar tu negocio utilizando herramientas y estrategias de Inteligencia Artificial. Curso presencial en Miraflores, Lima - Perú.",
+    "fechatext": "Disponible desde el sábado 4 de octubre",
+    "about": "Este curso de 8 horas está diseñado para emprendedores que buscan una ventaja competitiva, mostrándote cómo la IA puede ayudarte en cada etapa de tu startup, desde la investigación de mercado hasta el crecimiento.",
+    "profesores": [
+      {
+        "nombre": "Alvaro Felipe Chávez",
+        "imagen": "/image-1.jpg",
+        "usuarioSocial": "@alvaro",
+        "enlacePerfil": "https://vercel.com/"
+      },
+      {
+        "nombre": "Alexys Lozada",
+        "imagen": "/image-2.jpg",
+        "usuarioSocial": "@alexyslozada",
+        "enlacePerfil": "/perfil/alexys"
+      },
+      {
+        "nombre": "Beto Quiroga",
+        "imagen": "/image-3.jpg",
+        "usuarioSocial": "@betoquiroga",
+        "enlacePerfil": "/perfil/beto"
+      }
+    ],
+    "paraQuienEs": [
+      "Emprendedores con una idea de negocio.",
+      "Personas que quieren iniciar su propia startup.",
+      "Profesionales que buscan aplicar la IA en el ámbito empresarial."
+    ],
+    "conocimientosPrevios": [
+      "No se requieren conocimientos previos de programación o IA, solo entusiasmo por emprender."
+    ],
+    "temarios": [
+      {
+        "title": "Módulo 1: Ideación y Validación con IA",
+        "items": [
+          "Generación de ideas de negocio con IA",
+          "Investigación de mercado y análisis de competencia con IA",
+          "Creación de propuestas de valor y modelos de negocio con IA",
+          "Validación de hipótesis y MVPs con asistencia de IA"
+        ]
+      },
+      {
+        "title": "Módulo 2: Desarrollo de Producto y Marketing con IA",
+        "items": [
+          "Diseño de productos y servicios asistido por IA",
+          "Estrategias de lanzamiento y crecimiento con IA",
+          "Automatización de marketing y ventas con IA",
+          "Gestión de relaciones con clientes (CRM) con IA"
+        ]
+      },
+      {
+        "title": "Módulo 3: Finanzas y Escalado con IA",
+        "items": [
+          "Análisis financiero y proyecciones con IA",
+          "Optimización de operaciones y procesos con IA",
+          "Búsqueda de financiación y pitch decks con IA",
+          "Retos y oportunidades futuras del emprendimiento con IA"
+        ]
+      }
+    ],
+    "fecha": "2025-10-04T00:00:00",
+    "learnings": [
+      "Idear y validar oportunidades de negocio.",
+      "Utilizar la IA para optimizar procesos de startup.",
+      "Desarrollar estrategias de marketing y crecimiento.",
+      "Escalar tu negocio con el apoyo de la Inteligencia Artificial."
+    ],
+    "details": {
+      "date": "04 Oct 2025",
+      "duration": "8 horas",
+      "level": "Básico",
+      "offer": "Acceso a una comunidad de emprendedores"
+    },
+    "remainingSeats": "20 estudiantes",
+    "precio": 32,
+    "descuento": 0.12
+  },
+  {
+    "id": "medico-quirurgica",
+    "slug": "medico-quirurgica",
+    "category": "Enfermería Médico-Quirúrgica",
+    "src": "/Group65.png",
+    "name": "Emprendimiento con IA",
+    "titulo": "Crea y Escala tu Startup con Inteligencia Artificial",
+    "descripcion": "Aprende a idear, validar y escalar tu negocio utilizando herramientas y estrategias de Inteligencia Artificial. Curso presencial en Miraflores, Lima - Perú.",
+    "fechatext": "Disponible desde el sábado 4 de octubre",
+    "about": "Este curso de 8 horas está diseñado para emprendedores que buscan una ventaja competitiva, mostrándote cómo la IA puede ayudarte en cada etapa de tu startup, desde la investigación de mercado hasta el crecimiento.",
+    "profesores": [
+      {
+        "nombre": "Alvaro Felipe Chávez",
+        "imagen": "/image-1.jpg",
+        "usuarioSocial": "@alvaro",
+        "enlacePerfil": "https://vercel.com/"
+      },
+      {
+        "nombre": "Alexys Lozada",
+        "imagen": "/image-2.jpg",
+        "usuarioSocial": "@alexyslozada",
+        "enlacePerfil": "/perfil/alexys"
+      },
+      {
+        "nombre": "Beto Quiroga",
+        "imagen": "/image-3.jpg",
+        "usuarioSocial": "@betoquiroga",
+        "enlacePerfil": "/perfil/beto"
+      }
+    ],
+    "paraQuienEs": [
+      "Emprendedores con una idea de negocio.",
+      "Personas que quieren iniciar su propia startup.",
+      "Profesionales que buscan aplicar la IA en el ámbito empresarial."
+    ],
+    "conocimientosPrevios": [
+      "No se requieren conocimientos previos de programación o IA, solo entusiasmo por emprender."
+    ],
+    "temarios": [
+      {
+        "title": "Módulo 1: Ideación y Validación con IA",
+        "items": [
+          "Generación de ideas de negocio con IA",
+          "Investigación de mercado y análisis de competencia con IA",
+          "Creación de propuestas de valor y modelos de negocio con IA",
+          "Validación de hipótesis y MVPs con asistencia de IA"
+        ]
+      },
+      {
+        "title": "Módulo 2: Desarrollo de Producto y Marketing con IA",
+        "items": [
+          "Diseño de productos y servicios asistido por IA",
+          "Estrategias de lanzamiento y crecimiento con IA",
+          "Automatización de marketing y ventas con IA",
+          "Gestión de relaciones con clientes (CRM) con IA"
+        ]
+      },
+      {
+        "title": "Módulo 3: Finanzas y Escalado con IA",
+        "items": [
+          "Análisis financiero y proyecciones con IA",
+          "Optimización de operaciones y procesos con IA",
+          "Búsqueda de financiación y pitch decks con IA",
+          "Retos y oportunidades futuras del emprendimiento con IA"
+        ]
+      }
+    ],
+    "fecha": "2025-10-04T00:00:00",
+    "learnings": [
+      "Idear y validar oportunidades de negocio.",
+      "Utilizar la IA para optimizar procesos de startup.",
+      "Desarrollar estrategias de marketing y crecimiento.",
+      "Escalar tu negocio con el apoyo de la Inteligencia Artificial."
+    ],
+    "details": {
+      "date": "04 Oct 2025",
+      "duration": "8 horas",
+      "level": "Básico",
+      "offer": "Acceso a una comunidad de emprendedores"
+    },
+    "remainingSeats": "20 estudiantes",
+    "precio": 32,
+    "descuento": 0.12
+  },
+
+
+
+
+  {
+    "id": "Pública",
+    "slug": "Pública",
+    "category": "Salud Pública y Comunitaria",
+    "src": "/Group65.png",
+    "name": "Emprendimiento con IA",
+    "titulo": "Crea y Escala tu Startup con Inteligencia Artificial",
+    "descripcion": "Aprende a idear, validar y escalar tu negocio utilizando herramientas y estrategias de Inteligencia Artificial. Curso presencial en Miraflores, Lima - Perú.",
+    "fechatext": "Disponible desde el sábado 4 de octubre",
+    "about": "Este curso de 8 horas está diseñado para emprendedores que buscan una ventaja competitiva, mostrándote cómo la IA puede ayudarte en cada etapa de tu startup, desde la investigación de mercado hasta el crecimiento.",
+    "profesores": [
+      {
+        "nombre": "Alvaro Felipe Chávez",
+        "imagen": "/image-1.jpg",
+        "usuarioSocial": "@alvaro",
+        "enlacePerfil": "https://vercel.com/"
+      },
+      {
+        "nombre": "Alexys Lozada",
+        "imagen": "/image-2.jpg",
+        "usuarioSocial": "@alexyslozada",
+        "enlacePerfil": "/perfil/alexys"
+      },
+      {
+        "nombre": "Beto Quiroga",
+        "imagen": "/image-3.jpg",
+        "usuarioSocial": "@betoquiroga",
+        "enlacePerfil": "/perfil/beto"
+      }
+    ],
+    "paraQuienEs": [
+      "Emprendedores con una idea de negocio.",
+      "Personas que quieren iniciar su propia startup.",
+      "Profesionales que buscan aplicar la IA en el ámbito empresarial."
+    ],
+    "conocimientosPrevios": [
+      "No se requieren conocimientos previos de programación o IA, solo entusiasmo por emprender."
+    ],
+    "temarios": [
+      {
+        "title": "Módulo 1: Ideación y Validación con IA",
+        "items": [
+          "Generación de ideas de negocio con IA",
+          "Investigación de mercado y análisis de competencia con IA",
+          "Creación de propuestas de valor y modelos de negocio con IA",
+          "Validación de hipótesis y MVPs con asistencia de IA"
+        ]
+      },
+      {
+        "title": "Módulo 2: Desarrollo de Producto y Marketing con IA",
+        "items": [
+          "Diseño de productos y servicios asistido por IA",
+          "Estrategias de lanzamiento y crecimiento con IA",
+          "Automatización de marketing y ventas con IA",
+          "Gestión de relaciones con clientes (CRM) con IA"
+        ]
+      },
+      {
+        "title": "Módulo 3: Finanzas y Escalado con IA",
+        "items": [
+          "Análisis financiero y proyecciones con IA",
+          "Optimización de operaciones y procesos con IA",
+          "Búsqueda de financiación y pitch decks con IA",
+          "Retos y oportunidades futuras del emprendimiento con IA"
+        ]
+      }
+    ],
+    "fecha": "2025-10-04T00:00:00",
+    "learnings": [
+      "Idear y validar oportunidades de negocio.",
+      "Utilizar la IA para optimizar procesos de startup.",
+      "Desarrollar estrategias de marketing y crecimiento.",
+      "Escalar tu negocio con el apoyo de la Inteligencia Artificial."
+    ],
+    "details": {
+      "date": "04 Oct 2025",
+      "duration": "8 horas",
+      "level": "Básico",
+      "offer": "Acceso a una comunidad de emprendedores"
+    },
+    "remainingSeats": "20 estudiantes",
+    "precio": 32,
+    "descuento": 0.12
+  },
+  {
+    "id": "Salud-Pública",
+    "slug": "Salud-Pública",
+    "category": "Salud Pública y Comunitaria",
+    "src": "/Group65.png",
+    "name": "Emprendimiento con IA",
+    "titulo": "Crea y Escala tu Startup con Inteligencia Artificial",
+    "descripcion": "Aprende a idear, validar y escalar tu negocio utilizando herramientas y estrategias de Inteligencia Artificial. Curso presencial en Miraflores, Lima - Perú.",
+    "fechatext": "Disponible desde el sábado 4 de octubre",
+    "about": "Este curso de 8 horas está diseñado para emprendedores que buscan una ventaja competitiva, mostrándote cómo la IA puede ayudarte en cada etapa de tu startup, desde la investigación de mercado hasta el crecimiento.",
+    "profesores": [
+      {
+        "nombre": "Alvaro Felipe Chávez",
+        "imagen": "/image-1.jpg",
+        "usuarioSocial": "@alvaro",
+        "enlacePerfil": "https://vercel.com/"
+      },
+      {
+        "nombre": "Alexys Lozada",
+        "imagen": "/image-2.jpg",
+        "usuarioSocial": "@alexyslozada",
+        "enlacePerfil": "/perfil/alexys"
+      },
+      {
+        "nombre": "Beto Quiroga",
+        "imagen": "/image-3.jpg",
+        "usuarioSocial": "@betoquiroga",
+        "enlacePerfil": "/perfil/beto"
+      }
+    ],
+    "paraQuienEs": [
+      "Emprendedores con una idea de negocio.",
+      "Personas que quieren iniciar su propia startup.",
+      "Profesionales que buscan aplicar la IA en el ámbito empresarial."
+    ],
+    "conocimientosPrevios": [
+      "No se requieren conocimientos previos de programación o IA, solo entusiasmo por emprender."
+    ],
+    "temarios": [
+      {
+        "title": "Módulo 1: Ideación y Validación con IA",
+        "items": [
+          "Generación de ideas de negocio con IA",
+          "Investigación de mercado y análisis de competencia con IA",
+          "Creación de propuestas de valor y modelos de negocio con IA",
+          "Validación de hipótesis y MVPs con asistencia de IA"
+        ]
+      },
+      {
+        "title": "Módulo 2: Desarrollo de Producto y Marketing con IA",
+        "items": [
+          "Diseño de productos y servicios asistido por IA",
+          "Estrategias de lanzamiento y crecimiento con IA",
+          "Automatización de marketing y ventas con IA",
+          "Gestión de relaciones con clientes (CRM) con IA"
+        ]
+      },
+      {
+        "title": "Módulo 3: Finanzas y Escalado con IA",
+        "items": [
+          "Análisis financiero y proyecciones con IA",
+          "Optimización de operaciones y procesos con IA",
+          "Búsqueda de financiación y pitch decks con IA",
+          "Retos y oportunidades futuras del emprendimiento con IA"
+        ]
+      }
+    ],
+    "fecha": "2025-10-04T00:00:00",
+    "learnings": [
+      "Idear y validar oportunidades de negocio.",
+      "Utilizar la IA para optimizar procesos de startup.",
+      "Desarrollar estrategias de marketing y crecimiento.",
+      "Escalar tu negocio con el apoyo de la Inteligencia Artificial."
+    ],
+    "details": {
+      "date": "04 Oct 2025",
+      "duration": "8 horas",
+      "level": "Básico",
+      "offer": "Acceso a una comunidad de emprendedores"
+    },
+    "remainingSeats": "20 estudiantes",
+    "precio": 32,
+    "descuento": 0.12
+  },
+  {
+    "id": "Comunitaria",
+    "slug": "Comunitaria",
+    "category": "Salud Pública y Comunitaria",
+    "src": "/Group65.png",
+    "name": "Emprendimiento con IA",
+    "titulo": "Crea y Escala tu Startup con Inteligencia Artificial",
+    "descripcion": "Aprende a idear, validar y escalar tu negocio utilizando herramientas y estrategias de Inteligencia Artificial. Curso presencial en Miraflores, Lima - Perú.",
+    "fechatext": "Disponible desde el sábado 4 de octubre",
+    "about": "Este curso de 8 horas está diseñado para emprendedores que buscan una ventaja competitiva, mostrándote cómo la IA puede ayudarte en cada etapa de tu startup, desde la investigación de mercado hasta el crecimiento.",
+    "profesores": [
+      {
+        "nombre": "Alvaro Felipe Chávez",
+        "imagen": "/image-1.jpg",
+        "usuarioSocial": "@alvaro",
+        "enlacePerfil": "https://vercel.com/"
+      },
+      {
+        "nombre": "Alexys Lozada",
+        "imagen": "/image-2.jpg",
+        "usuarioSocial": "@alexyslozada",
+        "enlacePerfil": "/perfil/alexys"
+      },
+      {
+        "nombre": "Beto Quiroga",
+        "imagen": "/image-3.jpg",
+        "usuarioSocial": "@betoquiroga",
+        "enlacePerfil": "/perfil/beto"
+      }
+    ],
+    "paraQuienEs": [
+      "Emprendedores con una idea de negocio.",
+      "Personas que quieren iniciar su propia startup.",
+      "Profesionales que buscan aplicar la IA en el ámbito empresarial."
+    ],
+    "conocimientosPrevios": [
+      "No se requieren conocimientos previos de programación o IA, solo entusiasmo por emprender."
+    ],
+    "temarios": [
+      {
+        "title": "Módulo 1: Ideación y Validación con IA",
+        "items": [
+          "Generación de ideas de negocio con IA",
+          "Investigación de mercado y análisis de competencia con IA",
+          "Creación de propuestas de valor y modelos de negocio con IA",
+          "Validación de hipótesis y MVPs con asistencia de IA"
+        ]
+      },
+      {
+        "title": "Módulo 2: Desarrollo de Producto y Marketing con IA",
+        "items": [
+          "Diseño de productos y servicios asistido por IA",
+          "Estrategias de lanzamiento y crecimiento con IA",
+          "Automatización de marketing y ventas con IA",
+          "Gestión de relaciones con clientes (CRM) con IA"
+        ]
+      },
+      {
+        "title": "Módulo 3: Finanzas y Escalado con IA",
+        "items": [
+          "Análisis financiero y proyecciones con IA",
+          "Optimización de operaciones y procesos con IA",
+          "Búsqueda de financiación y pitch decks con IA",
+          "Retos y oportunidades futuras del emprendimiento con IA"
+        ]
+      }
+    ],
+    "fecha": "2025-10-04T00:00:00",
+    "learnings": [
+      "Idear y validar oportunidades de negocio.",
+      "Utilizar la IA para optimizar procesos de startup.",
+      "Desarrollar estrategias de marketing y crecimiento.",
+      "Escalar tu negocio con el apoyo de la Inteligencia Artificial."
+    ],
+    "details": {
+      "date": "04 Oct 2025",
+      "duration": "8 horas",
+      "level": "Básico",
+      "offer": "Acceso a una comunidad de emprendedores"
+    },
+    "remainingSeats": "20 estudiantes",
+    "precio": 32,
+    "descuento": 0.12
+  },
+  {
+    "id": "Comunitaria-IA",
+    "slug": "Comunitaria-IA",
+    "category": "Salud Pública y Comunitaria",
+    "src": "/Group65.png",
+    "name": "Emprendimiento con IA",
+    "titulo": "Crea y Escala tu Startup con Inteligencia Artificial",
+    "descripcion": "Aprende a idear, validar y escalar tu negocio utilizando herramientas y estrategias de Inteligencia Artificial. Curso presencial en Miraflores, Lima - Perú.",
+    "fechatext": "Disponible desde el sábado 4 de octubre",
+    "about": "Este curso de 8 horas está diseñado para emprendedores que buscan una ventaja competitiva, mostrándote cómo la IA puede ayudarte en cada etapa de tu startup, desde la investigación de mercado hasta el crecimiento.",
+    "profesores": [
+      {
+        "nombre": "Alvaro Felipe Chávez",
+        "imagen": "/image-1.jpg",
+        "usuarioSocial": "@alvaro",
+        "enlacePerfil": "https://vercel.com/"
+      },
+      {
+        "nombre": "Alexys Lozada",
+        "imagen": "/image-2.jpg",
+        "usuarioSocial": "@alexyslozada",
+        "enlacePerfil": "/perfil/alexys"
+      },
+      {
+        "nombre": "Beto Quiroga",
+        "imagen": "/image-3.jpg",
+        "usuarioSocial": "@betoquiroga",
+        "enlacePerfil": "/perfil/beto"
+      }
+    ],
+    "paraQuienEs": [
+      "Emprendedores con una idea de negocio.",
+      "Personas que quieren iniciar su propia startup.",
+      "Profesionales que buscan aplicar la IA en el ámbito empresarial."
+    ],
+    "conocimientosPrevios": [
+      "No se requieren conocimientos previos de programación o IA, solo entusiasmo por emprender."
+    ],
+    "temarios": [
+      {
+        "title": "Módulo 1: Ideación y Validación con IA",
+        "items": [
+          "Generación de ideas de negocio con IA",
+          "Investigación de mercado y análisis de competencia con IA",
+          "Creación de propuestas de valor y modelos de negocio con IA",
+          "Validación de hipótesis y MVPs con asistencia de IA"
+        ]
+      },
+      {
+        "title": "Módulo 2: Desarrollo de Producto y Marketing con IA",
+        "items": [
+          "Diseño de productos y servicios asistido por IA",
+          "Estrategias de lanzamiento y crecimiento con IA",
+          "Automatización de marketing y ventas con IA",
+          "Gestión de relaciones con clientes (CRM) con IA"
+        ]
+      },
+      {
+        "title": "Módulo 3: Finanzas y Escalado con IA",
+        "items": [
+          "Análisis financiero y proyecciones con IA",
+          "Optimización de operaciones y procesos con IA",
+          "Búsqueda de financiación y pitch decks con IA",
+          "Retos y oportunidades futuras del emprendimiento con IA"
+        ]
+      }
+    ],
+    "fecha": "2025-10-04T00:00:00",
+    "learnings": [
+      "Idear y validar oportunidades de negocio.",
+      "Utilizar la IA para optimizar procesos de startup.",
+      "Desarrollar estrategias de marketing y crecimiento.",
+      "Escalar tu negocio con el apoyo de la Inteligencia Artificial."
+    ],
+    "details": {
+      "date": "04 Oct 2025",
+      "duration": "8 horas",
+      "level": "Básico",
+      "offer": "Acceso a una comunidad de emprendedores"
+    },
+    "remainingSeats": "20 estudiantes",
+    "precio": 32,
+    "descuento": 0.12
+  },
+
+
+
+
+
+  {
+    "id": "Administración",
+    "slug": "Administración",
+    "category": "Administración y Gestión en Salud",
+    "src": "/Group65.png",
+    "name": "Emprendimiento con IA",
+    "titulo": "Crea y Escala tu Startup con Inteligencia Artificial",
+    "descripcion": "Aprende a idear, validar y escalar tu negocio utilizando herramientas y estrategias de Inteligencia Artificial. Curso presencial en Miraflores, Lima - Perú.",
+    "fechatext": "Disponible desde el sábado 4 de octubre",
+    "about": "Este curso de 8 horas está diseñado para emprendedores que buscan una ventaja competitiva, mostrándote cómo la IA puede ayudarte en cada etapa de tu startup, desde la investigación de mercado hasta el crecimiento.",
+    "profesores": [
+      {
+        "nombre": "Alvaro Felipe Chávez",
+        "imagen": "/image-1.jpg",
+        "usuarioSocial": "@alvaro",
+        "enlacePerfil": "https://vercel.com/"
+      },
+      {
+        "nombre": "Alexys Lozada",
+        "imagen": "/image-2.jpg",
+        "usuarioSocial": "@alexyslozada",
+        "enlacePerfil": "/perfil/alexys"
+      },
+      {
+        "nombre": "Beto Quiroga",
+        "imagen": "/image-3.jpg",
+        "usuarioSocial": "@betoquiroga",
+        "enlacePerfil": "/perfil/beto"
+      }
+    ],
+    "paraQuienEs": [
+      "Emprendedores con una idea de negocio.",
+      "Personas que quieren iniciar su propia startup.",
+      "Profesionales que buscan aplicar la IA en el ámbito empresarial."
+    ],
+    "conocimientosPrevios": [
+      "No se requieren conocimientos previos de programación o IA, solo entusiasmo por emprender."
+    ],
+    "temarios": [
+      {
+        "title": "Módulo 1: Ideación y Validación con IA",
+        "items": [
+          "Generación de ideas de negocio con IA",
+          "Investigación de mercado y análisis de competencia con IA",
+          "Creación de propuestas de valor y modelos de negocio con IA",
+          "Validación de hipótesis y MVPs con asistencia de IA"
+        ]
+      },
+      {
+        "title": "Módulo 2: Desarrollo de Producto y Marketing con IA",
+        "items": [
+          "Diseño de productos y servicios asistido por IA",
+          "Estrategias de lanzamiento y crecimiento con IA",
+          "Automatización de marketing y ventas con IA",
+          "Gestión de relaciones con clientes (CRM) con IA"
+        ]
+      },
+      {
+        "title": "Módulo 3: Finanzas y Escalado con IA",
+        "items": [
+          "Análisis financiero y proyecciones con IA",
+          "Optimización de operaciones y procesos con IA",
+          "Búsqueda de financiación y pitch decks con IA",
+          "Retos y oportunidades futuras del emprendimiento con IA"
+        ]
+      }
+    ],
+    "fecha": "2025-10-04T00:00:00",
+    "learnings": [
+      "Idear y validar oportunidades de negocio.",
+      "Utilizar la IA para optimizar procesos de startup.",
+      "Desarrollar estrategias de marketing y crecimiento.",
+      "Escalar tu negocio con el apoyo de la Inteligencia Artificial."
+    ],
+    "details": {
+      "date": "04 Oct 2025",
+      "duration": "8 horas",
+      "level": "Básico",
+      "offer": "Acceso a una comunidad de emprendedores"
+    },
+    "remainingSeats": "20 estudiantes",
+    "precio": 32,
+    "descuento": 0.12
+  },
+  {
+    "id": "Gestión",
+    "slug": "Gestión",
+    "category": "Administración y Gestión en Salud",
+    "src": "/Group65.png",
+    "name": "Emprendimiento con IA",
+    "titulo": "Crea y Escala tu Startup con Inteligencia Artificial",
+    "descripcion": "Aprende a idear, validar y escalar tu negocio utilizando herramientas y estrategias de Inteligencia Artificial. Curso presencial en Miraflores, Lima - Perú.",
+    "fechatext": "Disponible desde el sábado 4 de octubre",
+    "about": "Este curso de 8 horas está diseñado para emprendedores que buscan una ventaja competitiva, mostrándote cómo la IA puede ayudarte en cada etapa de tu startup, desde la investigación de mercado hasta el crecimiento.",
+    "profesores": [
+      {
+        "nombre": "Alvaro Felipe Chávez",
+        "imagen": "/image-1.jpg",
+        "usuarioSocial": "@alvaro",
+        "enlacePerfil": "https://vercel.com/"
+      },
+      {
+        "nombre": "Alexys Lozada",
+        "imagen": "/image-2.jpg",
+        "usuarioSocial": "@alexyslozada",
+        "enlacePerfil": "/perfil/alexys"
+      },
+      {
+        "nombre": "Beto Quiroga",
+        "imagen": "/image-3.jpg",
+        "usuarioSocial": "@betoquiroga",
+        "enlacePerfil": "/perfil/beto"
+      }
+    ],
+    "paraQuienEs": [
+      "Emprendedores con una idea de negocio.",
+      "Personas que quieren iniciar su propia startup.",
+      "Profesionales que buscan aplicar la IA en el ámbito empresarial."
+    ],
+    "conocimientosPrevios": [
+      "No se requieren conocimientos previos de programación o IA, solo entusiasmo por emprender."
+    ],
+    "temarios": [
+      {
+        "title": "Módulo 1: Ideación y Validación con IA",
+        "items": [
+          "Generación de ideas de negocio con IA",
+          "Investigación de mercado y análisis de competencia con IA",
+          "Creación de propuestas de valor y modelos de negocio con IA",
+          "Validación de hipótesis y MVPs con asistencia de IA"
+        ]
+      },
+      {
+        "title": "Módulo 2: Desarrollo de Producto y Marketing con IA",
+        "items": [
+          "Diseño de productos y servicios asistido por IA",
+          "Estrategias de lanzamiento y crecimiento con IA",
+          "Automatización de marketing y ventas con IA",
+          "Gestión de relaciones con clientes (CRM) con IA"
+        ]
+      },
+      {
+        "title": "Módulo 3: Finanzas y Escalado con IA",
+        "items": [
+          "Análisis financiero y proyecciones con IA",
+          "Optimización de operaciones y procesos con IA",
+          "Búsqueda de financiación y pitch decks con IA",
+          "Retos y oportunidades futuras del emprendimiento con IA"
+        ]
+      }
+    ],
+    "fecha": "2025-10-04T00:00:00",
+    "learnings": [
+      "Idear y validar oportunidades de negocio.",
+      "Utilizar la IA para optimizar procesos de startup.",
+      "Desarrollar estrategias de marketing y crecimiento.",
+      "Escalar tu negocio con el apoyo de la Inteligencia Artificial."
+    ],
+    "details": {
+      "date": "04 Oct 2025",
+      "duration": "8 horas",
+      "level": "Básico",
+      "offer": "Acceso a una comunidad de emprendedores"
+    },
+    "remainingSeats": "20 estudiantes",
+    "precio": 32,
+    "descuento": 0.12
+  },
+  {
+    "id": "Gestión-2",
+    "slug": "Gestión-2",
+    "category": "Administración y Gestión en Salud",
+    "src": "/Group65.png",
+    "name": "Emprendimiento con IA",
+    "titulo": "Crea y Escala tu Startup con Inteligencia Artificial",
+    "descripcion": "Aprende a idear, validar y escalar tu negocio utilizando herramientas y estrategias de Inteligencia Artificial. Curso presencial en Miraflores, Lima - Perú.",
+    "fechatext": "Disponible desde el sábado 4 de octubre",
+    "about": "Este curso de 8 horas está diseñado para emprendedores que buscan una ventaja competitiva, mostrándote cómo la IA puede ayudarte en cada etapa de tu startup, desde la investigación de mercado hasta el crecimiento.",
+    "profesores": [
+      {
+        "nombre": "Alvaro Felipe Chávez",
+        "imagen": "/image-1.jpg",
+        "usuarioSocial": "@alvaro",
+        "enlacePerfil": "https://vercel.com/"
+      },
+      {
+        "nombre": "Alexys Lozada",
+        "imagen": "/image-2.jpg",
+        "usuarioSocial": "@alexyslozada",
+        "enlacePerfil": "/perfil/alexys"
+      },
+      {
+        "nombre": "Beto Quiroga",
+        "imagen": "/image-3.jpg",
+        "usuarioSocial": "@betoquiroga",
+        "enlacePerfil": "/perfil/beto"
+      }
+    ],
+    "paraQuienEs": [
+      "Emprendedores con una idea de negocio.",
+      "Personas que quieren iniciar su propia startup.",
+      "Profesionales que buscan aplicar la IA en el ámbito empresarial."
+    ],
+    "conocimientosPrevios": [
+      "No se requieren conocimientos previos de programación o IA, solo entusiasmo por emprender."
+    ],
+    "temarios": [
+      {
+        "title": "Módulo 1: Ideación y Validación con IA",
+        "items": [
+          "Generación de ideas de negocio con IA",
+          "Investigación de mercado y análisis de competencia con IA",
+          "Creación de propuestas de valor y modelos de negocio con IA",
+          "Validación de hipótesis y MVPs con asistencia de IA"
+        ]
+      },
+      {
+        "title": "Módulo 2: Desarrollo de Producto y Marketing con IA",
+        "items": [
+          "Diseño de productos y servicios asistido por IA",
+          "Estrategias de lanzamiento y crecimiento con IA",
+          "Automatización de marketing y ventas con IA",
+          "Gestión de relaciones con clientes (CRM) con IA"
+        ]
+      },
+      {
+        "title": "Módulo 3: Finanzas y Escalado con IA",
+        "items": [
+          "Análisis financiero y proyecciones con IA",
+          "Optimización de operaciones y procesos con IA",
+          "Búsqueda de financiación y pitch decks con IA",
+          "Retos y oportunidades futuras del emprendimiento con IA"
+        ]
+      }
+    ],
+    "fecha": "2025-10-04T00:00:00",
+    "learnings": [
+      "Idear y validar oportunidades de negocio.",
+      "Utilizar la IA para optimizar procesos de startup.",
+      "Desarrollar estrategias de marketing y crecimiento.",
+      "Escalar tu negocio con el apoyo de la Inteligencia Artificial."
+    ],
+    "details": {
+      "date": "04 Oct 2025",
+      "duration": "8 horas",
+      "level": "Básico",
+      "offer": "Acceso a una comunidad de emprendedores"
+    },
+    "remainingSeats": "20 estudiantes",
+    "precio": 32,
+    "descuento": 0.12
+  },
+  {
+    "id": "Gestión-3",
+    "slug": "Gestión-3",
+    "category": "Administración y Gestión en Salud",
+    "src": "/Group65.png",
+    "name": "Emprendimiento con IA",
+    "titulo": "Crea y Escala tu Startup con Inteligencia Artificial",
+    "descripcion": "Aprende a idear, validar y escalar tu negocio utilizando herramientas y estrategias de Inteligencia Artificial. Curso presencial en Miraflores, Lima - Perú.",
+    "fechatext": "Disponible desde el sábado 4 de octubre",
+    "about": "Este curso de 8 horas está diseñado para emprendedores que buscan una ventaja competitiva, mostrándote cómo la IA puede ayudarte en cada etapa de tu startup, desde la investigación de mercado hasta el crecimiento.",
+    "profesores": [
+      {
+        "nombre": "Alvaro Felipe Chávez",
+        "imagen": "/image-1.jpg",
+        "usuarioSocial": "@alvaro",
+        "enlacePerfil": "https://vercel.com/"
+      },
+      {
+        "nombre": "Alexys Lozada",
+        "imagen": "/image-2.jpg",
+        "usuarioSocial": "@alexyslozada",
+        "enlacePerfil": "/perfil/alexys"
+      },
+      {
+        "nombre": "Beto Quiroga",
+        "imagen": "/image-3.jpg",
+        "usuarioSocial": "@betoquiroga",
+        "enlacePerfil": "/perfil/beto"
+      }
+    ],
+    "paraQuienEs": [
+      "Emprendedores con una idea de negocio.",
+      "Personas que quieren iniciar su propia startup.",
+      "Profesionales que buscan aplicar la IA en el ámbito empresarial."
+    ],
+    "conocimientosPrevios": [
+      "No se requieren conocimientos previos de programación o IA, solo entusiasmo por emprender."
+    ],
+    "temarios": [
+      {
+        "title": "Módulo 1: Ideación y Validación con IA",
+        "items": [
+          "Generación de ideas de negocio con IA",
+          "Investigación de mercado y análisis de competencia con IA",
+          "Creación de propuestas de valor y modelos de negocio con IA",
+          "Validación de hipótesis y MVPs con asistencia de IA"
+        ]
+      },
+      {
+        "title": "Módulo 2: Desarrollo de Producto y Marketing con IA",
+        "items": [
+          "Diseño de productos y servicios asistido por IA",
+          "Estrategias de lanzamiento y crecimiento con IA",
+          "Automatización de marketing y ventas con IA",
+          "Gestión de relaciones con clientes (CRM) con IA"
+        ]
+      },
+      {
+        "title": "Módulo 3: Finanzas y Escalado con IA",
+        "items": [
+          "Análisis financiero y proyecciones con IA",
+          "Optimización de operaciones y procesos con IA",
+          "Búsqueda de financiación y pitch decks con IA",
+          "Retos y oportunidades futuras del emprendimiento con IA"
+        ]
+      }
+    ],
+    "fecha": "2025-10-04T00:00:00",
+    "learnings": [
+      "Idear y validar oportunidades de negocio.",
+      "Utilizar la IA para optimizar procesos de startup.",
+      "Desarrollar estrategias de marketing y crecimiento.",
+      "Escalar tu negocio con el apoyo de la Inteligencia Artificial."
+    ],
+    "details": {
+      "date": "04 Oct 2025",
+      "duration": "8 horas",
+      "level": "Básico",
+      "offer": "Acceso a una comunidad de emprendedores"
+    },
+    "remainingSeats": "20 estudiantes",
+    "precio": 32,
+    "descuento": 0.12
+  },
+
+
+
+
+
+  {
+    "id": "Documentación",
+    "slug": "Documentación",
+    "category": "Documentación Clínica y Registros de Enfermería",
+    "src": "/Group65.png",
+    "name": "Emprendimiento con IA",
+    "titulo": "Crea y Escala tu Startup con Inteligencia Artificial",
+    "descripcion": "Aprende a idear, validar y escalar tu negocio utilizando herramientas y estrategias de Inteligencia Artificial. Curso presencial en Miraflores, Lima - Perú.",
+    "fechatext": "Disponible desde el sábado 4 de octubre",
+    "about": "Este curso de 8 horas está diseñado para emprendedores que buscan una ventaja competitiva, mostrándote cómo la IA puede ayudarte en cada etapa de tu startup, desde la investigación de mercado hasta el crecimiento.",
+    "profesores": [
+      {
+        "nombre": "Alvaro Felipe Chávez",
+        "imagen": "/image-1.jpg",
+        "usuarioSocial": "@alvaro",
+        "enlacePerfil": "https://vercel.com/"
+      },
+      {
+        "nombre": "Alexys Lozada",
+        "imagen": "/image-2.jpg",
+        "usuarioSocial": "@alexyslozada",
+        "enlacePerfil": "/perfil/alexys"
+      },
+      {
+        "nombre": "Beto Quiroga",
+        "imagen": "/image-3.jpg",
+        "usuarioSocial": "@betoquiroga",
+        "enlacePerfil": "/perfil/beto"
+      }
+    ],
+    "paraQuienEs": [
+      "Emprendedores con una idea de negocio.",
+      "Personas que quieren iniciar su propia startup.",
+      "Profesionales que buscan aplicar la IA en el ámbito empresarial."
+    ],
+    "conocimientosPrevios": [
+      "No se requieren conocimientos previos de programación o IA, solo entusiasmo por emprender."
+    ],
+    "temarios": [
+      {
+        "title": "Módulo 1: Ideación y Validación con IA",
+        "items": [
+          "Generación de ideas de negocio con IA",
+          "Investigación de mercado y análisis de competencia con IA",
+          "Creación de propuestas de valor y modelos de negocio con IA",
+          "Validación de hipótesis y MVPs con asistencia de IA"
+        ]
+      },
+      {
+        "title": "Módulo 2: Desarrollo de Producto y Marketing con IA",
+        "items": [
+          "Diseño de productos y servicios asistido por IA",
+          "Estrategias de lanzamiento y crecimiento con IA",
+          "Automatización de marketing y ventas con IA",
+          "Gestión de relaciones con clientes (CRM) con IA"
+        ]
+      },
+      {
+        "title": "Módulo 3: Finanzas y Escalado con IA",
+        "items": [
+          "Análisis financiero y proyecciones con IA",
+          "Optimización de operaciones y procesos con IA",
+          "Búsqueda de financiación y pitch decks con IA",
+          "Retos y oportunidades futuras del emprendimiento con IA"
+        ]
+      }
+    ],
+    "fecha": "2025-10-04T00:00:00",
+    "learnings": [
+      "Idear y validar oportunidades de negocio.",
+      "Utilizar la IA para optimizar procesos de startup.",
+      "Desarrollar estrategias de marketing y crecimiento.",
+      "Escalar tu negocio con el apoyo de la Inteligencia Artificial."
+    ],
+    "details": {
+      "date": "04 Oct 2025",
+      "duration": "8 horas",
+      "level": "Básico",
+      "offer": "Acceso a una comunidad de emprendedores"
+    },
+    "remainingSeats": "20 estudiantes",
+    "precio": 32,
+    "descuento": 0.12
+  },
+  {
+    "id": "Documentación1",
+    "slug": "Documentación1",
+    "category": "Documentación Clínica y Registros de Enfermería",
+    "src": "/Group65.png",
+    "name": "Emprendimiento con IA",
+    "titulo": "Crea y Escala tu Startup con Inteligencia Artificial",
+    "descripcion": "Aprende a idear, validar y escalar tu negocio utilizando herramientas y estrategias de Inteligencia Artificial. Curso presencial en Miraflores, Lima - Perú.",
+    "fechatext": "Disponible desde el sábado 4 de octubre",
+    "about": "Este curso de 8 horas está diseñado para emprendedores que buscan una ventaja competitiva, mostrándote cómo la IA puede ayudarte en cada etapa de tu startup, desde la investigación de mercado hasta el crecimiento.",
+    "profesores": [
+      {
+        "nombre": "Alvaro Felipe Chávez",
+        "imagen": "/image-1.jpg",
+        "usuarioSocial": "@alvaro",
+        "enlacePerfil": "https://vercel.com/"
+      },
+      {
+        "nombre": "Alexys Lozada",
+        "imagen": "/image-2.jpg",
+        "usuarioSocial": "@alexyslozada",
+        "enlacePerfil": "/perfil/alexys"
+      },
+      {
+        "nombre": "Beto Quiroga",
+        "imagen": "/image-3.jpg",
+        "usuarioSocial": "@betoquiroga",
+        "enlacePerfil": "/perfil/beto"
+      }
+    ],
+    "paraQuienEs": [
+      "Emprendedores con una idea de negocio.",
+      "Personas que quieren iniciar su propia startup.",
+      "Profesionales que buscan aplicar la IA en el ámbito empresarial."
+    ],
+    "conocimientosPrevios": [
+      "No se requieren conocimientos previos de programación o IA, solo entusiasmo por emprender."
+    ],
+    "temarios": [
+      {
+        "title": "Módulo 1: Ideación y Validación con IA",
+        "items": [
+          "Generación de ideas de negocio con IA",
+          "Investigación de mercado y análisis de competencia con IA",
+          "Creación de propuestas de valor y modelos de negocio con IA",
+          "Validación de hipótesis y MVPs con asistencia de IA"
+        ]
+      },
+      {
+        "title": "Módulo 2: Desarrollo de Producto y Marketing con IA",
+        "items": [
+          "Diseño de productos y servicios asistido por IA",
+          "Estrategias de lanzamiento y crecimiento con IA",
+          "Automatización de marketing y ventas con IA",
+          "Gestión de relaciones con clientes (CRM) con IA"
+        ]
+      },
+      {
+        "title": "Módulo 3: Finanzas y Escalado con IA",
+        "items": [
+          "Análisis financiero y proyecciones con IA",
+          "Optimización de operaciones y procesos con IA",
+          "Búsqueda de financiación y pitch decks con IA",
+          "Retos y oportunidades futuras del emprendimiento con IA"
+        ]
+      }
+    ],
+    "fecha": "2025-10-04T00:00:00",
+    "learnings": [
+      "Idear y validar oportunidades de negocio.",
+      "Utilizar la IA para optimizar procesos de startup.",
+      "Desarrollar estrategias de marketing y crecimiento.",
+      "Escalar tu negocio con el apoyo de la Inteligencia Artificial."
+    ],
+    "details": {
+      "date": "04 Oct 2025",
+      "duration": "8 horas",
+      "level": "Básico",
+      "offer": "Acceso a una comunidad de emprendedores"
+    },
+    "remainingSeats": "20 estudiantes",
+    "precio": 32,
+    "descuento": 0.12
+  },
+  {
+    "id": "Documentación2",
+    "slug": "Documentación2",
+    "category": "Documentación Clínica y Registros de Enfermería",
+    "src": "/Group65.png",
+    "name": "Emprendimiento con IA",
+    "titulo": "Crea y Escala tu Startup con Inteligencia Artificial",
+    "descripcion": "Aprende a idear, validar y escalar tu negocio utilizando herramientas y estrategias de Inteligencia Artificial. Curso presencial en Miraflores, Lima - Perú.",
+    "fechatext": "Disponible desde el sábado 4 de octubre",
+    "about": "Este curso de 8 horas está diseñado para emprendedores que buscan una ventaja competitiva, mostrándote cómo la IA puede ayudarte en cada etapa de tu startup, desde la investigación de mercado hasta el crecimiento.",
+    "profesores": [
+      {
+        "nombre": "Alvaro Felipe Chávez",
+        "imagen": "/image-1.jpg",
+        "usuarioSocial": "@alvaro",
+        "enlacePerfil": "https://vercel.com/"
+      },
+      {
+        "nombre": "Alexys Lozada",
+        "imagen": "/image-2.jpg",
+        "usuarioSocial": "@alexyslozada",
+        "enlacePerfil": "/perfil/alexys"
+      },
+      {
+        "nombre": "Beto Quiroga",
+        "imagen": "/image-3.jpg",
+        "usuarioSocial": "@betoquiroga",
+        "enlacePerfil": "/perfil/beto"
+      }
+    ],
+    "paraQuienEs": [
+      "Emprendedores con una idea de negocio.",
+      "Personas que quieren iniciar su propia startup.",
+      "Profesionales que buscan aplicar la IA en el ámbito empresarial."
+    ],
+    "conocimientosPrevios": [
+      "No se requieren conocimientos previos de programación o IA, solo entusiasmo por emprender."
+    ],
+    "temarios": [
+      {
+        "title": "Módulo 1: Ideación y Validación con IA",
+        "items": [
+          "Generación de ideas de negocio con IA",
+          "Investigación de mercado y análisis de competencia con IA",
+          "Creación de propuestas de valor y modelos de negocio con IA",
+          "Validación de hipótesis y MVPs con asistencia de IA"
+        ]
+      },
+      {
+        "title": "Módulo 2: Desarrollo de Producto y Marketing con IA",
+        "items": [
+          "Diseño de productos y servicios asistido por IA",
+          "Estrategias de lanzamiento y crecimiento con IA",
+          "Automatización de marketing y ventas con IA",
+          "Gestión de relaciones con clientes (CRM) con IA"
+        ]
+      },
+      {
+        "title": "Módulo 3: Finanzas y Escalado con IA",
+        "items": [
+          "Análisis financiero y proyecciones con IA",
+          "Optimización de operaciones y procesos con IA",
+          "Búsqueda de financiación y pitch decks con IA",
+          "Retos y oportunidades futuras del emprendimiento con IA"
+        ]
+      }
+    ],
+    "fecha": "2025-10-04T00:00:00",
+    "learnings": [
+      "Idear y validar oportunidades de negocio.",
+      "Utilizar la IA para optimizar procesos de startup.",
+      "Desarrollar estrategias de marketing y crecimiento.",
+      "Escalar tu negocio con el apoyo de la Inteligencia Artificial."
+    ],
+    "details": {
+      "date": "04 Oct 2025",
+      "duration": "8 horas",
+      "level": "Básico",
+      "offer": "Acceso a una comunidad de emprendedores"
+    },
+    "remainingSeats": "20 estudiantes",
+    "precio": 32,
+    "descuento": 0.12
+  },
+  {
+    "id": "Documentación3",
+    "slug": "Documentación3",
+    "category": "Documentación Clínica y Registros de Enfermería",
+    "src": "/Group65.png",
+    "name": "Emprendimiento con IA",
+    "titulo": "Crea y Escala tu Startup con Inteligencia Artificial",
+    "descripcion": "Aprende a idear, validar y escalar tu negocio utilizando herramientas y estrategias de Inteligencia Artificial. Curso presencial en Miraflores, Lima - Perú.",
+    "fechatext": "Disponible desde el sábado 4 de octubre",
+    "about": "Este curso de 8 horas está diseñado para emprendedores que buscan una ventaja competitiva, mostrándote cómo la IA puede ayudarte en cada etapa de tu startup, desde la investigación de mercado hasta el crecimiento.",
+    "profesores": [
+      {
+        "nombre": "Alvaro Felipe Chávez",
+        "imagen": "/image-1.jpg",
+        "usuarioSocial": "@alvaro",
+        "enlacePerfil": "https://vercel.com/"
+      },
+      {
+        "nombre": "Alexys Lozada",
+        "imagen": "/image-2.jpg",
+        "usuarioSocial": "@alexyslozada",
+        "enlacePerfil": "/perfil/alexys"
+      },
+      {
+        "nombre": "Beto Quiroga",
+        "imagen": "/image-3.jpg",
+        "usuarioSocial": "@betoquiroga",
+        "enlacePerfil": "/perfil/beto"
+      }
+    ],
+    "paraQuienEs": [
+      "Emprendedores con una idea de negocio.",
+      "Personas que quieren iniciar su propia startup.",
+      "Profesionales que buscan aplicar la IA en el ámbito empresarial."
+    ],
+    "conocimientosPrevios": [
+      "No se requieren conocimientos previos de programación o IA, solo entusiasmo por emprender."
+    ],
+    "temarios": [
+      {
+        "title": "Módulo 1: Ideación y Validación con IA",
+        "items": [
+          "Generación de ideas de negocio con IA",
+          "Investigación de mercado y análisis de competencia con IA",
+          "Creación de propuestas de valor y modelos de negocio con IA",
+          "Validación de hipótesis y MVPs con asistencia de IA"
+        ]
+      },
+      {
+        "title": "Módulo 2: Desarrollo de Producto y Marketing con IA",
+        "items": [
+          "Diseño de productos y servicios asistido por IA",
+          "Estrategias de lanzamiento y crecimiento con IA",
+          "Automatización de marketing y ventas con IA",
+          "Gestión de relaciones con clientes (CRM) con IA"
+        ]
+      },
+      {
+        "title": "Módulo 3: Finanzas y Escalado con IA",
+        "items": [
+          "Análisis financiero y proyecciones con IA",
+          "Optimización de operaciones y procesos con IA",
+          "Búsqueda de financiación y pitch decks con IA",
+          "Retos y oportunidades futuras del emprendimiento con IA"
+        ]
+      }
+    ],
+    "fecha": "2025-10-04T00:00:00",
+    "learnings": [
+      "Idear y validar oportunidades de negocio.",
+      "Utilizar la IA para optimizar procesos de startup.",
+      "Desarrollar estrategias de marketing y crecimiento.",
+      "Escalar tu negocio con el apoyo de la Inteligencia Artificial."
+    ],
+    "details": {
+      "date": "04 Oct 2025",
+      "duration": "8 horas",
+      "level": "Básico",
+      "offer": "Acceso a una comunidad de emprendedores"
+    },
+    "remainingSeats": "20 estudiantes",
+    "precio": 32,
+    "descuento": 0.12
+  },
+
+  {
+    "id": "Educación",
+    "slug": "Educación",
+    "category": "Educación y Docencia en Enfermería",
+    "src": "/Group65.png",
+    "name": "Emprendimiento con IA",
+    "titulo": "Crea y Escala tu Startup con Inteligencia Artificial",
+    "descripcion": "Aprende a idear, validar y escalar tu negocio utilizando herramientas y estrategias de Inteligencia Artificial. Curso presencial en Miraflores, Lima - Perú.",
+    "fechatext": "Disponible desde el sábado 4 de octubre",
+    "about": "Este curso de 8 horas está diseñado para emprendedores que buscan una ventaja competitiva, mostrándote cómo la IA puede ayudarte en cada etapa de tu startup, desde la investigación de mercado hasta el crecimiento.",
+    "profesores": [
+      {
+        "nombre": "Alvaro Felipe Chávez",
+        "imagen": "/image-1.jpg",
+        "usuarioSocial": "@alvaro",
+        "enlacePerfil": "https://vercel.com/"
+      },
+      {
+        "nombre": "Alexys Lozada",
+        "imagen": "/image-2.jpg",
+        "usuarioSocial": "@alexyslozada",
+        "enlacePerfil": "/perfil/alexys"
+      },
+      {
+        "nombre": "Beto Quiroga",
+        "imagen": "/image-3.jpg",
+        "usuarioSocial": "@betoquiroga",
+        "enlacePerfil": "/perfil/beto"
+      }
+    ],
+    "paraQuienEs": [
+      "Emprendedores con una idea de negocio.",
+      "Personas que quieren iniciar su propia startup.",
+      "Profesionales que buscan aplicar la IA en el ámbito empresarial."
+    ],
+    "conocimientosPrevios": [
+      "No se requieren conocimientos previos de programación o IA, solo entusiasmo por emprender."
+    ],
+    "temarios": [
+      {
+        "title": "Módulo 1: Ideación y Validación con IA",
+        "items": [
+          "Generación de ideas de negocio con IA",
+          "Investigación de mercado y análisis de competencia con IA",
+          "Creación de propuestas de valor y modelos de negocio con IA",
+          "Validación de hipótesis y MVPs con asistencia de IA"
+        ]
+      },
+      {
+        "title": "Módulo 2: Desarrollo de Producto y Marketing con IA",
+        "items": [
+          "Diseño de productos y servicios asistido por IA",
+          "Estrategias de lanzamiento y crecimiento con IA",
+          "Automatización de marketing y ventas con IA",
+          "Gestión de relaciones con clientes (CRM) con IA"
+        ]
+      },
+      {
+        "title": "Módulo 3: Finanzas y Escalado con IA",
+        "items": [
+          "Análisis financiero y proyecciones con IA",
+          "Optimización de operaciones y procesos con IA",
+          "Búsqueda de financiación y pitch decks con IA",
+          "Retos y oportunidades futuras del emprendimiento con IA"
+        ]
+      }
+    ],
+    "fecha": "2025-10-04T00:00:00",
+    "learnings": [
+      "Idear y validar oportunidades de negocio.",
+      "Utilizar la IA para optimizar procesos de startup.",
+      "Desarrollar estrategias de marketing y crecimiento.",
+      "Escalar tu negocio con el apoyo de la Inteligencia Artificial."
+    ],
+    "details": {
+      "date": "04 Oct 2025",
+      "duration": "8 horas",
+      "level": "Básico",
+      "offer": "Acceso a una comunidad de emprendedores"
+    },
+    "remainingSeats": "20 estudiantes",
+    "precio": 32,
+    "descuento": 0.12
+  },
+  {
+    "id": "Educación1",
+    "slug": "Educación1",
+    "category": "Educación y Docencia en Enfermería",
+    "src": "/Group65.png",
+    "name": "Emprendimiento con IA",
+    "titulo": "Crea y Escala tu Startup con Inteligencia Artificial",
+    "descripcion": "Aprende a idear, validar y escalar tu negocio utilizando herramientas y estrategias de Inteligencia Artificial. Curso presencial en Miraflores, Lima - Perú.",
+    "fechatext": "Disponible desde el sábado 4 de octubre",
+    "about": "Este curso de 8 horas está diseñado para emprendedores que buscan una ventaja competitiva, mostrándote cómo la IA puede ayudarte en cada etapa de tu startup, desde la investigación de mercado hasta el crecimiento.",
+    "profesores": [
+      {
+        "nombre": "Alvaro Felipe Chávez",
+        "imagen": "/image-1.jpg",
+        "usuarioSocial": "@alvaro",
+        "enlacePerfil": "https://vercel.com/"
+      },
+      {
+        "nombre": "Alexys Lozada",
+        "imagen": "/image-2.jpg",
+        "usuarioSocial": "@alexyslozada",
+        "enlacePerfil": "/perfil/alexys"
+      },
+      {
+        "nombre": "Beto Quiroga",
+        "imagen": "/image-3.jpg",
+        "usuarioSocial": "@betoquiroga",
+        "enlacePerfil": "/perfil/beto"
+      }
+    ],
+    "paraQuienEs": [
+      "Emprendedores con una idea de negocio.",
+      "Personas que quieren iniciar su propia startup.",
+      "Profesionales que buscan aplicar la IA en el ámbito empresarial."
+    ],
+    "conocimientosPrevios": [
+      "No se requieren conocimientos previos de programación o IA, solo entusiasmo por emprender."
+    ],
+    "temarios": [
+      {
+        "title": "Módulo 1: Ideación y Validación con IA",
+        "items": [
+          "Generación de ideas de negocio con IA",
+          "Investigación de mercado y análisis de competencia con IA",
+          "Creación de propuestas de valor y modelos de negocio con IA",
+          "Validación de hipótesis y MVPs con asistencia de IA"
+        ]
+      },
+      {
+        "title": "Módulo 2: Desarrollo de Producto y Marketing con IA",
+        "items": [
+          "Diseño de productos y servicios asistido por IA",
+          "Estrategias de lanzamiento y crecimiento con IA",
+          "Automatización de marketing y ventas con IA",
+          "Gestión de relaciones con clientes (CRM) con IA"
+        ]
+      },
+      {
+        "title": "Módulo 3: Finanzas y Escalado con IA",
+        "items": [
+          "Análisis financiero y proyecciones con IA",
+          "Optimización de operaciones y procesos con IA",
+          "Búsqueda de financiación y pitch decks con IA",
+          "Retos y oportunidades futuras del emprendimiento con IA"
+        ]
+      }
+    ],
+    "fecha": "2025-10-04T00:00:00",
+    "learnings": [
+      "Idear y validar oportunidades de negocio.",
+      "Utilizar la IA para optimizar procesos de startup.",
+      "Desarrollar estrategias de marketing y crecimiento.",
+      "Escalar tu negocio con el apoyo de la Inteligencia Artificial."
+    ],
+    "details": {
+      "date": "04 Oct 2025",
+      "duration": "8 horas",
+      "level": "Básico",
+      "offer": "Acceso a una comunidad de emprendedores"
+    },
+    "remainingSeats": "20 estudiantes",
+    "precio": 32,
+    "descuento": 0.12
+  },
+  {
+    "id": "Educación2",
+    "slug": "Educación2",
+    "category": "Educación y Docencia en Enfermería",
+    "src": "/Group65.png",
+    "name": "Emprendimiento con IA",
+    "titulo": "Crea y Escala tu Startup con Inteligencia Artificial",
+    "descripcion": "Aprende a idear, validar y escalar tu negocio utilizando herramientas y estrategias de Inteligencia Artificial. Curso presencial en Miraflores, Lima - Perú.",
+    "fechatext": "Disponible desde el sábado 4 de octubre",
+    "about": "Este curso de 8 horas está diseñado para emprendedores que buscan una ventaja competitiva, mostrándote cómo la IA puede ayudarte en cada etapa de tu startup, desde la investigación de mercado hasta el crecimiento.",
+    "profesores": [
+      {
+        "nombre": "Alvaro Felipe Chávez",
+        "imagen": "/image-1.jpg",
+        "usuarioSocial": "@alvaro",
+        "enlacePerfil": "https://vercel.com/"
+      },
+      {
+        "nombre": "Alexys Lozada",
+        "imagen": "/image-2.jpg",
+        "usuarioSocial": "@alexyslozada",
+        "enlacePerfil": "/perfil/alexys"
+      },
+      {
+        "nombre": "Beto Quiroga",
+        "imagen": "/image-3.jpg",
+        "usuarioSocial": "@betoquiroga",
+        "enlacePerfil": "/perfil/beto"
+      }
+    ],
+    "paraQuienEs": [
+      "Emprendedores con una idea de negocio.",
+      "Personas que quieren iniciar su propia startup.",
+      "Profesionales que buscan aplicar la IA en el ámbito empresarial."
+    ],
+    "conocimientosPrevios": [
+      "No se requieren conocimientos previos de programación o IA, solo entusiasmo por emprender."
+    ],
+    "temarios": [
+      {
+        "title": "Módulo 1: Ideación y Validación con IA",
+        "items": [
+          "Generación de ideas de negocio con IA",
+          "Investigación de mercado y análisis de competencia con IA",
+          "Creación de propuestas de valor y modelos de negocio con IA",
+          "Validación de hipótesis y MVPs con asistencia de IA"
+        ]
+      },
+      {
+        "title": "Módulo 2: Desarrollo de Producto y Marketing con IA",
+        "items": [
+          "Diseño de productos y servicios asistido por IA",
+          "Estrategias de lanzamiento y crecimiento con IA",
+          "Automatización de marketing y ventas con IA",
+          "Gestión de relaciones con clientes (CRM) con IA"
+        ]
+      },
+      {
+        "title": "Módulo 3: Finanzas y Escalado con IA",
+        "items": [
+          "Análisis financiero y proyecciones con IA",
+          "Optimización de operaciones y procesos con IA",
+          "Búsqueda de financiación y pitch decks con IA",
+          "Retos y oportunidades futuras del emprendimiento con IA"
+        ]
+      }
+    ],
+    "fecha": "2025-10-04T00:00:00",
+    "learnings": [
+      "Idear y validar oportunidades de negocio.",
+      "Utilizar la IA para optimizar procesos de startup.",
+      "Desarrollar estrategias de marketing y crecimiento.",
+      "Escalar tu negocio con el apoyo de la Inteligencia Artificial."
+    ],
+    "details": {
+      "date": "04 Oct 2025",
+      "duration": "8 horas",
+      "level": "Básico",
+      "offer": "Acceso a una comunidad de emprendedores"
+    },
+    "remainingSeats": "20 estudiantes",
+    "precio": 32,
+    "descuento": 0.12
+  },
+  {
+    "id": "Educación3",
+    "slug": "Educación3",
+    "category": "Educación y Docencia en Enfermería",
+    "src": "/Group65.png",
+    "name": "Emprendimiento con IA",
+    "titulo": "Crea y Escala tu Startup con Inteligencia Artificial",
+    "descripcion": "Aprende a idear, validar y escalar tu negocio utilizando herramientas y estrategias de Inteligencia Artificial. Curso presencial en Miraflores, Lima - Perú.",
+    "fechatext": "Disponible desde el sábado 4 de octubre",
+    "about": "Este curso de 8 horas está diseñado para emprendedores que buscan una ventaja competitiva, mostrándote cómo la IA puede ayudarte en cada etapa de tu startup, desde la investigación de mercado hasta el crecimiento.",
+    "profesores": [
+      {
+        "nombre": "Alvaro Felipe Chávez",
+        "imagen": "/image-1.jpg",
+        "usuarioSocial": "@alvaro",
+        "enlacePerfil": "https://vercel.com/"
+      },
+      {
+        "nombre": "Alexys Lozada",
+        "imagen": "/image-2.jpg",
+        "usuarioSocial": "@alexyslozada",
+        "enlacePerfil": "/perfil/alexys"
+      },
+      {
+        "nombre": "Beto Quiroga",
+        "imagen": "/image-3.jpg",
+        "usuarioSocial": "@betoquiroga",
+        "enlacePerfil": "/perfil/beto"
+      }
+    ],
+    "paraQuienEs": [
+      "Emprendedores con una idea de negocio.",
+      "Personas que quieren iniciar su propia startup.",
+      "Profesionales que buscan aplicar la IA en el ámbito empresarial."
+    ],
+    "conocimientosPrevios": [
+      "No se requieren conocimientos previos de programación o IA, solo entusiasmo por emprender."
+    ],
+    "temarios": [
+      {
+        "title": "Módulo 1: Ideación y Validación con IA",
+        "items": [
+          "Generación de ideas de negocio con IA",
+          "Investigación de mercado y análisis de competencia con IA",
+          "Creación de propuestas de valor y modelos de negocio con IA",
+          "Validación de hipótesis y MVPs con asistencia de IA"
+        ]
+      },
+      {
+        "title": "Módulo 2: Desarrollo de Producto y Marketing con IA",
+        "items": [
+          "Diseño de productos y servicios asistido por IA",
+          "Estrategias de lanzamiento y crecimiento con IA",
+          "Automatización de marketing y ventas con IA",
+          "Gestión de relaciones con clientes (CRM) con IA"
+        ]
+      },
+      {
+        "title": "Módulo 3: Finanzas y Escalado con IA",
+        "items": [
+          "Análisis financiero y proyecciones con IA",
+          "Optimización de operaciones y procesos con IA",
+          "Búsqueda de financiación y pitch decks con IA",
+          "Retos y oportunidades futuras del emprendimiento con IA"
+        ]
+      }
+    ],
+    "fecha": "2025-10-04T00:00:00",
+    "learnings": [
+      "Idear y validar oportunidades de negocio.",
+      "Utilizar la IA para optimizar procesos de startup.",
+      "Desarrollar estrategias de marketing y crecimiento.",
+      "Escalar tu negocio con el apoyo de la Inteligencia Artificial."
+    ],
+    "details": {
+      "date": "04 Oct 2025",
+      "duration": "8 horas",
+      "level": "Básico",
+      "offer": "Acceso a una comunidad de emprendedores"
+    },
+    "remainingSeats": "20 estudiantes",
+    "precio": 32,
+    "descuento": 0.12
+  },
+
+  {
+    "id": "Tecnologia",
+    "slug": "Tecnologia",
+    "category": "Tecnología en Salud",
+    "src": "/Group65.png",
+    "name": "Emprendimiento con IA",
+    "titulo": "Crea y Escala tu Startup con Inteligencia Artificial",
+    "descripcion": "Aprende a idear, validar y escalar tu negocio utilizando herramientas y estrategias de Inteligencia Artificial. Curso presencial en Miraflores, Lima - Perú.",
+    "fechatext": "Disponible desde el sábado 4 de octubre",
+    "about": "Este curso de 8 horas está diseñado para emprendedores que buscan una ventaja competitiva, mostrándote cómo la IA puede ayudarte en cada etapa de tu startup, desde la investigación de mercado hasta el crecimiento.",
+    "profesores": [
+      {
+        "nombre": "Alvaro Felipe Chávez",
+        "imagen": "/image-1.jpg",
+        "usuarioSocial": "@alvaro",
+        "enlacePerfil": "https://vercel.com/"
+      },
+      {
+        "nombre": "Alexys Lozada",
+        "imagen": "/image-2.jpg",
+        "usuarioSocial": "@alexyslozada",
+        "enlacePerfil": "/perfil/alexys"
+      },
+      {
+        "nombre": "Beto Quiroga",
+        "imagen": "/image-3.jpg",
+        "usuarioSocial": "@betoquiroga",
+        "enlacePerfil": "/perfil/beto"
+      }
+    ],
+    "paraQuienEs": [
+      "Emprendedores con una idea de negocio.",
+      "Personas que quieren iniciar su propia startup.",
+      "Profesionales que buscan aplicar la IA en el ámbito empresarial."
+    ],
+    "conocimientosPrevios": [
+      "No se requieren conocimientos previos de programación o IA, solo entusiasmo por emprender."
+    ],
+    "temarios": [
+      {
+        "title": "Módulo 1: Ideación y Validación con IA",
+        "items": [
+          "Generación de ideas de negocio con IA",
+          "Investigación de mercado y análisis de competencia con IA",
+          "Creación de propuestas de valor y modelos de negocio con IA",
+          "Validación de hipótesis y MVPs con asistencia de IA"
+        ]
+      },
+      {
+        "title": "Módulo 2: Desarrollo de Producto y Marketing con IA",
+        "items": [
+          "Diseño de productos y servicios asistido por IA",
+          "Estrategias de lanzamiento y crecimiento con IA",
+          "Automatización de marketing y ventas con IA",
+          "Gestión de relaciones con clientes (CRM) con IA"
+        ]
+      },
+      {
+        "title": "Módulo 3: Finanzas y Escalado con IA",
+        "items": [
+          "Análisis financiero y proyecciones con IA",
+          "Optimización de operaciones y procesos con IA",
+          "Búsqueda de financiación y pitch decks con IA",
+          "Retos y oportunidades futuras del emprendimiento con IA"
+        ]
+      }
+    ],
+    "fecha": "2025-10-04T00:00:00",
+    "learnings": [
+      "Idear y validar oportunidades de negocio.",
+      "Utilizar la IA para optimizar procesos de startup.",
+      "Desarrollar estrategias de marketing y crecimiento.",
+      "Escalar tu negocio con el apoyo de la Inteligencia Artificial."
+    ],
+    "details": {
+      "date": "04 Oct 2025",
+      "duration": "8 horas",
+      "level": "Básico",
+      "offer": "Acceso a una comunidad de emprendedores"
+    },
+    "remainingSeats": "20 estudiantes",
+    "precio": 32,
+    "descuento": 0.12
+  },
+  {
+    "id": "Tecnologia1",
+    "slug": "Tecnologia1",
+    "category": "Tecnología en Salud",
+    "src": "/Group65.png",
+    "name": "Emprendimiento con IA",
+    "titulo": "Crea y Escala tu Startup con Inteligencia Artificial",
+    "descripcion": "Aprende a idear, validar y escalar tu negocio utilizando herramientas y estrategias de Inteligencia Artificial. Curso presencial en Miraflores, Lima - Perú.",
+    "fechatext": "Disponible desde el sábado 4 de octubre",
+    "about": "Este curso de 8 horas está diseñado para emprendedores que buscan una ventaja competitiva, mostrándote cómo la IA puede ayudarte en cada etapa de tu startup, desde la investigación de mercado hasta el crecimiento.",
+    "profesores": [
+      {
+        "nombre": "Alvaro Felipe Chávez",
+        "imagen": "/image-1.jpg",
+        "usuarioSocial": "@alvaro",
+        "enlacePerfil": "https://vercel.com/"
+      },
+      {
+        "nombre": "Alexys Lozada",
+        "imagen": "/image-2.jpg",
+        "usuarioSocial": "@alexyslozada",
+        "enlacePerfil": "/perfil/alexys"
+      },
+      {
+        "nombre": "Beto Quiroga",
+        "imagen": "/image-3.jpg",
+        "usuarioSocial": "@betoquiroga",
+        "enlacePerfil": "/perfil/beto"
+      }
+    ],
+    "paraQuienEs": [
+      "Emprendedores con una idea de negocio.",
+      "Personas que quieren iniciar su propia startup.",
+      "Profesionales que buscan aplicar la IA en el ámbito empresarial."
+    ],
+    "conocimientosPrevios": [
+      "No se requieren conocimientos previos de programación o IA, solo entusiasmo por emprender."
+    ],
+    "temarios": [
+      {
+        "title": "Módulo 1: Ideación y Validación con IA",
+        "items": [
+          "Generación de ideas de negocio con IA",
+          "Investigación de mercado y análisis de competencia con IA",
+          "Creación de propuestas de valor y modelos de negocio con IA",
+          "Validación de hipótesis y MVPs con asistencia de IA"
+        ]
+      },
+      {
+        "title": "Módulo 2: Desarrollo de Producto y Marketing con IA",
+        "items": [
+          "Diseño de productos y servicios asistido por IA",
+          "Estrategias de lanzamiento y crecimiento con IA",
+          "Automatización de marketing y ventas con IA",
+          "Gestión de relaciones con clientes (CRM) con IA"
+        ]
+      },
+      {
+        "title": "Módulo 3: Finanzas y Escalado con IA",
+        "items": [
+          "Análisis financiero y proyecciones con IA",
+          "Optimización de operaciones y procesos con IA",
+          "Búsqueda de financiación y pitch decks con IA",
+          "Retos y oportunidades futuras del emprendimiento con IA"
+        ]
+      }
+    ],
+    "fecha": "2025-10-04T00:00:00",
+    "learnings": [
+      "Idear y validar oportunidades de negocio.",
+      "Utilizar la IA para optimizar procesos de startup.",
+      "Desarrollar estrategias de marketing y crecimiento.",
+      "Escalar tu negocio con el apoyo de la Inteligencia Artificial."
+    ],
+    "details": {
+      "date": "04 Oct 2025",
+      "duration": "8 horas",
+      "level": "Básico",
+      "offer": "Acceso a una comunidad de emprendedores"
+    },
+    "remainingSeats": "20 estudiantes",
+    "precio": 32,
+    "descuento": 0.12
+  },
+  {
+    "id": "Tecnologia2",
+    "slug": "Tecnologia2",
+    "category": "Tecnología en Salud",
+    "src": "/Group65.png",
+    "name": "Emprendimiento con IA",
+    "titulo": "Crea y Escala tu Startup con Inteligencia Artificial",
+    "descripcion": "Aprende a idear, validar y escalar tu negocio utilizando herramientas y estrategias de Inteligencia Artificial. Curso presencial en Miraflores, Lima - Perú.",
+    "fechatext": "Disponible desde el sábado 4 de octubre",
+    "about": "Este curso de 8 horas está diseñado para emprendedores que buscan una ventaja competitiva, mostrándote cómo la IA puede ayudarte en cada etapa de tu startup, desde la investigación de mercado hasta el crecimiento.",
+    "profesores": [
+      {
+        "nombre": "Alvaro Felipe Chávez",
+        "imagen": "/image-1.jpg",
+        "usuarioSocial": "@alvaro",
+        "enlacePerfil": "https://vercel.com/"
+      },
+      {
+        "nombre": "Alexys Lozada",
+        "imagen": "/image-2.jpg",
+        "usuarioSocial": "@alexyslozada",
+        "enlacePerfil": "/perfil/alexys"
+      },
+      {
+        "nombre": "Beto Quiroga",
+        "imagen": "/image-3.jpg",
+        "usuarioSocial": "@betoquiroga",
+        "enlacePerfil": "/perfil/beto"
+      }
+    ],
+    "paraQuienEs": [
+      "Emprendedores con una idea de negocio.",
+      "Personas que quieren iniciar su propia startup.",
+      "Profesionales que buscan aplicar la IA en el ámbito empresarial."
+    ],
+    "conocimientosPrevios": [
+      "No se requieren conocimientos previos de programación o IA, solo entusiasmo por emprender."
+    ],
+    "temarios": [
+      {
+        "title": "Módulo 1: Ideación y Validación con IA",
+        "items": [
+          "Generación de ideas de negocio con IA",
+          "Investigación de mercado y análisis de competencia con IA",
+          "Creación de propuestas de valor y modelos de negocio con IA",
+          "Validación de hipótesis y MVPs con asistencia de IA"
+        ]
+      },
+      {
+        "title": "Módulo 2: Desarrollo de Producto y Marketing con IA",
+        "items": [
+          "Diseño de productos y servicios asistido por IA",
+          "Estrategias de lanzamiento y crecimiento con IA",
+          "Automatización de marketing y ventas con IA",
+          "Gestión de relaciones con clientes (CRM) con IA"
+        ]
+      },
+      {
+        "title": "Módulo 3: Finanzas y Escalado con IA",
+        "items": [
+          "Análisis financiero y proyecciones con IA",
+          "Optimización de operaciones y procesos con IA",
+          "Búsqueda de financiación y pitch decks con IA",
+          "Retos y oportunidades futuras del emprendimiento con IA"
+        ]
+      }
+    ],
+    "fecha": "2025-10-04T00:00:00",
+    "learnings": [
+      "Idear y validar oportunidades de negocio.",
+      "Utilizar la IA para optimizar procesos de startup.",
+      "Desarrollar estrategias de marketing y crecimiento.",
+      "Escalar tu negocio con el apoyo de la Inteligencia Artificial."
+    ],
+    "details": {
+      "date": "04 Oct 2025",
+      "duration": "8 horas",
+      "level": "Básico",
+      "offer": "Acceso a una comunidad de emprendedores"
+    },
+    "remainingSeats": "20 estudiantes",
+    "precio": 32,
+    "descuento": 0.12
+  },
+  {
+    "id": "Tecnologia3",
+    "slug": "Tecnologia3",
+    "category": "Tecnología en Salud",
+    "src": "/Group65.png",
+    "name": "Emprendimiento con IA",
+    "titulo": "Crea y Escala tu Startup con Inteligencia Artificial",
+    "descripcion": "Aprende a idear, validar y escalar tu negocio utilizando herramientas y estrategias de Inteligencia Artificial. Curso presencial en Miraflores, Lima - Perú.",
+    "fechatext": "Disponible desde el sábado 4 de octubre",
+    "about": "Este curso de 8 horas está diseñado para emprendedores que buscan una ventaja competitiva, mostrándote cómo la IA puede ayudarte en cada etapa de tu startup, desde la investigación de mercado hasta el crecimiento.",
+    "profesores": [
+      {
+        "nombre": "Alvaro Felipe Chávez",
+        "imagen": "/image-1.jpg",
+        "usuarioSocial": "@alvaro",
+        "enlacePerfil": "https://vercel.com/"
+      },
+      {
+        "nombre": "Alexys Lozada",
+        "imagen": "/image-2.jpg",
+        "usuarioSocial": "@alexyslozada",
+        "enlacePerfil": "/perfil/alexys"
+      },
+      {
+        "nombre": "Beto Quiroga",
+        "imagen": "/image-3.jpg",
+        "usuarioSocial": "@betoquiroga",
+        "enlacePerfil": "/perfil/beto"
+      }
+    ],
+    "paraQuienEs": [
+      "Emprendedores con una idea de negocio.",
+      "Personas que quieren iniciar su propia startup.",
+      "Profesionales que buscan aplicar la IA en el ámbito empresarial."
+    ],
+    "conocimientosPrevios": [
+      "No se requieren conocimientos previos de programación o IA, solo entusiasmo por emprender."
+    ],
+    "temarios": [
+      {
+        "title": "Módulo 1: Ideación y Validación con IA",
+        "items": [
+          "Generación de ideas de negocio con IA",
+          "Investigación de mercado y análisis de competencia con IA",
+          "Creación de propuestas de valor y modelos de negocio con IA",
+          "Validación de hipótesis y MVPs con asistencia de IA"
+        ]
+      },
+      {
+        "title": "Módulo 2: Desarrollo de Producto y Marketing con IA",
+        "items": [
+          "Diseño de productos y servicios asistido por IA",
+          "Estrategias de lanzamiento y crecimiento con IA",
+          "Automatización de marketing y ventas con IA",
+          "Gestión de relaciones con clientes (CRM) con IA"
+        ]
+      },
+      {
+        "title": "Módulo 3: Finanzas y Escalado con IA",
+        "items": [
+          "Análisis financiero y proyecciones con IA",
+          "Optimización de operaciones y procesos con IA",
+          "Búsqueda de financiación y pitch decks con IA",
+          "Retos y oportunidades futuras del emprendimiento con IA"
+        ]
+      }
+    ],
+    "fecha": "2025-10-04T00:00:00",
+    "learnings": [
+      "Idear y validar oportunidades de negocio.",
+      "Utilizar la IA para optimizar procesos de startup.",
+      "Desarrollar estrategias de marketing y crecimiento.",
+      "Escalar tu negocio con el apoyo de la Inteligencia Artificial."
+    ],
+    "details": {
+      "date": "04 Oct 2025",
+      "duration": "8 horas",
+      "level": "Básico",
+      "offer": "Acceso a una comunidad de emprendedores"
+    },
+    "remainingSeats": "20 estudiantes",
+    "precio": 32,
+    "descuento": 0.12
+  },
+
+  {
+    "id": "etica-bioetica",
+    "slug": "etica-bioetica",
+    "category": "Ética, Bioética y Legalidad en Enfermería",
+    "src": "/Group65.png",
+    "name": "Emprendimiento con IA",
+    "titulo": "Crea y Escala tu Startup con Inteligencia Artificial",
+    "descripcion": "Aprende a idear, validar y escalar tu negocio utilizando herramientas y estrategias de Inteligencia Artificial. Curso presencial en Miraflores, Lima - Perú.",
+    "fechatext": "Disponible desde el sábado 4 de octubre",
+    "about": "Este curso de 8 horas está diseñado para emprendedores que buscan una ventaja competitiva, mostrándote cómo la IA puede ayudarte en cada etapa de tu startup, desde la investigación de mercado hasta el crecimiento.",
+    "profesores": [
+      {
+        "nombre": "Alvaro Felipe Chávez",
+        "imagen": "/image-1.jpg",
+        "usuarioSocial": "@alvaro",
+        "enlacePerfil": "https://vercel.com/"
+      },
+      {
+        "nombre": "Alexys Lozada",
+        "imagen": "/image-2.jpg",
+        "usuarioSocial": "@alexyslozada",
+        "enlacePerfil": "/perfil/alexys"
+      },
+      {
+        "nombre": "Beto Quiroga",
+        "imagen": "/image-3.jpg",
+        "usuarioSocial": "@betoquiroga",
+        "enlacePerfil": "/perfil/beto"
+      }
+    ],
+    "paraQuienEs": [
+      "Emprendedores con una idea de negocio.",
+      "Personas que quieren iniciar su propia startup.",
+      "Profesionales que buscan aplicar la IA en el ámbito empresarial."
+    ],
+    "conocimientosPrevios": [
+      "No se requieren conocimientos previos de programación o IA, solo entusiasmo por emprender."
+    ],
+    "temarios": [
+      {
+        "title": "Módulo 1: Ideación y Validación con IA",
+        "items": [
+          "Generación de ideas de negocio con IA",
+          "Investigación de mercado y análisis de competencia con IA",
+          "Creación de propuestas de valor y modelos de negocio con IA",
+          "Validación de hipótesis y MVPs con asistencia de IA"
+        ]
+      },
+      {
+        "title": "Módulo 2: Desarrollo de Producto y Marketing con IA",
+        "items": [
+          "Diseño de productos y servicios asistido por IA",
+          "Estrategias de lanzamiento y crecimiento con IA",
+          "Automatización de marketing y ventas con IA",
+          "Gestión de relaciones con clientes (CRM) con IA"
+        ]
+      },
+      {
+        "title": "Módulo 3: Finanzas y Escalado con IA",
+        "items": [
+          "Análisis financiero y proyecciones con IA",
+          "Optimización de operaciones y procesos con IA",
+          "Búsqueda de financiación y pitch decks con IA",
+          "Retos y oportunidades futuras del emprendimiento con IA"
+        ]
+      }
+    ],
+    "fecha": "2025-10-04T00:00:00",
+    "learnings": [
+      "Idear y validar oportunidades de negocio.",
+      "Utilizar la IA para optimizar procesos de startup.",
+      "Desarrollar estrategias de marketing y crecimiento.",
+      "Escalar tu negocio con el apoyo de la Inteligencia Artificial."
+    ],
+    "details": {
+      "date": "04 Oct 2025",
+      "duration": "8 horas",
+      "level": "Básico",
+      "offer": "Acceso a una comunidad de emprendedores"
+    },
+    "remainingSeats": "20 estudiantes",
+    "precio": 32,
+    "descuento": 0.12
+  },
+  {
+    "id": "etica-legalidad",
+    "slug": "etica-legalidad",
+    "category": "Ética, Bioética y Legalidad en Enfermería",
+    "src": "/Group65.png",
+    "name": "Emprendimiento con IA",
+    "titulo": "Crea y Escala tu Startup con Inteligencia Artificial",
+    "descripcion": "Aprende a idear, validar y escalar tu negocio utilizando herramientas y estrategias de Inteligencia Artificial. Curso presencial en Miraflores, Lima - Perú.",
+    "fechatext": "Disponible desde el sábado 4 de octubre",
+    "about": "Este curso de 8 horas está diseñado para emprendedores que buscan una ventaja competitiva, mostrándote cómo la IA puede ayudarte en cada etapa de tu startup, desde la investigación de mercado hasta el crecimiento.",
+    "profesores": [
+      {
+        "nombre": "Alvaro Felipe Chávez",
+        "imagen": "/image-1.jpg",
+        "usuarioSocial": "@alvaro",
+        "enlacePerfil": "https://vercel.com/"
+      },
+      {
+        "nombre": "Alexys Lozada",
+        "imagen": "/image-2.jpg",
+        "usuarioSocial": "@alexyslozada",
+        "enlacePerfil": "/perfil/alexys"
+      },
+      {
+        "nombre": "Beto Quiroga",
+        "imagen": "/image-3.jpg",
+        "usuarioSocial": "@betoquiroga",
+        "enlacePerfil": "/perfil/beto"
+      }
+    ],
+    "paraQuienEs": [
+      "Emprendedores con una idea de negocio.",
+      "Personas que quieren iniciar su propia startup.",
+      "Profesionales que buscan aplicar la IA en el ámbito empresarial."
+    ],
+    "conocimientosPrevios": [
+      "No se requieren conocimientos previos de programación o IA, solo entusiasmo por emprender."
+    ],
+    "temarios": [
+      {
+        "title": "Módulo 1: Ideación y Validación con IA",
+        "items": [
+          "Generación de ideas de negocio con IA",
+          "Investigación de mercado y análisis de competencia con IA",
+          "Creación de propuestas de valor y modelos de negocio con IA",
+          "Validación de hipótesis y MVPs con asistencia de IA"
+        ]
+      },
+      {
+        "title": "Módulo 2: Desarrollo de Producto y Marketing con IA",
+        "items": [
+          "Diseño de productos y servicios asistido por IA",
+          "Estrategias de lanzamiento y crecimiento con IA",
+          "Automatización de marketing y ventas con IA",
+          "Gestión de relaciones con clientes (CRM) con IA"
+        ]
+      },
+      {
+        "title": "Módulo 3: Finanzas y Escalado con IA",
+        "items": [
+          "Análisis financiero y proyecciones con IA",
+          "Optimización de operaciones y procesos con IA",
+          "Búsqueda de financiación y pitch decks con IA",
+          "Retos y oportunidades futuras del emprendimiento con IA"
+        ]
+      }
+    ],
+    "fecha": "2025-10-04T00:00:00",
+    "learnings": [
+      "Idear y validar oportunidades de negocio.",
+      "Utilizar la IA para optimizar procesos de startup.",
+      "Desarrollar estrategias de marketing y crecimiento.",
+      "Escalar tu negocio con el apoyo de la Inteligencia Artificial."
+    ],
+    "details": {
+      "date": "04 Oct 2025",
+      "duration": "8 horas",
+      "level": "Básico",
+      "offer": "Acceso a una comunidad de emprendedores"
+    },
+    "remainingSeats": "20 estudiantes",
+    "precio": 32,
+    "descuento": 0.12
+  },
+  {
+    "id": "etica-enfermeria",
+    "slug": "etica-enfermeria",
+    "category": "Ética, Bioética y Legalidad en Enfermería",
+    "src": "/Group65.png",
+    "name": "Emprendimiento con IA",
+    "titulo": "Crea y Escala tu Startup con Inteligencia Artificial",
+    "descripcion": "Aprende a idear, validar y escalar tu negocio utilizando herramientas y estrategias de Inteligencia Artificial. Curso presencial en Miraflores, Lima - Perú.",
+    "fechatext": "Disponible desde el sábado 4 de octubre",
+    "about": "Este curso de 8 horas está diseñado para emprendedores que buscan una ventaja competitiva, mostrándote cómo la IA puede ayudarte en cada etapa de tu startup, desde la investigación de mercado hasta el crecimiento.",
+    "profesores": [
+      {
+        "nombre": "Alvaro Felipe Chávez",
+        "imagen": "/image-1.jpg",
+        "usuarioSocial": "@alvaro",
+        "enlacePerfil": "https://vercel.com/"
+      },
+      {
+        "nombre": "Alexys Lozada",
+        "imagen": "/image-2.jpg",
+        "usuarioSocial": "@alexyslozada",
+        "enlacePerfil": "/perfil/alexys"
+      },
+      {
+        "nombre": "Beto Quiroga",
+        "imagen": "/image-3.jpg",
+        "usuarioSocial": "@betoquiroga",
+        "enlacePerfil": "/perfil/beto"
+      }
+    ],
+    "paraQuienEs": [
+      "Emprendedores con una idea de negocio.",
+      "Personas que quieren iniciar su propia startup.",
+      "Profesionales que buscan aplicar la IA en el ámbito empresarial."
+    ],
+    "conocimientosPrevios": [
+      "No se requieren conocimientos previos de programación o IA, solo entusiasmo por emprender."
+    ],
+    "temarios": [
+      {
+        "title": "Módulo 1: Ideación y Validación con IA",
+        "items": [
+          "Generación de ideas de negocio con IA",
+          "Investigación de mercado y análisis de competencia con IA",
+          "Creación de propuestas de valor y modelos de negocio con IA",
+          "Validación de hipótesis y MVPs con asistencia de IA"
+        ]
+      },
+      {
+        "title": "Módulo 2: Desarrollo de Producto y Marketing con IA",
+        "items": [
+          "Diseño de productos y servicios asistido por IA",
+          "Estrategias de lanzamiento y crecimiento con IA",
+          "Automatización de marketing y ventas con IA",
+          "Gestión de relaciones con clientes (CRM) con IA"
+        ]
+      },
+      {
+        "title": "Módulo 3: Finanzas y Escalado con IA",
+        "items": [
+          "Análisis financiero y proyecciones con IA",
+          "Optimización de operaciones y procesos con IA",
+          "Búsqueda de financiación y pitch decks con IA",
+          "Retos y oportunidades futuras del emprendimiento con IA"
+        ]
+      }
+    ],
+    "fecha": "2025-10-04T00:00:00",
+    "learnings": [
+      "Idear y validar oportunidades de negocio.",
+      "Utilizar la IA para optimizar procesos de startup.",
+      "Desarrollar estrategias de marketing y crecimiento.",
+      "Escalar tu negocio con el apoyo de la Inteligencia Artificial."
+    ],
+    "details": {
+      "date": "04 Oct 2025",
+      "duration": "8 horas",
+      "level": "Básico",
+      "offer": "Acceso a una comunidad de emprendedores"
+    },
+    "remainingSeats": "20 estudiantes",
+    "precio": 32,
+    "descuento": 0.12
+  },
+  {
+    "id": "etica-enfermería-bioetica",
+    "slug": "etica-enfermería-bioetica",
+    "category": "Ética, Bioética y Legalidad en Enfermería",
     "src": "/Group65.png",
     "name": "Emprendimiento con IA",
     "titulo": "Crea y Escala tu Startup con Inteligencia Artificial",
@@ -720,5 +3351,4 @@
     "precio": 32,
     "descuento": 0.12
   }
-  
 ]

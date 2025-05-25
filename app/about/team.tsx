@@ -4,222 +4,171 @@ import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { PiLinkedinLogo, PiTwitterLogo } from "react-icons/pi";
-
-interface StatItemProps {
-  label: string;
-  value: string;
-}
-
-interface SocialLinks {
-  linkedin?: string;
-  twitter?: string;
-  website?: string;
-}
+import {
+  PiBookOpenText, // Ícono para cursos genéricos
+  PiCodeSimple, // Ícono para código/Python
+  PiDatabase, // Ícono para bases de datos
+  // PiLinkedinLogo, // Eliminado por no ser usado
+  // PiTwitterLogo,  // Eliminado por no ser usado
+  // PiFlask, // Eliminado por no ser usado
+  // PiRocketLaunch, // Eliminado por no ser usado
+} from "react-icons/pi";
 
 interface TeamMemberProps {
   image: string;
   name: string;
   role: string;
-  description: string;
-  social: SocialLinks;
-  index: number;
+  description?: string; // Hacemos la descripción opcional
+  // social: { // Eliminado porque no se usa dentro del componente TeamMember
+  //   linkedin?: string;
+  //   twitter?: string;
+  //   website?: string;
+  // };
+  course: string; // Nombre del curso asociado
+  courseLink: string; // Enlace al curso
+  courseIcon: React.ReactNode; // Ícono del curso
 }
 
-const StatItem: React.FC<StatItemProps> = ({ label, value }) => (
-  <div
-    className="flex flex-col items-center border-b md:border-b-0 
-    md:border-l border-gray-200 px-4 py-6 first:border-l-0 
-    flex-1 text-center"
-  >
-    <h3 className="text-[#7b7b7b] text-base mb-4">{label}</h3>
-    <span className="text-4xl md:text-5xl lg:text-6xl font-light">{value}</span>
-  </div>
-);
-
-const SocialIcon: React.FC<{ href: string; icon: React.ReactNode }> = ({
-  href,
-  icon,
-}) => (
-  <Link
-    href={href}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="text-gray-600 hover:text-gray-900 transition-colors"
-  >
-    {icon}
-  </Link>
-);
+// El componente SocialIcon fue eliminado porque ya no se usa.
+// Si en el futuro necesitas iconos sociales en otro lugar, puedes volver a crearlo o importarlo.
 
 const TeamMember: React.FC<TeamMemberProps> = ({
   image,
   name,
   role,
   description,
-  social,
-}) => (
-  <motion.div className="flex flex-col h-full">
-    <div className="relative overflow-hidden group ">
-      <motion.div transition={{ duration: 0.4 }} className="h-full">
+  // social, // Eliminado del destructuring de props
+  course,
+  courseLink,
+  courseIcon,
+}) => {
+  return (
+    <motion.div
+      className="flex flex-col h-full bg-[#1A362D] rounded-lg shadow-lg overflow-hidden group border border-[#1A362D]"
+      whileHover={{ y: -5 }}
+      transition={{ duration: 0.3 }}
+    >
+      <div className="relative overflow-hidden w-full h-[250px]">
         <Image
-          height={10000}
-          width={10000}
+          height={400}
+          width={600}
           src={image}
           alt={name}
-          className="object-cover 
-            h-[300px] 
-            
-            w-full "
+          className="object-cover h-full w-full transition-transform duration-500 group-hover:scale-105"
         />
-      </motion.div>
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileHover={{ opacity: 1 }}
-        transition={{ duration: 0.3 }}
-        className="absolute inset-0 bg-black bg-opacity-20"
-      />
-    </div>
-    <div className="pt-6 space-y-3 flex-1">
-      <h3 className="font-medium text-xl">{name}</h3>
-      <p className="text-gray-600 font-medium">{role}</p>
-      <p className="text-gray-500 text-sm leading-relaxed">{description}</p>
-      <div className="flex gap-4 pt-4">
-        {social.linkedin && (
-          <SocialIcon
-            href={social.linkedin}
-            icon={<PiLinkedinLogo size={20} />}
-          />
-        )}
-        {social.twitter && (
-          <SocialIcon
-            href={social.twitter}
-            icon={<PiTwitterLogo size={20} />}
-          />
-        )}
       </div>
-    </div>
-  </motion.div>
-);
+      <div className="p-6 space-y-3 flex-1 flex flex-col justify-between text-white">
+        <div>
+          <h3 className="font-semibold text-2xl">{name}</h3>
+          <p className="font-medium text-lg mt-1 text-gray-300">{role}</p>
+          {description && (
+            <p className="text-gray-400 text-sm leading-relaxed mt-3">
+              {description}
+            </p>
+          )}
+        </div>
+        <div className="mt-auto pt-4 border-t border-gray-700 flex items-center justify-between">
+          <Link
+            href={courseLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 text-[#7B7B7B] hover:text-white transition-colors duration-300 transform hover:translate-x-1"
+          >
+            <div className="bg-[#2A4D42] p-2 rounded-full flex items-center justify-center">
+              {courseIcon}
+            </div>
+            <span className="font-medium text-sm">{course}</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={2}
+              stroke="currentColor"
+              className="w-4 h-4 ml-1"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="m8.25 4.5 7.5 7.5-7.5 7.5"
+              />
+            </svg>
+          </Link>
+          {/* Los iconos sociales se han eliminado o se pueden reintroducir si es necesario en otro lugar */}
+        </div>
+      </div>
+    </motion.div>
+  );
+};
 
-const stats: StatItemProps[] = [
-  { label: "Team Size", value: "6" },
-  { label: "Research", value: "1" },
-  { label: "Engineers", value: "2" },
-  { label: "Data Science", value: "1" },
-  { label: "Strategy", value: "1" },
-  { label: "Entrepreneurs", value: "1" },
-];
-
-const teamMembers: Omit<TeamMemberProps, "index">[] = [
+const teamMembers: TeamMemberProps[] = [
   {
-    name: "John smith",
-    role: " Software Engineer",
-    image: "/john-smith.jpg",
-    description: "I like to code stuff",
-    social: {
-      linkedin: "https://www.linkedin.com",
-      twitter: "https://twitter.com",
-      website: "https://website.com",
-    },
+    name: "Carli Florida",
+    role: "Teacher In-house en Platzi",
+    image: "/image-4.jpg",
+    // social: {}, // La propiedad 'social' en los datos puede quedarse, pero la interface y el destructuring se eliminaron
+    course: "Curso de Python",
+    courseLink: "#",
+    courseIcon: <PiCodeSimple size={20} className="text-[#A2E285]" />,
   },
   {
-    name: "John smith",
-    role: " Software Engineer",
-    image: "/john-smith.jpg",
-    description: "I like to code stuff",
-    social: {
-      linkedin: "https://www.linkedin.com",
-      twitter: "https://twitter.com",
-      website: "https://website.com",
-    },
+    name: "Anibal Rojas",
+    role: "VP de Ingeniería en Platzi",
+    image: "/image-3.jpg",
+    // social: {},
+    course: "Curso de ChatGPT para Empresas",
+    courseLink: "#",
+    courseIcon: <PiBookOpenText size={20} className="text-[#A2E285]" />,
   },
   {
-    name: "John smith",
-    role: " Software Engineer",
-    image: "/john-smith.jpg",
-    description: "I like to code stuff",
-    social: {
-      linkedin: "https://www.linkedin.com",
-      twitter: "https://twitter.com",
-      website: "https://website.com",
-    },
+    name: "Carolina Castañeda",
+    role: "Online Tech Teacher en Platzi",
+    image: "/image-2.jpg",
+    // social: {},
+    course: "Curso de Bases de Datos con SQL",
+    courseLink: "#",
+    courseIcon: <PiDatabase size={20} className="text-[#A2E285]" />,
   },
   {
-    name: "John smith",
-    role: " Software Engineer",
-    image: "/john-smith.jpg",
-    description: "I like to code stuff",
-    social: {
-      linkedin: "https://www.linkedin.com",
-      twitter: "https://twitter.com",
-      website: "https://website.com",
-    },
+    name: "Luis Martinez",
+    role: "Platform Engineer en Deel",
+    image: "/image-1.jpg",
+    // social: {},
+    course: "Curso de Django",
+    courseLink: "#",
+    courseIcon: <PiCodeSimple size={20} className="text-[#A2E285]" />,
   },
-  {
-    name: "John smith",
-    role: " Software Engineer",
-    image: "/john-smith.jpg",
-    description: "I like to code stuff",
-    social: {
-      linkedin: "https://www.linkedin.com",
-      twitter: "https://twitter.com",
-      website: "https://website.com",
-    },
-  },
-  {
-    name: "John smith",
-    role: " Software Engineer",
-    image: "/john-smith.jpg",
-    description: "I like to code stuff",
-    social: {
-      linkedin: "https://www.linkedin.com",
-      twitter: "https://twitter.com",
-      website: "https://website.com",
-    },
-  },
-
 ];
 
 const Team = () => {
   return (
-    <div className="py-20">
+    <div className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="mb-20"
+          className="mb-16 text-center"
         >
-          <p className="text-sm uppercase tracking-wider text-gray-500 mb-6">
-            /Team
+          <p className="text-sm uppercase tracking-widest text-gray-500 mb-3">
+            /NUESTROS EXPERTOS
           </p>
-          <p
-            className="text-[#7b7b7b]
-           max-w-3xl text-lg"
-          >
-            Our team consists of dedicated professionals with diverse expertise
-            in healthcare, technology, and innovation. Together, we work to
-            create meaningful impact through cutting-edge solutions.
-          </p>
+          <h2 className="text-4xl font-extrabold text-gray-900 sm:text-5xl lg:text-6xl">
+            Nuestros profesores son expertos de la industria
+          </h2>
         </motion.div>
 
-        <div className="flex flex-col
-         md:flex-row flex-wrap md:flex-nowrap 
-         justify-between w-full mb-20">
-          {stats.map((stat, index) => (
-            <StatItem key={index} label={stat.label} 
-            value={stat.value} />
-          ))}
-        </div>
-
-        <div className="grid grid-cols-1
-         md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-12">
           {teamMembers.map((member, index) => (
-            <TeamMember key={index} {...member} index={index} />
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+            >
+              <TeamMember {...member} />
+            </motion.div>
           ))}
         </div>
-
-
       </div>
     </div>
   );

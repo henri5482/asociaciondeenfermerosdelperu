@@ -1,12 +1,24 @@
-'use client';
+"use client";
 
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
-import Autoplay from 'embla-carousel-autoplay';
-import { motion } from 'framer-motion';
-import { StarIcon } from 'lucide-react';
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import { motion } from "framer-motion";
+import { StarIcon } from "lucide-react";
+import { useEffect, useState, useRef, useCallback } from "react";
+import Autoplay from "embla-carousel-autoplay";
 
 interface TestimonialItem {
   id: number;
@@ -100,25 +112,23 @@ export default function SuccessStoriesCarousel() {
 
   useEffect(() => {
     const checkScreenSize = () => {
-      // isMobile will be true if window.innerWidth < 640px (sm breakpoint)
       setIsMobile(window.innerWidth < 640);
-      // isTablet will be true for screen sizes between sm (640px) and lg (1024px)
       setIsTablet(window.innerWidth >= 640 && window.innerWidth < 1024);
     };
 
     checkScreenSize();
-    window.addEventListener('resize', checkScreenSize);
-    return () => window.removeEventListener('resize', checkScreenSize);
+    window.addEventListener("resize", checkScreenSize);
+    return () => window.removeEventListener("resize", checkScreenSize);
   }, []);
 
   const getCarouselItemBasis = useCallback(() => {
-    if (isMobile) return 'basis-full'; // Full width on mobile (xs and sm)
-    if (isTablet) return 'basis-1/2'; // Half width on tablet (md, lg)
-    return 'basis-1/3'; // One-third width on desktop (xl and beyond)
+    if (isMobile) return "basis-full"; // Full width on mobile
+    if (isTablet) return "basis-1/2"; // Half width on tablet
+    return "basis-1/3"; // One-third width on desktop
   }, [isMobile, isTablet]);
 
   return (
-    <section className="w-full px-4 sm:px-6 lg:px-8 py-16 md:py-24 bg-[#0f1e26] text-gray-50 overflow-hidden relative">
+    <section className="w-full px-4 sm:px-6 lg:px-8 py-16 md:py-24 bg-[#1a2c3b] text-gray-50 overflow-hidden relative">
       {/* Background radial gradient for visual flair */}
       <div className="absolute inset-0 z-0 radial-gradient-custom opacity-30"></div>
 
@@ -130,19 +140,20 @@ export default function SuccessStoriesCarousel() {
           viewport={{ once: true, amount: 0.5 }}
           variants={sectionHeaderVariants}
         >
-          Tú puedes ser la próxima{' '}
-          <span className="inline-block text-[#00c2a8] font-extrabold drop-shadow-md">
+          Tú puedes ser la próxima{" "}
+          <span className="inline-block text-[#006394] font-extrabold drop-shadow-md">
             historia de éxito
           </span>
         </motion.h2>
         <motion.p
-          className="text-gray-400 text-base sm:text-lg lg:text-xl max-w-3xl mx-auto leading-relaxed"
+          className="text-white text-base sm:text-lg lg:text-xl max-w-3xl mx-auto leading-relaxed"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
           variants={sectionHeaderVariants}
         >
-          Así como ellos, tú también puedes alcanzar tus metas y transformar tu futuro. Únete a nuestra comunidad.
+          Así como ellos, tú también puedes alcanzar tus metas y transformar tu
+          futuro. Únete a nuestra comunidad.
         </motion.p>
       </div>
 
@@ -166,44 +177,77 @@ export default function SuccessStoriesCarousel() {
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true, amount: 0.4 }}
-                  whileHover={{ scale: 1.03, boxShadow: "0 25px 50px rgba(0,0,0,0.3)", transition: { type: "spring", stiffness: 200, damping: 15 } }}
+                  whileHover={{
+                    scale: 1.03,
+                    boxShadow: "0 25px 50px rgba(0,0,0,0.3)",
+                    transition: { type: "spring", stiffness: 200, damping: 15 },
+                  }}
                   className="h-full transform transition-all duration-300"
                 >
                   <Card
+                    // Responsive padding: smaller on mobile (p-4) larger on sm/lg (sm:p-6 lg:p-8)
                     className="p-4 sm:p-6 lg:p-8 bg-[#1f232b] text-gray-200 border border-[#373e4a] rounded-xl h-full flex flex-col justify-between shadow-lg hover:shadow-2xl transition-shadow duration-300 relative overflow-hidden"
                   >
                     {/* Subtle inner glow effect */}
-                    <div className="absolute inset-0 border-[0.5px] border-transparent rounded-xl pointer-events-none"
+                    <div
+                      className="absolute inset-0 border-[0.5px] border-transparent rounded-xl pointer-events-none"
                       style={{
-                        background: 'linear-gradient(180deg, rgba(0,194,168,0.1) 0%, rgba(0,194,168,0) 50%)',
-                        mask: 'linear-gradient(white, white) padding-box, linear-gradient(white, white)',
-                        maskComposite: 'exclude',
-                        WebkitMaskComposite: 'exclude',
+                        background:
+                          "linear-gradient(180deg, rgba(0,194,168,0.1) 0%, rgba(0,194,168,0) 50%)",
+                        mask: "linear-gradient(white, white) padding-box, linear-gradient(white, white)",
+                        maskComposite: "exclude",
+                        WebkitMaskComposite: "exclude",
                       }}
                     ></div>
 
                     <CardHeader className="flex flex-row items-start gap-3 p-0 pb-4 sm:gap-4 sm:pb-5">
+                      {/* Responsive avatar size: w-12 h-12 on mobile, larger on sm/lg */}
                       <Avatar className="w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 border-2 border-[#00c2a8] flex-shrink-0 shadow-md">
-                        <AvatarImage src={testimonial.avatar} alt={testimonial.name} />
-                        <AvatarFallback className="bg-[#00c2a8]/20 text-[#00c2a8] font-bold text-lg sm:text-xl">{testimonial.name.charAt(0)}</AvatarFallback>
+                        {" "}
+                        {/* Reduced border-width for smaller avatars */}
+                        <AvatarImage
+                          src={testimonial.avatar}
+                          alt={testimonial.name}
+                        />
+                        <AvatarFallback className="bg-[#00c2a8]/20 text-[#00c2a8] font-bold text-lg sm:text-xl">
+                          {testimonial.name.charAt(0)}
+                        </AvatarFallback>{" "}
+                        {/* Responsive fallback text size */}
                       </Avatar>
                       <div className="flex-1">
-                        <CardTitle className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-100 mb-0 sm:mb-1">{testimonial.name}</CardTitle>
-                        <CardDescription className="text-sm sm:text-base text-gray-400">{testimonial.role}</CardDescription>
+                        {/* Responsive title size: text-lg on mobile, larger on sm/lg */}
+                        <CardTitle className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-100 mb-0 sm:mb-1">
+                          {testimonial.name}
+                        </CardTitle>{" "}
+                        {/* Reduced margin-bottom */}
+                        {/* Responsive description size: text-sm on mobile, larger on sm/lg */}
+                        <CardDescription className="text-sm sm:text-base text-gray-400">
+                          {testimonial.role}
+                        </CardDescription>
+                        {/* Responsive star icon size: w-4 h-4 on mobile, larger on sm/lg */}
                         <div className="flex items-center gap-0.5 mt-1 sm:mt-2">
+                          {" "}
+                          {/* Reduced gap and margin-top */}
                           {[...Array(5)].map((_, i) => (
                             <StarIcon
                               key={i}
                               className={`w-4 h-4 sm:w-5 sm:h-5 transition-colors duration-200 ${
-                                i < testimonial.rating ? 'fill-yellow-500 text-yellow-500' : 'fill-gray-600 text-gray-600'
+                                i < testimonial.rating
+                                  ? "fill-yellow-500 text-yellow-500"
+                                  : "fill-gray-600 text-gray-600"
                               }`}
                             />
                           ))}
                         </div>
                       </div>
                     </CardHeader>
+                    {/* Responsive comment text size: text-sm on mobile, larger on sm/lg */}
                     <CardContent className="p-0 text-sm sm:text-base leading-relaxed flex-grow overflow-hidden pt-3">
+                      {" "}
+                      {/* Added small padding top to separate from header slightly */}
                       <blockquote className="italic text-gray-300 pl-3 border-l-3 border-[#00c2a8] text-sm sm:text-base">
+                        {" "}
+                        {/* Reduced border-left width and padding-left */}
                         &quot;{testimonial.comment}&quot;
                       </blockquote>
                     </CardContent>
@@ -213,11 +257,19 @@ export default function SuccessStoriesCarousel() {
             ))}
           </CarouselContent>
 
-          {/* Navigation controls - Hidden on screens smaller than 'md' (768px) */}
-          <div className="absolute top-1/2 -translate-y-1/2 -left-3 sm:-left-6 right-0 md:flex justify-between px-2 sm:px-4 pointer-events-none z-20 hidden">
-            <CarouselPrevious className="relative h-10 w-10 sm:h-12 sm:w-12 bg-[#373e4a] text-gray-200 hover:bg-[#4f5869] rounded-full shadow-lg transition-colors duration-200 pointer-events-auto flex items-center justify-center border border-[#4f5869]" />
-            <CarouselNext className="relative h-10 w-10 sm:h-12 sm:w-12 bg-[#373e4a] text-gray-200 hover:bg-[#4f5869] rounded-full shadow-lg transition-colors duration-200 pointer-events-auto flex items-center justify-center border border-[#4f5869]" />
-          </div>
+          {/* Navigation controls */}
+     <div
+  className="absolute top-1/2 -translate-y-1/2 left-0 right-0 justify-between px-2 sm:px-4 pointer-events-none z-20 hidden md:flex"
+>
+  <CarouselPrevious
+    className="pointer-events-auto flex items-center justify-center h-10 w-10 sm:h-12 sm:w-12 bg-[#373e4a] text-gray-200 hover:bg-[#4f5869] rounded-full shadow-lg transition-colors duration-200 border border-[#4f5869]"
+  />
+  <CarouselNext
+    className="pointer-events-auto flex items-center justify-center h-10 w-10 sm:h-12 sm:w-12 bg-[#373e4a] text-gray-200 hover:bg-[#4f5869] rounded-full shadow-lg transition-colors duration-200 border border-[#4f5869]"
+  />
+</div>
+
+
         </Carousel>
       </div>
     </section>

@@ -77,7 +77,7 @@ export function Projects() {
     );
 
   return (
-    <section className="w-full bg-[#0f1e26] py-12 md:py-20 px-4 md:px-8 lg:px-16 flex justify-center items-center">
+    <section className="w-full  bg-[#1a2c3b] py-12 md:py-20 px-4 md:px-8 lg:px-16 flex justify-center items-center">
       <Carousel opts={{ align: "start", loop: true }} className="w-full max-w-7xl">
         <CarouselContent>
           {courses.map((course, index) => (
@@ -87,7 +87,7 @@ export function Projects() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="flex flex-col md:flex-row items-center gap-6 md:gap-10 bg-[#1a2c3b] rounded-2xl p-6 md:p-10 shadow-xl hover:shadow-2xl transition-all duration-300"
+                className="flex flex-col md:flex-row items-center gap-6 md:gap-10 bg-[#0f1e26] rounded-2xl p-6 md:p-10 shadow-xl hover:shadow-2xl transition-all duration-300"
               >
                 <Link
                   href={`/cursos/${course.slug}`}
