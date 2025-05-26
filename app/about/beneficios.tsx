@@ -1,8 +1,8 @@
 'use client';
 
-import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import Image from 'next/image';
+import { useRef } from 'react';
 
 const Beneficios = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -11,19 +11,19 @@ const Beneficios = () => {
   const benefits = [
     {
       id: 1,
-      icon: '/logo-1.svg', // Keeping the original path
+      icon: '/logo-1.svg',
       title: 'Obtén un gran descuento si eres estudiante',
       description: 'Prepárate un año en EDteam a mitad de precio y consigue tu primer empleo antes de acabar tu carrera.',
     },
     {
       id: 2,
-      icon: '/logo-2.svg', // Keeping the original path
+      icon: '/logo-2.svg',
       title: 'Trae amigos y estudia gratis',
       description: 'Ayuda a tus contactos a obtener un descuento en EDteam y gana suscripciones premium.',
     },
     {
       id: 3,
-      icon: '/logo-3.svg', // Keeping the original path
+      icon: '/logo-3.svg',
       title: 'Regala educación a tus seres queridos',
       description: 'Obsequia un curso o una suscripción y ayuda a las personas que más quieres a avanzar en su carrera.',
     },
@@ -73,25 +73,21 @@ const Beneficios = () => {
   };
 
   return (
-    <section className="bg-[#0f141f] py-16 md:py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden" ref={containerRef}>
-      <div className="absolute inset-0 z-0" style={{
-        background: `
-          radial-gradient(circle at 15% 25%, rgba(0,194,168,0.08) 0%, transparent 40%),
-          radial-gradient(circle at 85% 75%, rgba(0,194,168,0.08) 0%, transparent 40%),
-          linear-gradient(to bottom, transparent, #0b101b 90%)
-        `
-      }}></div>
+    <section className="bg-[#26374c] py-16 md:py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden" ref={containerRef}>
+      {/* Background element - consider if it's truly needed or adds too much complexity */}
+      <div className="absolute inset-0 z-0"></div>
 
       <div className="max-w-7xl mx-auto relative z-10">
         <motion.h2
-          className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-100 text-center mb-12 md:mb-16 leading-tight"
+          className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#E1F5FE] text-center mb-12 md:mb-16 leading-tight"
           initial="hidden"
           animate={isInViewContainer ? "visible" : "hidden"}
           variants={titleVariants}
         >
-          Aprovecha los beneficios y crece con <span className="text-[#00c2a8]">EDteam</span>
+          Aprovecha los beneficios y crece con <span className="text-[#00c2a8]">Nosotros</span> {/* Changed highlight color for consistency */}
         </motion.h2>
 
+        {/* Grid layout changes from 1 column to 2 columns on large screens */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Column: Benefit Cards */}
           <div className="flex flex-col space-y-8">
@@ -112,6 +108,8 @@ const Beneficios = () => {
                       alt={`${benefit.title} icon`}
                       width={24}
                       height={24}
+                      // Use `sizes` prop for better image optimization across different viewports
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
                   </div>
                 </div>
@@ -129,24 +127,21 @@ const Beneficios = () => {
           </div>
 
           {/* Right Column: Main Image/Video and Community Text */}
-          <div className="flex flex-col items-center justify-center">
+          <div className="flex flex-col items-center justify-center mt-12 lg:mt-0"> {/* Added margin top for small screens */}
             <motion.div
-              className="w-full relative rounded-lg overflow-hidden shadow-2xl bg-gray-800" // Added bg-gray-800 for fallback color
+              className="w-full relative rounded-lg overflow-hidden shadow-2xl bg-gray-800 max-w-md lg:max-w-none" // Constrain max-width on smaller screens
               initial="hidden"
               animate={isInViewContainer ? "visible" : "hidden"}
               variants={mediaVariants}
-              // Adjust paddingBottom to prevent cropping.
-              // Based on image_54976e.jpg, a ratio closer to 16:9 or slightly taller might fit.
-              // Let's try 65% for a slightly less wide aspect ratio to fit the content.
-              // If it's still cropped, you might need to adjust this value.
-              style={{ paddingBottom: '65%' }} // Adjusted aspect ratio to prevent cropping
+              style={{ paddingBottom: '65%' }} // A 16:9 aspect ratio (56.25%) is common; 65% is slightly taller. Adjust as needed for your image.
             >
               <Image
-                src="/Group65.png" // Keeping the original path
+                src="/Group65.png"
                 alt="Course cover: Bioseguridad y Prevención de Riesgos Hospitalario"
                 layout="fill"
-                objectFit="contain" // Changed to 'contain' to ensure the whole image is visible, even if it adds letterboxing
+                objectFit="contain" // `contain` is good for ensuring the whole image is visible
                 className="rounded-lg"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw" // Added sizes for better image optimization
               />
               {/* Overlay for subtle dimming/effect */}
               <div className="absolute inset-0 bg-black opacity-10"></div>

@@ -3,6 +3,7 @@ import Footer from "./footer";
 import Founders from "./founders";
 import Hero from "./hero";
 import Navbar from "./navbar";
+import Planes from "./planes";
 import { Projects } from "./projects";
 import Statistics from "./stats";
 
@@ -17,6 +18,7 @@ const Home = () => {
  <Founders />
  <Statistics />
  <Faq />
+ <Planes />
  <Footer />
   </div> );
 }

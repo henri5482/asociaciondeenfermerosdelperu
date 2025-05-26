@@ -1,12 +1,14 @@
 'use client';
+import Faq from "../faq";
 
+import Image from "next/image"; // Import Image from Next.js for optimized images
 import Footer from "../footer";
+import Founders from "../founders";
 import Navbar from "../navbar"; // Assuming your Navbar component path is correct
 import Beneficios from "./beneficios";
 import Certifications from "./certificados";
 import Numeros from "./numeros";
-import Team from "./team";     // Assuming your Team component path is correct
-import Image from "next/image"; // Import Image from Next.js for optimized images
+import Beneficiosabout from "./beneficiosablout";
 
 const About = () => {
   return (
@@ -34,14 +36,14 @@ const About = () => {
           <div className="w-full flex flex-col md:flex-row items-center md:items-start justify-between gap-8 md:gap-16 lg:gap-24">
             {/* Left Column: Title "Sobre Harvard" inspired */}
             <div className="w-full md:w-1/2 text-center md:text-left pt-16 md:pt-0"> {/* Added padding top for aesthetic spacing from navbar */}
-              <h1 className="text-4xl sm:text-5xl lg:text-8xl font-bold text-white mb-4 drop-shadow-lg">
+              <h1 className="text-4xl sm:text-5xl lg:text-8xl font-bold text-[#E1F5FE] mb-4 drop-shadow-lg">
                 Sobre Nosotros 
               </h1>
             </div>
 
             {/* Right Column: Description Text */}
             <div className="w-full md:w-1/2 text-center md:text-left">
-              <p className="text-base sm:text-xl font-bold lg:text-3xl text-white leading-relaxed drop-shadow-md">
+              <p className="text-base sm:text-xl font-bold lg:text-3xl text-[#E1F5FE] leading-relaxed drop-shadow-md">
                 Aquellos que se unen a nuestra comunidad para aprender, investigar, enseñar, trabajar y crecer—
                 se unen a casi cuatro siglos de estudiantes y académicos en la búsqueda de la verdad, el
                 conocimiento y un mundo mejor.
@@ -52,8 +54,11 @@ const About = () => {
       </section>
       <Numeros/>
       <Beneficios />
-      <Team />
+      <Beneficiosabout/>
+      <Founders />
       <Certifications/>
+       <Faq />
+      
       <Footer/>
     </div>
   );

@@ -31,19 +31,19 @@ const Sellos = () => {
   }, []); // The empty dependency array ensures this effect runs only once after the initial render.
 
   return (
-    <div className="flex flex-col md:flex-row justify-center items-center mx-auto p-4 md:p-8 max-w-6xl min-h-[88vh]">
+    <div className="flex flex-col md:flex-row justify-center items-center mx-auto p-4 py-20 md:p-8 max-w-6xl min-h-[88vh]">
       {/* Left Section: Text Content for Certificates */}
       <div className="flex flex-col justify-center items-center text-center md:text-left md:items-start md:w-1/2 p-4">
-        <h1 className="text-4xl md:text-5xl font-extrabold mb-4 text-gray-900 leading-tight">
-          ¡Obtén tu <span className="text-blue-600">Certificado</span>{" "}
+        <h1 className="text-4xl md:text-5xl font-extrabold mb-4 text-[#26374c] leading-tight">
+          ¡Obtén tu <span className="text-[#006394]">Certificado</span>{" "}
           Personalizado!
         </h1>
-        <p className="text-lg md:text-xl text-gray-700 mb-6 max-w-md">
-          Si eres <strong className="font-semibold text-blue-600">Plus</strong>,
+        <p className="text-lg md:text-xl text-[#26374c] mb-6 max-w-md">
+          Si eres <strong className="font-semibold text-[#006394]">Plus</strong>,
           al completar cualquier curso que hayas comprado, recibirás un
           certificado único firmado por el profesor. ¡Comparte tus logros!
         </p>
-        <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105">
+        <button className="bg-[#006394] hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105">
           Explorar Cursos
         </button>
       </div>

@@ -1,8 +1,7 @@
 "use client";
 
-import Image from "next/image";
-import React from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 // Path for the QR code image that appears on the phone
 const qrCodeImage = "/qr.png"; // Replace with your actual QR code image
@@ -54,7 +53,7 @@ const Celular = () => {
   };
 
   return (
-    <section className="bg-white py-24 md:py-36 overflow-hidden">
+    <section className="bg-[#E1F5FE] py-24 md:py-36 overflow-hidden">
       {/* Main content: Text and Phone */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-center gap-16 md:gap-24 mb-24 md:mb-36">
         {/* Left Section: Text Content with Framer Motion */}
@@ -65,10 +64,10 @@ const Celular = () => {
           viewport={{ once: true, amount: 0.5 }}
           variants={textVariants}
         >
-          <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-6 leading-tight drop-shadow-sm">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-[#26374c] mb-6 leading-tight drop-shadow-sm">
             Muestra tus proyectos
           </h2>
-          <p className="text-lg md:text-xl text-gray-700 mb-8 max-w-md">
+          <p className="text-lg md:text-xl text-[#26374c] mb-8 max-w-md">
             Tus certificados vienen con un código QR que llevará a la última
             versión de tu proyecto de curso. Así todos verán lo que sabes hacer.
           </p>
@@ -102,7 +101,7 @@ const Celular = () => {
 
             {/* QR Code section */}
             <div className="flex flex-col items-center justify-center p-4 bg-white">
-              <h3 className="text-sm font-semibold text-gray-800 mb-2">
+              <h3 className="text-sm font-semibold text-[#26374c] mb-2">
                 Tu proyecto de curso
               </h3>
               <div className="relative w-48 h-48 md:w-56 md:h-56 bg-white border border-gray-300 rounded-lg flex items-center justify-center p-2">
@@ -115,7 +114,7 @@ const Celular = () => {
                   priority
                 />
               </div>
-              <p className="text-xs text-gray-500 mt-2 text-center">
+              <p className="text-xs text-[#26374c] mt-2 text-center">
                 Escanea para ver el proyecto
               </p>
             </div>
@@ -133,10 +132,10 @@ const Celular = () => {
           viewport={{ once: true, amount: 0.5 }}
           variants={featureVariants}
         >
-          <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4 leading-tight">
+          <h1 className="text-3xl md:text-4xl font-extrabold text-[#26374c] mb-4 leading-tight">
             Personalizados y únicos
           </h1>
-          <p className="text-lg md:text-xl text-gray-700 max-w-md mx-auto md:mx-0">
+          <p className="text-lg md:text-xl text-[#26374c] max-w-md mx-auto md:mx-0">
             Cada certificado está firmado por el profesor que ha impartido el
             curso. Y también lleva tu nombre, así que es único e irrepetible.
           </p>
@@ -150,10 +149,10 @@ const Celular = () => {
           variants={featureVariants}
           transition={{ delay: 0.2 }} // Slightly delay the second feature
         >
-          <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4 leading-tight">
+          <h1 className="text-3xl md:text-4xl font-extrabold text-[#26374c] mb-4 leading-tight">
             Imprímelos y muéstralos
           </h1>
-          <p className="text-lg md:text-xl text-gray-700 max-w-md mx-auto md:mx-0">
+          <p className="text-lg md:text-xl text-[#26374c] max-w-md mx-auto md:mx-0">
             Imprime tus certificados para colgarlos en la pared. Será un bello
             recordatorio físico de todo lo que has aprendido.
           </p>
@@ -168,11 +167,11 @@ const Celular = () => {
           viewport={{ once: true, amount: 0.5 }}
           variants={ctaVariants}
         >
-          <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-8 leading-tight drop-shadow-sm">
+          <h2 className="text-2xl md:text-3xl font-extrabold text-[#26374c] mb-8 leading-tight drop-shadow-sm">
             Más cursos para desarrollar tu creatividad
           </h2>
           <motion.button
-            className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-xl text-lg md:text-lg shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105"
+            className="bg-[#006394] hover:bg-[#26374c] text-white font-bold py-3 px-8 rounded-xl text-lg md:text-lg shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105"
             variants={ctaVariants} // Use ctaVariants for the button's hover state as well
             whileHover="hover"
           >

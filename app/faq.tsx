@@ -15,10 +15,10 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 import { motion } from "framer-motion";
 import { StarIcon } from "lucide-react";
-import { useEffect, useState, useRef, useCallback } from "react";
-import Autoplay from "embla-carousel-autoplay";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 interface TestimonialItem {
   id: number;
@@ -128,7 +128,7 @@ export default function SuccessStoriesCarousel() {
   }, [isMobile, isTablet]);
 
   return (
-    <section className="w-full px-4 sm:px-6 lg:px-8 py-16 md:py-24 bg-[#1a2c3b] text-gray-50 overflow-hidden relative">
+    <section className="w-full px-4 sm:px-6 lg:px-8 py-16 md:py-24 bg-[#26374c] text-gray-50 overflow-hidden relative">
       {/* Background radial gradient for visual flair */}
       <div className="absolute inset-0 z-0 radial-gradient-custom opacity-30"></div>
 
@@ -141,7 +141,7 @@ export default function SuccessStoriesCarousel() {
           variants={sectionHeaderVariants}
         >
           Tú puedes ser la próxima{" "}
-          <span className="inline-block text-[#006394] font-extrabold drop-shadow-md">
+          <span className="inline-block text-[#327293] font-extrabold drop-shadow-md">
             historia de éxito
           </span>
         </motion.h2>

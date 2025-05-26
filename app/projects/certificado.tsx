@@ -1,7 +1,7 @@
 "use client"; // This directive is necessary for client-side components in Next.js 13+ App Router
 
 import Image from 'next/image';
-import React, { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 // IMPORTANT: Place your certificate images in the /public directory.
 // For example: public/certificate-1.jpg, public/certificate-2.jpg, etc.
@@ -30,14 +30,14 @@ const Certificado = () => {
   }, []); // Empty dependency array means this effect runs only once after the initial render
 
   return (
-    <section className='bg-white py-0 '> {/* Added a section tag for better semantic structure and padding */}
+    <section className='bg-[#E1F5FE] py-20 '> {/* Added a section tag for better semantic structure and padding */}
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
         {/* Title */}
-        <h2 className='text-4xl md:text-5xl font-extrabold text-gray-900 mb-8 leading-tight'>
+        <h2 className='text-4xl md:text-5xl font-extrabold text-[#26374c] mb-8 leading-tight'>
           Compártelos con el mundo
         </h2>
         {/* Description */}
-        <p className='text-lg md:text-xl text-gray-700 mb-12 max-w-2xl mx-auto'>
+        <p className='text-lg md:text-xl text-[#26374c] mb-12 max-w-2xl mx-auto'>
           Tus certificados tienen un enlace único para que puedas compartir una versión online donde y con quien quieras.
         </p>
 

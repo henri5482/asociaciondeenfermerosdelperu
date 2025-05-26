@@ -1,6 +1,5 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import {
   Carousel,
@@ -9,9 +8,10 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 // Interfaces
 interface Temario {
@@ -77,7 +77,7 @@ export function Projects() {
     );
 
   return (
-    <section className="w-full  bg-[#1a2c3b] py-12 md:py-20 px-4 md:px-8 lg:px-16 flex justify-center items-center">
+    <section className="w-full  bg-[#26374c] py-12 md:py-20 px-4 md:px-8 lg:px-16 flex justify-center items-center">
       <Carousel opts={{ align: "start", loop: true }} className="w-full max-w-7xl">
         <CarouselContent>
           {courses.map((course, index) => (

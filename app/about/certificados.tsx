@@ -103,7 +103,7 @@ const Certifications = () => {
 
   return (
     // Aplica el fondo oscuro a la sección principal
-    <div className="bg-[#0f1e26]">
+    <div className="bg-[#26374c]">
       <div className="px-4 sm:px-6 mx-auto max-w-7xl py-12 md:py-24">
         {/* Animación para el encabezado */}
         <motion.div

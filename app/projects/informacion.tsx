@@ -1,13 +1,12 @@
 "use client";
 
-import React from 'react';
-import { motion } from 'framer-motion';
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion"; // Adjust path if your shadcn components are elsewhere
+import { motion } from 'framer-motion';
 
 const Informacion = () => {
   // Define animation variants for Framer Motion
@@ -41,7 +40,7 @@ const Informacion = () => {
   ];
 
   return (
-    <section className='bg-white py-24 md:py-36 overflow-hidden'>
+    <section className='bg-[#E1F5FE] py-24 md:py-36 overflow-hidden'>
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-start justify-center gap-16 md:gap-24'>
         {/* Left Section: Main Heading */}
         <motion.div
@@ -51,7 +50,7 @@ const Informacion = () => {
           viewport={{ once: true, amount: 0.5 }}
           variants={questionVariants}
         >
-          <h2 className='text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight drop-shadow-sm'>
+          <h2 className='text-4xl md:text-5xl font-extrabold text-[#26374c] leading-tight drop-shadow-sm'>
             Todo lo que tienes que saber sobre los certificados
           </h2>
         </motion.div>
@@ -69,10 +68,10 @@ const Informacion = () => {
                 transition={{ delay: index * 0.1 }} // Stagger animation for each item
               >
                 <AccordionItem value={`item-${index}`} className="border-b border-gray-200">
-                  <AccordionTrigger className="text-xl md:text-2xl font-semibold text-gray-800 hover:no-underline py-6">
+                  <AccordionTrigger className="text-xl md:text-2xl font-semibold text-[#26374c] hover:no-underline py-6">
                     {item.question}
                   </AccordionTrigger>
-                  <AccordionContent className="text-lg text-gray-700 pb-4 pr-8">
+                  <AccordionContent className="text-lg text-[#26374c] pb-4 pr-8">
                     {item.answer}
                   </AccordionContent>
                 </AccordionItem>

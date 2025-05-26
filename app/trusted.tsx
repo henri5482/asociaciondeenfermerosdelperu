@@ -1,8 +1,8 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { Marquee } from "@/components/magicui/marquee";
 import { cn } from "@/lib/utils";
+import { motion } from "framer-motion";
 import Image from "next/image";
 
 // Definición de las empresas con sus logos
@@ -62,7 +62,7 @@ const Trusted = () => {
     <div
       className={cn(
         "w-full overflow-hidden py-12 md:py-16 relative", // Menos padding vertical
-        "bg-[#E7F6FE] text-[#006394]" // Fondo claro y texto oscuro
+        "bg-[#E1F5FE] text-[#006394]" // Fondo claro y texto oscuro
       )}
     >
       {/* Elementos de fondo decorativos (ajustados para ser más sutiles en un espacio más pequeño) */}

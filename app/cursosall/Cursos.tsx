@@ -2,8 +2,8 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState, useMemo } from "react";
-import { FiSearch, FiX, FiChevronDown } from "react-icons/fi"; // Importa FiChevronDown
+import { useEffect, useMemo, useState } from "react";
+import { FiChevronDown, FiSearch, FiX } from "react-icons/fi"; // Importa FiChevronDown
 import { Curso } from "../types/curso";
 
 const Cursos = () => {
@@ -125,7 +125,7 @@ const Cursos = () => {
 
   return (
     <div className="container mx-auto max-sm:px-4 py-12">
-      <h2 className="text-5xl font-extrabold text-center text-white mb-16 drop-shadow-lg">
+      <h2 className=" text-3xl md:text-5xl font-extrabold text-center text-white mb-6 md:mb-16 drop-shadow-lg">
         Explora Nuestros Cursos Exclusivos
       </h2>
 
@@ -183,7 +183,7 @@ const SearchBar = ({
     <input
       type="text"
       placeholder="Buscar cursos..."
-      className="w-full pl-12 pr-10 py-4 rounded-full border border-gray-600 bg-[#0f1e26] text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+      className="w-full pl-12 pr-10 py-4 rounded-full border border-gray-600 bg-[#26374c] text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
       value={searchTerm}
       onChange={onChange}
       aria-label="Buscar cursos"

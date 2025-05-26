@@ -1,14 +1,13 @@
 "use client";
 
-import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import React from "react";
 import {
   PiBookOpenText, // Ícono para cursos genéricos
   PiCodeSimple, // Ícono para código/Python
   PiDatabase, // Ícono para bases de datos
-
 } from "react-icons/pi";
 
 interface TeamMemberProps {
@@ -36,7 +35,7 @@ const TeamMember: React.FC<TeamMemberProps> = ({
 }) => {
   return (
     <motion.div
-      className="flex flex-col h-full bg-[#006394] rounded-lg shadow-lg overflow-hidden group border border-[#1A362D]"
+      className="flex flex-col h-full bg-[#327293] rounded-lg shadow-lg overflow-hidden group border border-[#1A362D]"
       whileHover={{ y: -5 }}
       transition={{ duration: 0.3 }}
     >
