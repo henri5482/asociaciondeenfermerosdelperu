@@ -1,9 +1,9 @@
 "use client";
-import { motion } from "framer-motion";
 import { Separator } from "@/components/ui/separator";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import { FaChevronUp } from "react-icons/fa";
 import {
   PiFacebookLogo,
   PiInstagramLogo,
@@ -11,7 +11,6 @@ import {
   PiTwitterLogo,
   PiYoutubeLogo,
 } from "react-icons/pi";
-import { FaChevronUp } from "react-icons/fa";
 
 const Footer = () => {
   // Data for "Acerca de" section links
@@ -67,7 +66,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-[#D2EFFF] border-t border-gray-200 text-gray-800">
+    <footer className="bg-[#E1F5FE] border-t border-gray-200 text-gray-800">
       <div className="container mx-auto px-4 py-8 sm:px-6 md:px-8 lg:px-12 xl:px-16 md:py-12 lg:py-16">
         {/* Top section: Logo and back to top */}
         <div className="hidden md:flex justify-between items-center">

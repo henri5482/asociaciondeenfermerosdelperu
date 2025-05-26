@@ -1,8 +1,8 @@
 'use client';
 
-import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import Image from 'next/image';
+import { useRef } from 'react';
 
 const Beneficios = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -73,7 +73,7 @@ const Beneficios = () => {
   };
 
   return (
-    <section className="bg-[#0f141f] py-16 md:py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden" ref={containerRef}>
+    <section className="bg-[#26374c] py-16 md:py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden" ref={containerRef}>
       <div className="absolute inset-0 z-0" style={{
         background: `
           radial-gradient(circle at 15% 25%, rgba(0,194,168,0.08) 0%, transparent 40%),
@@ -84,12 +84,12 @@ const Beneficios = () => {
 
       <div className="max-w-7xl mx-auto relative z-10">
         <motion.h2
-          className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-100 text-center mb-12 md:mb-16 leading-tight"
+          className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#E1F5FE] text-center mb-12 md:mb-16 leading-tight"
           initial="hidden"
           animate={isInViewContainer ? "visible" : "hidden"}
           variants={titleVariants}
         >
-          Aprovecha los beneficios y crece con <span className="text-[#00c2a8]">EDteam</span>
+          Aprovecha los beneficios y crece con <span className="text-[#E1F5FE]">Nosotros</span>
         </motion.h2>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">

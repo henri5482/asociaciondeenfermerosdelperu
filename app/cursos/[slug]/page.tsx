@@ -102,7 +102,7 @@ export default async function CourseDetail({
   if (!course) {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center bg-[#0f1e26] text-white">
-        <p className="text-xl mb-4">Course not found</p>
+        <p className="text-xl mb-4">Curso no encontrado</p>
         <Link href="/" className="text-cyan-300 hover:underline">
           Back to home
         </Link>
@@ -133,17 +133,17 @@ export default async function CourseDetail({
   return (
     <>
       <Navbar />
-      <div className="min-h-screen bg-[#0f1e26] text-white py-12 px-4 md:px-8 lg:px-16 pt-40">
+      <div className="min-h-screen bg-[#26374c] text-white py-12 px-4 md:px-8 lg:px-16 pt-40">
         <div className="max-w-7xl mx-auto bg-[#1a2c3b] rounded-2xl p-6 md:p-10 shadow-2xl">
           {/* Sección superior: Título, descripción y contenido principal */}
           <div className="flex flex-col md:flex-row gap-8 mb-8">
             {/* Columna izquierda: Contenido textual */}
             <div className="flex-1">
               <div className="flex flex-wrap gap-2 mb-4">
-                <div className="bg-yellow-400 text-black px-4 py-2 rounded-md font-semibold inline-block">
+                <div className="bg-[#E1F5FE] text-black px-4 py-2 rounded-md font-semibold inline-block">
                   PRÓXIMO LANZAMIENTO
                 </div>
-                <div className="bg-yellow-400 text-black px-4 py-2 rounded-md font-semibold inline-block">
+                <div className="bg-[#E1F5FE] text-black px-4 py-2 rounded-md font-semibold inline-block">
                   <span>Las clases empiezan el </span>
                   <span className="font-bold">{startDate}</span>
                 </div>
@@ -171,7 +171,7 @@ export default async function CourseDetail({
               <div className="flex flex-col md:flex-row items-center gap-4 mt-8 w-full">
                 {/* Botón "Ver más cursos" */}
                 <Button
-                  className="bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-500 hover:to-amber-600 text-gray-900 font-semibold py-5 px-1 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-[1.02] flex items-center gap-3 min-w-[200px] justify-center"
+                  className="bg-[#E1F5FE] hover:text-white text-gray-900 font-semibold py-5 px-1 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-[1.02] flex items-center gap-3 min-w-[200px] justify-center"
                   asChild
                 >
                   <Link href="/premium-subscription">
@@ -193,7 +193,7 @@ export default async function CourseDetail({
                       <path d="M3 5h4" />
                       <path d="M17 19h4" />
                     </svg>
-                    <span className="text-lg">Explorar cursos</span>
+                    <span className="text-lg">Haste Premium</span>
                   </Link>
                 </Button>
 

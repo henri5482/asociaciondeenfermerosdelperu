@@ -187,12 +187,12 @@ const Planes = () => {
   const getCardBgColor = (type: Plan['type']) => {
     switch (type) {
       case 'expert':
-        return 'bg-[#183935]';
+        return 'bg-[#26374c]';
       case 'expert-duo':
-        return 'bg-[#0F1E26]';
+        return 'bg-[#26374c]';
       case 'basic':
       default:
-        return 'bg-[#0F1E26]';
+        return 'bg-[#26374c]';
     }
   };
 
@@ -207,13 +207,13 @@ const Planes = () => {
   };
 
   return (
-    <section className="bg-[#0f1e26] min-h-screen py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <section className="bg-[#E7F6FE] min-h-screen py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
       <div className="max-w-7xl mx-auto text-center">
         <motion.h2
           variants={headingVariants}
           initial="hidden"
           animate="visible"
-          className="text-5xl md:text-6xl font-extrabold text-white mb-16 drop-shadow-lg leading-tight"
+          className="text-5xl md:text-6xl font-extrabold text-[#006394] mb-16 drop-shadow-lg leading-tight"
         >
           Elige el plan ideal para ti
         </motion.h2>
@@ -223,7 +223,7 @@ const Planes = () => {
           variants={audienceSelectorVariants}
           initial="hidden"
           animate="visible"
-          className="inline-flex rounded-full bg-[#373e4a] p-1 mb-12 shadow-lg"
+          className="inline-flex rounded-full bg-[#26374c] p-1 mb-12 shadow-lg"
           role="tablist"
         >
           <button
@@ -393,7 +393,7 @@ const Planes = () => {
 
                   {/* Opciones de pago (si aplica) */}
                   {currentPlan.paymentOptions && (
-                    <div className="bg-[#1e2a3a] rounded-xl p-4 mb-6 text-center text-sm text-gray-300 shadow-inner">
+                    <div className="bg-[#26374c] rounded-xl p-4 mb-6 text-center text-sm text-gray-300 shadow-inner">
                       <p>
                         Paga a <span className="font-bold">{currentPlan.paymentOptions.installments} cuotas</span> sin intereses de <span className="font-bold">
                           {currentPlan.currency}

@@ -1,8 +1,7 @@
 "use client";
 
-import Image from "next/image";
-import React from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 // Path for the QR code image that appears on the phone
 const qrCodeImage = "/qr.png"; // Replace with your actual QR code image
@@ -54,7 +53,7 @@ const Celular = () => {
   };
 
   return (
-    <section className="bg-white py-24 md:py-36 overflow-hidden">
+    <section className="bg-[#E1F5FE] py-24 md:py-36 overflow-hidden">
       {/* Main content: Text and Phone */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-center gap-16 md:gap-24 mb-24 md:mb-36">
         {/* Left Section: Text Content with Framer Motion */}

@@ -5,13 +5,13 @@ import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const links = [
   { href: "/cursosall", label: "Cursos" },
   { href: "/projects", label: "Certificados" },
   { href: "/about", label: "Nosotros" },
-  { href: "/contact", label: "Trabaja con nosotros" },
+  { href: "/profesor", label: "Trabaja con nosotros" },
 ];
 
 const Navbar = () => {

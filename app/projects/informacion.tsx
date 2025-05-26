@@ -1,13 +1,12 @@
 "use client";
 
-import React from 'react';
-import { motion } from 'framer-motion';
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion"; // Adjust path if your shadcn components are elsewhere
+import { motion } from 'framer-motion';
 
 const Informacion = () => {
   // Define animation variants for Framer Motion
@@ -41,7 +40,7 @@ const Informacion = () => {
   ];
 
   return (
-    <section className='bg-white py-24 md:py-36 overflow-hidden'>
+    <section className='bg-[#E1F5FE] py-24 md:py-36 overflow-hidden'>
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-start justify-center gap-16 md:gap-24'>
         {/* Left Section: Main Heading */}
         <motion.div

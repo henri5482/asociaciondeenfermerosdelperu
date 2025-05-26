@@ -1,8 +1,8 @@
 'use client';
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-import React, { useRef, useEffect, useState } from 'react';
-import { motion, useInView, animate } from 'framer-motion';
+import { animate, motion, useInView } from 'framer-motion';
+import React, { useEffect, useRef } from 'react';
 
 interface CountingNumberProps {
   value: number;
@@ -36,7 +36,7 @@ const Numeros = () => {
   const isInViewContainer = useInView(containerRef, { once: true, amount: 0.2 });
 
   const stats = [
-    { id: 1, label: 'ESTUDIANTES INSCRITOS', value: 75000, suffix: '+' },
+    { id: 1, label: 'ESTUDIANTES INSCRITOS', value: 10000, suffix: '+' },
     { id: 2, label: 'PROFESIONALES CERTIFICADOS', value: 12000, suffix: '+' },
     { id: 3, label: 'HORAS DE CONTENIDO', value: 1500, suffix: '+' },
     { id: 4, label: 'PROYECTOS COMPLETADOS', value: 3000, suffix: '+' },
@@ -59,22 +59,22 @@ const Numeros = () => {
       y: 0,
       transition: {
         delay: i * 0.15,
-        duration: 0.6,
+        duration: 0.7, // Slightly longer duration
         ease: "easeOut",
         type: "spring",
-        stiffness: 100,
-        damping: 10,
+        stiffness: 120, // Adjusted stiffness for a snappier feel
+        damping: 15,    // Adjusted damping
       },
     }),
   };
 
   return (
-    <section className="bg-[#0b101b] py-12 sm:py-16 md:py-20 lg:py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-      {/* Background Gradients */}
+    <section className="bg-[#26374c] py-12 sm:py-16 md:py-20 lg:py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+      {/* Background Gradients: Adjusted colors for cohesive blue theme */}
       <div className="absolute inset-0 z-0" style={{
         background: `
-          radial-gradient(circle at 15% 25%, rgba(0,194,168,0.08) 0%, transparent 40%),
-          radial-gradient(circle at 85% 75%, rgba(0,194,168,0.08) 0%, transparent 40%),
+          radial-gradient(circle at 15% 25%, rgba(13,112,174,0.08) 0%, transparent 40%),
+          radial-gradient(circle at 85% 75%, rgba(13,112,174,0.08) 0%, transparent 40%),
           linear-gradient(to bottom, transparent, #0b101b 90%)
         `
       }}></div>
@@ -82,12 +82,12 @@ const Numeros = () => {
       <div className="max-w-7xl mx-auto text-center relative z-10" ref={containerRef}>
         {/* Section Title */}
         <motion.h2
-          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-gray-100 mb-12 sm:mb-16 md:mb-20 leading-tight"
+          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-[#E1F5FE] mb-12 sm:mb-16 md:mb-20 leading-tight"
           initial="hidden"
           animate={isInViewContainer ? "visible" : "hidden"}
           variants={sectionHeaderVariants}
         >
-          Nuestro Impacto en <span className="text-[#00c2a8] drop-shadow-md">Números</span>
+          Nuestro Impacto en <span className="text-[#E1F5FE] drop-shadow-xl">Números</span> {/* Increased drop shadow */}
         </motion.h2>
 
         {/* Statistics Grid */}
@@ -101,11 +101,12 @@ const Numeros = () => {
               animate={isInViewContainer ? "visible" : "hidden"}
               variants={statCardVariants}
             >
-              {/* Card Border/Glow */}
+              {/* Card Border/Glow: Updated colors and added subtle inner glow */}
               <div className="absolute inset-0 rounded-xl sm:rounded-2xl border-2 border-transparent transition-all duration-300
-                          group-hover:border-[#00c2a8]/30"
+                             group-hover:border-[#0d70ae]/40" // Increased border opacity on hover
                 style={{
-                  background: 'linear-gradient(180deg, rgba(0,194,168,0.08) 0%, transparent 50%)',
+                  background: 'linear-gradient(180deg, rgba(74,168,237,0.08) 0%, transparent 50%)', // Brighter blue for internal gradient
+                  boxShadow: 'inset 0 0 15px rgba(13,112,174,0.05)', // Subtle inner glow using base blue
                   mask: 'linear-gradient(white, white) padding-box, linear-gradient(white, white)',
                   maskComposite: 'exclude',
                   WebkitMaskComposite: 'exclude',
@@ -113,9 +114,10 @@ const Numeros = () => {
               ></div>
 
               <div className="relative z-10 text-center">
-                <div className="text-5xl min-[1000px]:text-5xl xl:text-6xl font-extrabold text-white mb-2 sm:mb-3 drop-shadow-lg"
+                <div className="text-5xl min-[1000px]:text-5xl xl:text-6xl font-extrabold text-white mb-2 sm:mb-3"
                      style={{
-                       textShadow: '0 0 15px rgba(0,194,168,0.8), 0 0 30px rgba(0,194,168,0.5), 0 0 45px rgba(0,194,168,0.3)'
+                       // Stronger, bluer glow for numbers
+                       textShadow: '0 0 15px rgba(74,168,237,0.9), 0 0 30px rgba(74,168,237,0.6), 0 0 45px rgba(74,168,237,0.3)'
                      }}>
                   <CountingNumber value={stat.value} suffix={stat.suffix} />
                 </div>

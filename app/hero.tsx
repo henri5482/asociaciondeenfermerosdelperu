@@ -1,7 +1,7 @@
 "use client";
 
-import { motion, useScroll, useTransform } from "framer-motion";
 import { Button } from "@/components/ui/button"; // Asumo que esta ruta es correcta
+import { motion, useScroll, useTransform } from "framer-motion";
 
 const Hero = () => {
   const { scrollY } = useScroll();
@@ -86,7 +86,7 @@ const Hero = () => {
 
   return (
     <main
-      className="relative overflow-hidden bg-[#1a2c3b] text-white
+      className="relative overflow-hidden bg-[#26374c] text-white
       pt-28  md:pt-32 lg:pt-40 xl:pt-48 2xl:pt-56
       pb-28  md:pb-16 lg:pb-20 xl:pb-24 2xl:pb-28
       px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32 2xl:px-36
@@ -105,10 +105,10 @@ const Hero = () => {
         {/* MEJORA: Se eliminaron las clases de tamaño de fuente conflictivas del motion.h1. 
             Los spans internos ahora controlan completamente sus respectivos tamaños de fuente. */}
         <motion.h1
-          className="font-extrabold leading-tight mb-4 tracking-tight"
+          className="font-extrabold leading-tight mb-4 tracking-tight text-[#E1F5FE]"
           variants={contentItemVariants}
         >
-          <span className="block text-2xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-5xl text-white">
+          <span className="block text-2xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-5xl text-[#E1F5FE]">
             Forma parte de la nueva {" "}
           </span>
           <span className="block  text-4xl md:text-5xl lg:text-6xl xl:text-[77px]  2xl:text-[80px]   drop-shadow-lg">
@@ -145,8 +145,8 @@ const Hero = () => {
             className="
               relative overflow-hidden
               inline-flex items-center justify-center
-              bg-gradient-to-r from-[#00a83e] to-[#00c54a] hover:from-[#008a33] hover:to-[#00a83e]
-              text-white px-8 py-5 sm:px-10 sm:py-6 2xl:py-7 rounded-full font-semibold text-base sm:text-lg md:text-xl shadow-lg
+              bg-gradient-to-r from-[#E1F5FE] to-[#E1F5FE] hover:from-[#008a33] hover:to-[#00a83e]
+              text-[#26374c] px-8 py-5 sm:px-10 sm:py-6 2xl:py-7 rounded-full font-semibold text-base sm:text-lg md:text-xl shadow-lg
               transition-all duration-300 ease-in-out transform
               focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#00c54a]
               w-full sm:w-auto
