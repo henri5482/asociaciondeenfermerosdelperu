@@ -2,6 +2,7 @@ import { Analytics } from '@vercel/analytics/react';
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from 'next/font/google';
 import "./globals.css";
+import FloatingButtons from './floating-buttons';
 
 const font = Plus_Jakarta_Sans({
   subsets: ['latin'],
@@ -33,6 +34,8 @@ export default function RootLayout({
     <html lang="es" suppressHydrationWarning className={font.variable}>
       <body className={`${font.className} antialiased`}>
         {children}
+                <FloatingButtons /> {/* Render the floating buttons here */}
+
         <Analytics />
       </body>
     </html>
