@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import React, { useState, useEffect } from "react";
 
 // IMPORTANT: Make sure these paths are correct and the images are in your /public directory.
@@ -43,9 +44,12 @@ const Sellos = () => {
           al completar cualquier curso que hayas comprado, recibirás un
           certificado único firmado por el profesor. ¡Comparte tus logros!
         </p>
+        <Link href="/cursosall" className="inline-block">
+        
         <button className="bg-[#006394] hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105">
           Explorar Cursos
         </button>
+        </Link>
       </div>
 
       {/* Right Section: Dynamic Animated Seals Display */}

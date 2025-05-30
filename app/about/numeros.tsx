@@ -36,8 +36,8 @@ const Numeros = () => {
   const isInViewContainer = useInView(containerRef, { once: true, amount: 0.2 });
 
   const stats = [
-    { id: 1, label: 'ESTUDIANTES INSCRITOS', value: 10000, suffix: '+' },
-    { id: 2, label: 'PROFESIONALES CERTIFICADOS', value: 12000, suffix: '+' },
+    { id: 1, label: 'ESTUDIANTES INSCRITOS', value: 8000, suffix: '+' },
+    { id: 2, label: 'PROFESIONALES CERTIFICADOS', value: 9000, suffix: '+' },
     { id: 3, label: 'HORAS DE CONTENIDO', value: 1500, suffix: '+' },
     { id: 4, label: 'PROYECTOS COMPLETADOS', value: 3000, suffix: '+' },
   ];

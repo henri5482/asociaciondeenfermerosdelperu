@@ -15,8 +15,8 @@ import {
 const Footer = () => {
   // Data for "Acerca de" section links
   const aboutLinks = [
-    { name: "¿Sobre Nosotros?", href: "/about/edteam" },
-    { name: "El equipo", href: "/about/equipo" },
+    { name: "¿Sobre Nosotros?", href: "/about" },
+    { name: "El equipo", href: "#" },
     { name: "Los profesores", href: "/about/profesores" },
     { name: "Enunciado de misión", href: "/about/mision" },
     { name: "Marca y logotipo", href: "/about/marca" },

@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 // Path for the QR code image that appears on the phone
 const qrCodeImage = "/qr.png"; // Replace with your actual QR code image
@@ -167,16 +168,20 @@ const Celular = () => {
           viewport={{ once: true, amount: 0.5 }}
           variants={ctaVariants}
         >
+          
           <h2 className="text-2xl md:text-3xl font-extrabold text-[#26374c] mb-8 leading-tight drop-shadow-sm">
-            Más cursos para desarrollar tu creatividad
+            Más cursos para desarrollar tus habilidades
           </h2>
+
+          <Link href="/cursosall" className="block mb-6">
           <motion.button
             className="bg-[#006394] hover:bg-[#26374c] text-white font-bold py-3 px-8 rounded-xl text-lg md:text-lg shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105"
             variants={ctaVariants} // Use ctaVariants for the button's hover state as well
             whileHover="hover"
-          >
+            >
             Ver todos los cursos
           </motion.button>
+            </Link>
         </motion.div>
       </div>
 
