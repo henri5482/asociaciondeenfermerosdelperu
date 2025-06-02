@@ -36,8 +36,8 @@ const Numeros = () => {
   const isInViewContainer = useInView(containerRef, { once: true, amount: 0.2 });
 
   const stats = [
-    { id: 1, label: 'ESTUDIANTES INSCRITOS', value: 10000, suffix: '+' },
-    { id: 2, label: 'PROFESIONALES CERTIFICADOS', value: 12000, suffix: '+' },
+    { id: 1, label: 'ESTUDIANTES INSCRITOS', value: 8000, suffix: '+' },
+    { id: 2, label: 'PROFESIONALES CERTIFICADOS', value: 9000, suffix: '+' },
     { id: 3, label: 'HORAS DE CONTENIDO', value: 1500, suffix: '+' },
     { id: 4, label: 'PROYECTOS COMPLETADOS', value: 3000, suffix: '+' },
   ];
@@ -71,13 +71,7 @@ const Numeros = () => {
   return (
     <section className="bg-[#26374c] py-12 sm:py-16 md:py-20 lg:py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
       {/* Background Gradients: Adjusted colors for cohesive blue theme */}
-      <div className="absolute inset-0 z-0" style={{
-        background: `
-          radial-gradient(circle at 15% 25%, rgba(13,112,174,0.08) 0%, transparent 40%),
-          radial-gradient(circle at 85% 75%, rgba(13,112,174,0.08) 0%, transparent 40%),
-          linear-gradient(to bottom, transparent, #0b101b 90%)
-        `
-      }}></div>
+      <div className="absolute inset-0 z-0" ></div>
 
       <div className="max-w-7xl mx-auto text-center relative z-10" ref={containerRef}>
         {/* Section Title */}

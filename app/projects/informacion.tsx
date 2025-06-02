@@ -50,7 +50,7 @@ const Informacion = () => {
           viewport={{ once: true, amount: 0.5 }}
           variants={questionVariants}
         >
-          <h2 className='text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight drop-shadow-sm'>
+          <h2 className='text-4xl md:text-5xl font-extrabold text-[#26374c] leading-tight drop-shadow-sm'>
             Todo lo que tienes que saber sobre los certificados
           </h2>
         </motion.div>
@@ -68,10 +68,10 @@ const Informacion = () => {
                 transition={{ delay: index * 0.1 }} // Stagger animation for each item
               >
                 <AccordionItem value={`item-${index}`} className="border-b border-gray-200">
-                  <AccordionTrigger className="text-xl md:text-2xl font-semibold text-gray-800 hover:no-underline py-6">
+                  <AccordionTrigger className="text-xl md:text-2xl font-semibold text-[#26374c] hover:no-underline py-6">
                     {item.question}
                   </AccordionTrigger>
-                  <AccordionContent className="text-lg text-gray-700 pb-4 pr-8">
+                  <AccordionContent className="text-lg text-[#26374c] pb-4 pr-8">
                     {item.answer}
                   </AccordionContent>
                 </AccordionItem>

@@ -59,7 +59,7 @@ const LandingSection = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 to-gray-950 flex items-center justify-center p-4 sm:p-8">
+    <div className="min-h-screen bg-[#26374c] flex items-center justify-center p-4 sm:p-8">
       <motion.div
         className="w-full max-w-6xl"
         initial="hidden"
@@ -87,15 +87,15 @@ const LandingSection = () => {
                     </CarouselItem>
                   ))}
                 </CarouselContent>
-                <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 z-10 text-white bg-black/50 hover:bg-black/70" />
-                <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 z-10 text-white bg-black/50 hover:bg-black/70" />
+                <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 z-10 text-[#E1F5FE] bg-black/50 hover:bg-black/70" />
+                <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 z-10 text-[#E1F5FE] bg-black/50 hover:bg-black/70" />
               </Carousel>
             </motion.div>
 
             {/* Panel Derecho: Contenido de Texto */}
             <motion.div className="flex flex-col justify-center p-6 sm:p-8 md:p-10 space-y-6" variants={itemVariants}>
               <motion.h2
-                className="text-3xl sm:text-4xl font-extrabold text-white leading-tight mb-2"
+                className="text-3xl sm:text-4xl font-extrabold text-[#E1F5FE] leading-tight mb-2"
                 variants={itemVariants}
               >
                 {headingText}
@@ -106,10 +106,10 @@ const LandingSection = () => {
 
               {/* Tags */}
               <motion.div className="flex flex-wrap gap-3 pt-2" variants={itemVariants}>
-                <Badge variant="secondary" className="bg-slate-700 text-slate-300 px-3 py-1.5 text-sm font-medium hover:bg-slate-600 transition-colors">
+                <Badge variant="secondary" className="bg-slate-700 text-[#E1F5FE] px-3 py-1.5 text-sm font-medium hover:bg-slate-600 transition-colors">
                   {tag1Text}
                 </Badge>
-                <Badge variant="secondary" className="bg-slate-700 text-slate-300 px-3 py-1.5 text-sm font-medium hover:bg-slate-600 transition-colors">
+                <Badge variant="secondary" className="bg-slate-700 text-[#E1F5FE] px-3 py-1.5 text-sm font-medium hover:bg-slate-600 transition-colors">
                   {tag2Text}
                 </Badge>
               </motion.div>
@@ -122,7 +122,7 @@ const LandingSection = () => {
                 <motion.div {...buttonHoverTap} className="w-full sm:w-auto">
                   <Button
                     size="lg"
-                    className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 shadow-lg"
+                    className="w-full sm:w-auto bg-white hover:bg-blue-700 text-black hover:text-[#E1F5FE] font-bold py-3 px-6 rounded-lg transition-all duration-300 shadow-lg"
                   >
                     Comienza a enseñar
                   </Button>
@@ -131,7 +131,7 @@ const LandingSection = () => {
                   <Button
                     variant="outline"
                     size="lg"
-                    className="w-full sm:w-auto border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 shadow-lg"
+                    className="w-full sm:w-auto border-blue-500  text-black hover:bg-blue-500 hover:text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 shadow-lg"
                   >
                     Postúlate a la escuela de profesores
                   </Button>

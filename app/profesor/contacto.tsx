@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 import { Loader2 } from "lucide-react"; // Importar icono de cargando de Lucide
 import React, { useState } from "react"; // Asegúrate de importar React
 
-const WHATSAPP_PHONE_NUMBER = "51987654321"; // ¡CAMBIA ESTO por tu número de WhatsApp real con código de país! (ej: 51912345678)
+const WHATSAPP_PHONE_NUMBER = "51918237837"; // ¡CAMBIA ESTO por tu número de WhatsApp real con código de país! (ej: 51912345678)
 
 const Contacto = () => {
   const [formData, setFormData] = useState({
@@ -45,7 +45,7 @@ const Contacto = () => {
 
     // Construir el mensaje de WhatsApp
     const whatsappMessage = `
-¡Hola! Me gustaría postularme para enseñar en EDteam.
+¡Hola! Me gustaría postularme para enseñar .
 
 Mis datos son:
 Nombre: ${formData.name}
@@ -106,7 +106,7 @@ Por favor, adjunto mi CV en este chat.
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 to-gray-950 flex items-center justify-center p-4 sm:p-8">
+    <div className="min-h-screen bg-[#26374c] flex items-center justify-center p-4 sm:p-8">
       <motion.div
         className="w-full max-w-2xl"
         initial="hidden"

@@ -1,6 +1,5 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { motion } from "framer-motion";
 import Image from "next/image"; // Para los iconos y placeholders
@@ -23,21 +22,21 @@ const benefitsData = [
   },
   {
     id: 3,
-    icon: "/images/icon-commissions.png", // Reemplazar con tu ícono real
+    icon: "/bolso.png", // Reemplazar con tu ícono real
     title: "Te pagamos comisiones",
     description:
       "Las compras de tu curso, las vistas y tus respuestas a los estudiantes generan ingresos extra para ti.",
   },
   {
     id: 4,
-    icon: "/images/icon-support.png", // Reemplazar con tu ícono real
+    icon: "/bolso.png", // Reemplazar con tu ícono real
     title: "Te ayudamos con tu curso",
     description:
       "Nuestro equipo te acompañará en todas las etapas de tu curso para que solo te enfoques en enseñar.",
   },
 ];
 
-const Beneficios = () => {
+const Beneficiosabout = () => {
   const sectionVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: {
@@ -62,13 +61,10 @@ const Beneficios = () => {
     },
   };
 
-  const buttonHoverTap = {
-    hover: { scale: 1.03, transition: { type: "spring", stiffness: 400, damping: 17 } },
-    tap: { scale: 0.98 },
-  };
+
 
   return (
-    <div className="bg-[#26374c] text-[#E1F5FE] py-16 px-4 sm:px-8 lg:px-16">
+    <div className="bg-[#26374c] text-[#E1F5FE] py-1 px-4 sm:px-8 lg:px-16">
       <motion.div
         className="max-w-7xl mx-auto text-center"
         initial="hidden"
@@ -81,7 +77,6 @@ const Beneficios = () => {
           className="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-12 leading-tight"
           variants={itemVariants}
         >
-          Beneficios de enseñar en EDteam
         </motion.h2>
 
         {/* Grid de Beneficios */}
@@ -117,32 +112,9 @@ const Beneficios = () => {
           ))}
         </motion.div>
 
-        {/* Botones de Acción */}
-        <motion.div
-          className="flex flex-col sm:flex-row justify-center gap-4"
-          variants={itemVariants}
-        >
-          <motion.div {...buttonHoverTap}>
-            <Button
-              size="lg"
-              className="w-full sm:w-auto bg-[#E1F5FE] hover:text-white hover:bg-[#26374c] text-slate-900 font-bold py-3 px-8 rounded-lg shadow-lg"
-            >
-              Comienza a enseñar
-            </Button>
-          </motion.div>
-          <motion.div {...buttonHoverTap}>
-            <Button
-              variant="outline"
-              size="lg"
-              className="w-full sm:w-auto bg-[#E1F5FE] border-gray-500 text-slate-900 hover:bg-gray-700 hover:text-white font-bold py-3 px-8 rounded-lg shadow-lg transition-colors duration-300"
-            >
-              Postúlate a la escuela de profesores
-            </Button>
-          </motion.div>
-        </motion.div>
       </motion.div>
     </div>
   );
 };
 
-export default Beneficios;
+export default Beneficiosabout;

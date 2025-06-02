@@ -33,7 +33,7 @@ const Hero = () => {
   };
 
   return (
-    <div className="relative w-full min-h-[450px] sm:min-h-[500px] md:min-h-[580px] lg:min-h-[650px] xl:min-h-[750px] flex items-center overflow-hidden">
+    <div className="relative w-full pt-20 min-h-[450px] sm:min-h-[500px] md:min-h-[580px] lg:min-h-[650px] xl:min-h-[750px] flex items-center overflow-hidden">
       {/* Imagen de fondo */}
       <motion.div
         className="absolute inset-0 z-0"
@@ -53,29 +53,29 @@ const Hero = () => {
       </motion.div>
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-[#2D66C2] opacity-70 z-10"></div>
+      <div className="absolute inset-0 bg-[#2D66C2] opacity-20 z-10"></div>
 
       {/* Contenedor del texto y botones con animaciones */}
       <motion.div
         className="
           relative z-20 
           w-full 
-          px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20 
+          px-4 sm:px-6 md:px-8 lg:px-0 xl:px-0 
           py-8 sm:py-10 md:py-12
           max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl xl:max-w-[700px]
           mx-auto lg:mx-0 
           text-center lg:text-left
-          lg:ml-[calc(8rem)] xl:ml-[calc(10rem)]
+          lg:ml-[calc(8rem)] xl:ml-[calc(10rem)] 
         "
         variants={containerVariants}
         initial="hidden"
         animate="visible"
       >
         <motion.h1
-          className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-[2.75rem] xl:text-5xl font-extrabold leading-tight mb-4 md:mb-6"
+          className="text-[#E1F5FE] text-3xl sm:text-4xl md:text-5xl lg:text-[2.75rem] xl:text-6xl font-extrabold leading-tight mb-4 md:mb-6"
           variants={itemVariants}
         >
-          Enseña en EDteam desde tu casa
+          Enseña con Nosotros desde tu casa
           <br className="hidden md:block" />
           y deja tu huella en el mundo
         </motion.h1>
@@ -101,7 +101,7 @@ const Hero = () => {
           <motion.div {...buttonHoverTap}>
             <Button
               size="lg" // shadcn/ui button size
-              className="w-full sm:w-auto bg-[#FFCC00] text-[#2D66C2] font-bold hover:bg-[#E0B800] transition-colors duration-300 shadow-md text-sm sm:text-base py-2.5 px-5"
+              className="w-full sm:w-auto bg-[#26374c] text-[#E1F5FE] font-bold hover:bg-white transition-colors duration-300 shadow-md text-sm sm:text-base py-2.5 px-5"
               // El padding y font-size se pueden controlar también con props de Button o mantener en className
             >
               Comienza a enseñar
@@ -112,7 +112,7 @@ const Hero = () => {
             <Button
               variant="outline" // shadcn/ui outline variant
               size="lg"
-              className="w-full sm:w-auto border-2 border-white text-black font-bold hover:bg-white hover:text-[#2D66C2] transition-colors duration-300 text-sm sm:text-base py-2.5 px-5"
+              className="w-full sm:w-auto  bg-[#26374c]  text-white font-bold hover:bg-white hover:text-[#2D66C2] transition-colors duration-300 text-sm sm:text-base py-2.5 px-5"
             >
               Postúlate a la escuela de profesores
             </Button>

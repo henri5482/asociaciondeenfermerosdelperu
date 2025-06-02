@@ -10,6 +10,7 @@ import { useEffect, useState } from "react";
 const links = [
   { href: "/cursosall", label: "Cursos" },
   { href: "/projects", label: "Certificados" },
+  { href: "/docentes", label: "Profesores" },
   { href: "/about", label: "Nosotros" },
   { href: "/profesor", label: "Trabaja con nosotros" },
 ];

@@ -125,7 +125,7 @@ const Cursos = () => {
 
   return (
     <div className="container mx-auto max-sm:px-4 py-12">
-      <h2 className="text-5xl font-extrabold text-center text-white mb-16 drop-shadow-lg">
+      <h2 className=" text-3xl md:text-5xl font-extrabold text-center text-white mb-6 md:mb-16 drop-shadow-lg">
         Explora Nuestros Cursos Exclusivos
       </h2>
 

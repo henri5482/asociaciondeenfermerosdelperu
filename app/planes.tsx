@@ -187,7 +187,6 @@ const Planes = () => {
   const getCardBgColor = (type: Plan['type']) => {
     switch (type) {
       case 'expert':
-        return 'bg-[#26374c]';
       case 'expert-duo':
         return 'bg-[#26374c]';
       case 'basic':
@@ -198,22 +197,22 @@ const Planes = () => {
 
   // Determinar el color del borde si es necesario (el Plan Expert tiene un borde verde)
   const getCardBorderColor = (type: Plan['type']) => {
-    return type === 'expert' ? 'border border-[#2d8d85]' : 'border border-gray-700';
+    return type === 'expert' || type === 'expert-duo' ? 'border border-[#2d8d85]' : 'border border-gray-700';
   };
 
   // Determinar el color del botón
   const getButtonBgColor = (type: Plan['type']) => {
-    return type === 'expert' ? 'bg-[#00d77d] hover:bg-[#00c06f]' : 'bg-[#373e4a] hover:bg-[#4f5869]';
+    return type === 'expert' || type === 'expert-duo' ? 'bg-[#00d77d] hover:bg-[#00c06f]' : 'bg-[#373e4a] hover:bg-[#4f5869]';
   };
 
   return (
-    <section className="bg-[#E7F6FE] min-h-screen py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <section className="bg-[#E7F6FE] min-h-screen py-16 sm:py-20 md:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
       <div className="max-w-7xl mx-auto text-center">
         <motion.h2
           variants={headingVariants}
           initial="hidden"
           animate="visible"
-          className="text-5xl md:text-6xl font-extrabold text-[#006394] mb-16 drop-shadow-lg leading-tight"
+          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#006394] mb-12 md:mb-16 drop-shadow-lg leading-tight"
         >
           Elige el plan ideal para ti
         </motion.h2>
@@ -223,12 +222,12 @@ const Planes = () => {
           variants={audienceSelectorVariants}
           initial="hidden"
           animate="visible"
-          className="inline-flex rounded-full bg-[#26374c] p-1 mb-12 shadow-lg"
+          className="inline-flex rounded-full bg-[#26374c] p-1 mb-10 md:mb-12 shadow-lg flex-wrap justify-center" // Added flex-wrap and justify-center for small screens
           role="tablist"
         >
           <button
             onClick={() => setCurrentAudience('personas')}
-            className={`px-6 py-3 rounded-full text-lg font-semibold transition-colors duration-300 relative z-10
+            className={`px-5 py-2 sm:px-6 sm:py-3 rounded-full text-base sm:text-lg font-semibold transition-colors duration-300 relative z-10 whitespace-nowrap
               ${currentAudience === 'personas' ? 'text-white' : 'text-gray-400 hover:text-white'}`}
             role="tab"
             aria-selected={currentAudience === 'personas'}
@@ -244,7 +243,7 @@ const Planes = () => {
           </button>
           <button
             onClick={() => setCurrentAudience('empresas')}
-            className={`px-6 py-3 rounded-full text-lg font-semibold transition-colors duration-300 relative z-10
+            className={`px-5 py-2 sm:px-6 sm:py-3 rounded-full text-base sm:text-lg font-semibold transition-colors duration-300 relative z-10 whitespace-nowrap
               ${currentAudience === 'empresas' ? 'text-white' : 'text-gray-400 hover:text-white'}`}
             role="tab"
             aria-selected={currentAudience === 'empresas'}
@@ -268,14 +267,13 @@ const Planes = () => {
             initial="hidden"
             animate="visible"
             exit="exit"
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch justify-center"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 items-stretch justify-center" // Adjusted gap for different screens
           >
             {filteredPlanes.map((plan) => {
-              // Creamos una copia mutable del plan para aplicar modificaciones condicionales
               // eslint-disable-next-line prefer-const
               let currentPlan = { ...plan };
               // eslint-disable-next-line prefer-const
-              let displayFeatures = [...plan.features]; // Clonar para no mutar el array original
+              let displayFeatures = [...plan.features];
 
               // Lógica para Expert Duo: ajustar precio, cuotas y características
               if (currentPlan.type === 'expert-duo' && currentAudience === 'personas') {
@@ -283,11 +281,10 @@ const Planes = () => {
 
                 if (expertDuoStudents === '4') {
                   currentPlan.price = expertDuo4StudentsConfig.price;
-                  currentPlan.oldPrice = expertDuo4StudentsConfig.oldPrice; // Aplica el oldPrice para 4 estudiantes
+                  currentPlan.oldPrice = expertDuo4StudentsConfig.oldPrice;
                   currentPlan.paymentOptions = expertDuo4StudentsConfig.paymentOptions;
                   studentFeatureText = '4 estudiantes';
                 } else {
-                  // Vuelve a los valores predeterminados para 2 estudiantes (desde planesData original)
                   const originalDuoPlan = planesData.find(p => p.id === 'personas-expert-duo');
                   if (originalDuoPlan) {
                     currentPlan.price = originalDuoPlan.price;
@@ -297,12 +294,11 @@ const Planes = () => {
                   studentFeatureText = '2 estudiantes';
                 }
 
-                // Actualizar la característica de estudiantes en displayFeatures
                 const existingStudentFeatureIndex = displayFeatures.findIndex(f => f.text.includes('estudiantes'));
                 if (existingStudentFeatureIndex !== -1) {
                   displayFeatures[existingStudentFeatureIndex] = { text: studentFeatureText, included: true };
                 } else {
-                  displayFeatures.unshift({ text: studentFeatureText, included: true }); // Añadir al principio si no existe
+                  displayFeatures.unshift({ text: studentFeatureText, included: true });
                 }
               }
               // Lógica para Plan Basic: asegurar la característica de 1 estudiante
@@ -318,26 +314,28 @@ const Planes = () => {
                 <motion.div
                   key={currentPlan.id + expertDuoStudents} // Clave única para forzar la reanimación al cambiar estudiantes
                   variants={itemVariants}
-                  className={`relative flex flex-col rounded-3xl p-8 shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-2 hover:shadow-2xl
-                    ${getCardBgColor(currentPlan.type)} ${getCardBorderColor(currentPlan.type)}
+                  className={`
+                    relative flex flex-col rounded-3xl p-6 sm:p-8 shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-2 hover:shadow-2xl
+                    ${getCardBgColor(currentPlan.type)} 
+                    ${getCardBorderColor(currentPlan.type)}
                     ${currentPlan.type === 'expert' ? 'lg:scale-105 lg:z-10' : ''}
                     ${currentPlan.type === 'expert-duo' && currentAudience === 'personas' ? 'md:col-span-2 lg:col-start-3' : ''}
                   `}
                 >
                   {/* Etiqueta de AHORRAS X MESES */}
                   {currentPlan.discountMonths && (
-                    <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-yellow-400 text-gray-900 text-sm font-bold px-4 py-1 rounded-full shadow-md z-10">
+                    <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-yellow-400 text-gray-900 text-xs sm:text-sm font-bold px-3 py-0.5 sm:px-4 sm:py-1 rounded-full shadow-md z-10 whitespace-nowrap">
                       AHORRAS {currentPlan.discountMonths} MESES
                     </div>
                   )}
 
                   {/* Encabezado del plan */}
-                  <div className="text-left mb-6">
-                    <h3 className="text-3xl font-bold text-white mb-2">{currentPlan.name}</h3>
+                  <div className="text-left mb-4 sm:mb-6">
+                    <h3 className="text-2xl sm:text-3xl font-bold text-white mb-1">{currentPlan.name}</h3>
                     <span className="text-gray-400 text-sm">{currentPlan.billingCycle === 'mensual' ? 'Mensual' : 'Anual'}</span>
                     {currentPlan.type === 'expert-duo' && currentAudience === 'personas' && (
-                      <div className="flex flex-wrap items-center space-x-4 mt-3">
-                        <label className="flex items-center text-gray-300 text-sm cursor-pointer mb-2 sm:mb-0">
+                      <div className="flex flex-wrap items-center space-x-3 sm:space-x-4 mt-3"> {/* Adjusted spacing */}
+                        <label className="flex items-center text-gray-300 text-sm cursor-pointer mb-1 sm:mb-0"> {/* Adjusted margin-bottom */}
                           <input
                             type="radio"
                             name={`students-${currentPlan.id}`}
@@ -347,7 +345,7 @@ const Planes = () => {
                           />
                           2 estudiantes
                         </label>
-                        <label className="flex items-center text-gray-300 text-sm cursor-pointer">
+                        <label className="flex items-center text-gray-300 text-sm cursor-pointer mb-1 sm:mb-0"> {/* Adjusted margin-bottom */}
                           <input
                             type="radio"
                             name={`students-${currentPlan.id}`}
@@ -362,38 +360,38 @@ const Planes = () => {
                   </div>
 
                   {/* Precio */}
-                  <div className="mb-6 flex items-baseline justify-start">
-                    <span className="text-5xl font-extrabold text-white">
+                  <div className="mb-4 sm:mb-6 flex items-baseline justify-start">
+                    <span className="text-4xl sm:text-5xl font-extrabold text-white">
                       {currentPlan.currency}
                       {currentPlan.price.toLocaleString('es-PE', { minimumFractionDigits: 0, maximumFractionDigits: 0 })}
                     </span>
-                    <span className="text-gray-400 text-xl ml-2">/{currentPlan.billingCycle === 'mensual' ? 'mes' : 'año'}</span>
+                    <span className="text-gray-400 text-lg sm:text-xl ml-2">/{currentPlan.billingCycle === 'mensual' ? 'mes' : 'año'}</span>
                     {currentPlan.oldPrice && (
-                      <span className="text-gray-600 line-through text-lg ml-3">
+                      <span className="text-gray-600 line-through text-base sm:text-lg ml-2 sm:ml-3">
                         {currentPlan.currency}
                         {currentPlan.oldPrice.toLocaleString('es-PE', { minimumFractionDigits: 0, maximumFractionDigits: 0 })}
                       </span>
                     )}
                   </div>
-                  <p className="text-gray-400 text-sm mb-6">{currentPlan.billingCycle === 'mensual' ? 'Cobro mensual recurrente' : ''}</p>
+                  <p className="text-gray-400 text-xs sm:text-sm mb-4 sm:mb-6">{currentPlan.billingCycle === 'mensual' ? 'Cobro mensual recurrente' : ''}</p>
 
                   {/* Lista de características (ahora usa displayFeatures) */}
-                  <ul className="text-left space-y-4 flex-grow mb-8">
+                  <ul className="text-left space-y-3 sm:space-y-4 flex-grow mb-6 sm:mb-8">
                     {displayFeatures.map((feature, index) => (
-                      <li key={index} className={`flex items-center ${feature.included ? 'text-gray-300' : 'text-gray-500 line-through'}`}>
+                      <li key={index} className={`flex items-start ${feature.included ? 'text-gray-300' : 'text-gray-500 line-through'}`}> {/* Changed items-center to items-start for better multi-line text alignment */}
                         {feature.included ? (
-                          <FaCheckCircle className="text-green-400 mr-3 text-lg flex-shrink-0" />
+                          <FaCheckCircle className="text-green-400 mr-3 text-base sm:text-lg flex-shrink-0 mt-1" /> 
                         ) : (
-                          <FaTimesCircle className="text-red-500 mr-3 text-lg flex-shrink-0" />
+                          <FaTimesCircle className="text-red-500 mr-3 text-base sm:text-lg flex-shrink-0 mt-1" /> 
                         )}
-                        <span className="text-sm">{feature.text}</span>
+                        <span className="text-xs sm:text-sm">{feature.text}</span> {/* Adjusted font size */}
                       </li>
                     ))}
                   </ul>
 
                   {/* Opciones de pago (si aplica) */}
                   {currentPlan.paymentOptions && (
-                    <div className="bg-[#26374c] rounded-xl p-4 mb-6 text-center text-sm text-gray-300 shadow-inner">
+                    <div className="bg-[#26374c] rounded-xl p-3 sm:p-4 mb-4 sm:mb-6 text-center text-xs sm:text-sm text-gray-300 shadow-inner"> {/* Adjusted padding and text size */}
                       <p>
                         Paga a <span className="font-bold">{currentPlan.paymentOptions.installments} cuotas</span> sin intereses de <span className="font-bold">
                           {currentPlan.currency}
@@ -405,7 +403,7 @@ const Planes = () => {
 
                   {/* Botón de llamada a la acción */}
                   <button
-                    className={`w-full py-4 rounded-xl text-lg font-bold text-white transition-colors duration-300 shadow-lg
+                    className={`w-full py-3 sm:py-4 rounded-xl text-base sm:text-lg font-bold text-white transition-colors duration-300 shadow-lg
                       ${getButtonBgColor(currentPlan.type)}`}
                   >
                     {currentPlan.callToAction}

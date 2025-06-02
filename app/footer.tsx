@@ -15,13 +15,12 @@ import {
 const Footer = () => {
   // Data for "Acerca de" section links
   const aboutLinks = [
-    "Acerca de la empresa",
-    "¿Qué es EDteam?",
-    "El equipo",
-    "Los profesores",
-    "Enunciado de misión",
-    "Marca y logotipo",
-    "Cultura",
+    { name: "¿Sobre Nosotros?", href: "/about" },
+    { name: "El equipo", href: "#" },
+    { name: "Los profesores", href: "/about/profesores" },
+    { name: "Enunciado de misión", href: "/about/mision" },
+    { name: "Marca y logotipo", href: "/about/marca" },
+    { name: "Cultura", href: "/about/cultura" },
   ];
 
   // Data for "Conecta con EDteam" sections
@@ -29,35 +28,41 @@ const Footer = () => {
     {
       title: "Soporte al cliente",
       links: [
-        "Política de privacidad",
-        "Términos y condiciones",
-        "Política de reembolsos",
+        { name: "Política de privacidad", href: "/legal/privacidad" },
+        { name: "Términos y condiciones", href: "/legal/terminos" },
+        { name: "Política de reembolsos", href: "/legal/reembolsos" },
+        { name: "haste premium", href: "/premium" },
       ],
-    },
-    {
-      title: "Servicios para empresas",
-      links: ["Canjear cupones", "Regala cursos", "Sube a premium"],
     },
   ];
 
   // Data for "Nuestros productos" section links
   const productLinks = [
-    "Recursos gratis",
-    "Cursos gratis",
-    "Blog",
-    "Conferencias",
-    "Comunidad",
-    "Cómo instalar la App",
-    "Firmas de correo",
+    { name: "Recursos gratis", href: "/recursos-gratis" },
+    { name: "Cursos gratis", href: "/cursos-gratis" },
+    { name: "Blog", href: "/blog" },
+    { name: "Comunidad", href: "/comunidad" },
   ];
 
   // Data for social media links
   const socialLinks = [
-    { icon: PiFacebookLogo, name: "Facebook", href: "#" },
-    { icon: PiInstagramLogo, name: "Instagram", href: "#" },
-    { icon: PiTwitterLogo, name: "Twitter", href: "#" },
-    { icon: PiLinkedinLogo, name: "LinkedIn", href: "#" },
-    { icon: PiYoutubeLogo, name: "YouTube", href: "#" },
+    {
+      icon: PiFacebookLogo,
+      name: "Facebook",
+      href: "https://www.facebook.com/",
+    },
+    {
+      icon: PiInstagramLogo,
+      name: "Instagram",
+      href: "https://www.instagram.com/",
+    },
+    { icon: PiTwitterLogo, name: "Twitter", href: "https://twitter.com/" },
+    {
+      icon: PiLinkedinLogo,
+      name: "LinkedIn",
+      href: "https://www.linkedin.com/",
+    },
+    { icon: PiYoutubeLogo, name: "YouTube", href: "https://www.youtube.com/" },
   ];
 
   // Function to scroll to top
@@ -130,17 +135,19 @@ const Footer = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-y-10 lg:gap-x-12 mb-8 sm:mb-12">
           {/* Section: JEDteam (About) */}
           <div className="py-2">
-            <h2 className="text-lg font-bold mb-4 text-[#0d70af]">JEDteam</h2>
+            <h2 className="text-lg font-bold mb-4 text-[#0d70af]">
+              Asociacion de Enfermeros
+            </h2>
             <nav>
               <ul className="space-y-2 sm:space-y-3">
                 {aboutLinks.map((link) => (
-                  <li key={link}>
+                  <li key={link.name}>
                     <Link
-                      href="#"
+                      href={link.href}
                       className="text-gray-700 hover:text-[#0a5c8a] hover:underline transition-colors flex items-center text-sm group"
                     >
                       <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#0d70af] mr-2 flex-shrink-0 group-hover:bg-[#0a5c8a] transition-colors"></span>
-                      {link}
+                      {link.name}
                     </Link>
                   </li>
                 ))}
@@ -151,7 +158,7 @@ const Footer = () => {
           {/* Section: Conecta con EDteam */}
           <div className="py-2">
             <h2 className="text-lg font-bold mb-4 text-[#0d70af]">
-              Conecta con EDteam
+              Conecta con Nosotros
             </h2>
             <nav className="space-y-4 sm:space-y-6">
               {connectLinks.map((section) => (
@@ -161,13 +168,13 @@ const Footer = () => {
                   </h3>
                   <ul className="space-y-2 sm:space-y-3">
                     {section.links.map((link) => (
-                      <li key={link}>
+                      <li key={link.name}>
                         <Link
-                          href="#"
+                          href={link.href}
                           className="text-gray-700 hover:text-[#0a5c8a] hover:underline transition-colors flex items-center text-sm group"
                         >
                           <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#0d70af] mr-2 flex-shrink-0 group-hover:bg-[#0a5c8a] transition-colors"></span>
-                          {link}
+                          {link.name}
                         </Link>
                       </li>
                     ))}
@@ -185,13 +192,13 @@ const Footer = () => {
             <nav>
               <ul className="space-y-2 sm:space-y-3">
                 {productLinks.map((link) => (
-                  <li key={link}>
+                  <li key={link.name}>
                     <Link
-                      href="#"
+                      href={link.href}
                       className="text-gray-700 hover:text-[#0a5c8a] hover:underline transition-colors flex items-center text-sm group"
                     >
                       <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#0d70af] mr-2 flex-shrink-0 group-hover:bg-[#0a5c8a] transition-colors"></span>
-                      {link}
+                      {link.name}
                     </Link>
                   </li>
                 ))}
@@ -244,21 +251,21 @@ const Footer = () => {
           </div>
           <nav className="flex flex-wrap justify-center gap-x-3 sm:gap-x-4 gap-y-1 sm:gap-y-2 items-center">
             <Link
-              href="#"
+              href="/legal/terminos"
               className="text-gray-600 hover:text-[#0a5c8a] text-xs sm:text-sm whitespace-nowrap"
             >
               Términos de servicio
             </Link>
             <span className="hidden sm:inline text-gray-400">|</span>
             <Link
-              href="#"
+              href="/legal/privacidad"
               className="text-gray-600 hover:text-[#0a5c8a] text-xs sm:text-sm whitespace-nowrap"
             >
               Política de privacidad
             </Link>
             <span className="hidden sm:inline text-gray-400">|</span>
             <Link
-              href="#"
+              href="/sitemap"
               className="text-gray-600 hover:text-[#0a5c8a] text-xs sm:text-sm whitespace-nowrap"
             >
               Mapa del sitio

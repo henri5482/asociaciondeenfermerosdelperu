@@ -87,8 +87,8 @@ const Hero = () => {
   return (
     <main
       className="relative overflow-hidden bg-[#26374c] text-white
-      pt-28  md:pt-32 lg:pt-40 xl:pt-48 2xl:pt-56
-      pb-28  md:pb-16 lg:pb-20 xl:pb-24 2xl:pb-28
+      pt-32  md:pt-32 lg:pt-40 xl:pt-48 2xl:pt-56
+      pb-20  md:pb-16 lg:pb-20 xl:pb-24 2xl:pb-28
       px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32 2xl:px-36
       flex flex-col-reverse md:flex-row items-center justify-between
       gap-8 sm:gap-12 md:gap-16 lg:gap-20 xl:gap-24
